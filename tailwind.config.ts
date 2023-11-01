@@ -14,6 +14,15 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    container: {
+      center: true, // Center the content horizontally
+      screens: {
+        sm: '100%', // Full width on small screens
+        md: '95%', // Full width on medium screens
+        lg: '960px', // Maximum width on large screens
+        xl: '1140px', // Maximum width on extra-large screens
+      },
+    },
   },
   plugins: [],
 }
