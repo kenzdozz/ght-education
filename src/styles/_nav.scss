@@ -1,0 +1,115 @@
+.Nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  // transform: translateX(-50%);
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: rgba(255, 255, 255, 0.5);
+  // border-radius: 20px;
+
+  .item-container,
+  .action-container {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    min-width: 10rem;
+    padding: 0.5rem 1.5rem;
+    height: max-content;
+  }
+
+  .action-container {
+    //   background-color: rgba(65, 5, 83, 0.9);
+    //   color: white;
+    min-width: unset;
+    width: auto;
+  }
+}
+
+.nav-menu {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #318CE7; 
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &.active::after {
+    opacity: 1;
+  }
+
+  &:hover {
+    &.active::after {
+      opacity: 1;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  z-index: 100;
+  max-height: 0;
+  overflow: hidden;
+  width: 13rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(5px);
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+.show {
+  max-height: 300px;
+  padding: 1.7rem 0.75rem;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    padding 0.5s ease-in-out, 0.1s;
+  padding: 0.45rem 0.9rem;
+
+  .submenu-icon {
+    visibility: hidden;
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out 0.2s; /* Delay the opacity transition */
+    opacity: 0; /* Start with opacity 0 */
+  }
+
+  &:hover {
+    background-color: rgba(49, 140, 231, 0.2);
+    border-radius: 10px;
+
+    .submenu-icon {
+      visibility: visible;
+      opacity: 1; /* Make the icon fully visible on hover */
+    }
+  }
+
+  &:not(:hover) {
+    .submenu-icon {
+      opacity: 0; /* Hide the icon smoothly when not hovering */
+    }
+  }
+}

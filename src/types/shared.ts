@@ -70,3 +70,12 @@ export interface ContainerProps
     // noFade?: boolean;
     //   'data-anim'?: TAnimatTransitionName;
 }
+
+export interface NavItem {
+    title: string,
+    url: string,
+    subNav?: {
+        title: string,
+        url: string,
+    }[]
+}

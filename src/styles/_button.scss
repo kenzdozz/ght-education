@@ -1,0 +1,25 @@
+.button {
+    background-color: $default-blue;
+    color: white;
+    outline: none;
+    min-width: 8rem;
+    min-height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: $button-box-shadow;
+    transition: all 0.3s ease-in-out;
+
+    &-transparent {
+        background-color: transparent !important;
+        border: 2px solid $default-blue;
+        color: $default-blue;
+    }
+
+    &:hover {
+        box-shadow: $button-box-shadow-hover;
+        transform: translateY(-0.125rem) scale(1.0125);
+    }
+    // font-weight: 700;
+}
