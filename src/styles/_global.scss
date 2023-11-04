@@ -56,3 +56,34 @@ body {
     left: 0;
   }
 }
+
+.swiper {
+  width: 100%;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.customer-swiper {
+  padding-bottom: 40px !important;
+}
+
+.swiper-wrapper {
+  align-items: center !important;
+
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: auto !important;
+  // width: 40% !important;
+  height: inherit !important;
+  // height: 570px !important;
+  // height: 100px;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none !important;
+}
+

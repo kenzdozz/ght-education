@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Nav from '@/components/Nav'
-import '@/styles/app.scss'
 import Footer from '@/components/Footer'
+import '@/styles/app.scss'
+import '@/styles/app.scss'
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 
 const popins = Poppins({ subsets: ['latin'], weight: ['100', '200', '400', '600', '700', '800'] })
 

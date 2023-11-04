@@ -144,3 +144,31 @@ export const faqs = [
         text: 'I am gay because I no wan dey fuck woman again so i decided to be gay..hope u know my own definition of gay na to dey fuck plenty woman...oops...then I am not gay if thats what you mean'
     },
 ]
+
+export const testimonies = [
+    {
+        name: 'Olinya Chaimaka',
+        message: `teilmed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        img: '/img/img1.jpg',
+        id: 0
+    },
+    {
+        name: 'Vivain Mmesoma',
+        message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        img: '/img/img1.jpg',
+        id: 1
+    },
+
+    {
+        name: 'Abimbola Okenwa',
+        message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        img: '/img/img1.jpg',
+        id: 2
+    },
+    {
+        name: 'Marylin Nkechi',
+        message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        img: '/img/img1.jpg',
+        id: 3
+    },
+]

@@ -3,7 +3,7 @@ import { Header, Universities } from '@/components/studies'
 import useScrollReveal from '@/utils/useScrollReveal'
 import React from 'react'
 
-const schoolPage = () => {
+const SchoolPage = () => {
     const [schoolsRef] = useScrollReveal()
     return (
         <main ref={schoolsRef}>
@@ -13,4 +13,4 @@ const schoolPage = () => {
     )
 }
 
-export default schoolPage
+export default SchoolPage
