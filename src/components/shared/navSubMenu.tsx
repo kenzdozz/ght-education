@@ -6,14 +6,16 @@ import { Container } from ".";
 const _NavSubMenu = ({
     subitem,
     dropdown,
-    parenturl
+    parenturl,
+    slug,
 }: {
     subitem: {
         title: string;
         url: string;
     }[];
     dropdown: boolean;
-    parenturl: string
+    parenturl: string;
+    slug: boolean
 }) => {
 
     return (

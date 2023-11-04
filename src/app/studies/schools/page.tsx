@@ -7,7 +7,7 @@ const schoolPage = () => {
     const [schoolsRef] = useScrollReveal()
     return (
         <main ref={schoolsRef}>
-            <Header />
+            <Header head='best Universities around the world' />
             <Universities />
         </main>
     )

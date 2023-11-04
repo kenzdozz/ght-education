@@ -15,14 +15,16 @@ const config: Config = {
       },
     },
     container: {
-      center: true, // Center the content horizontally
+      center: true,
       screens: {
-        sm: '100%', // Full width on small screens
-        md: '95%', // Full width on medium screens
-        lg: '960px', // Maximum width on large screens
-        xl: '1140px', // Maximum width on extra-large screens
+        sm: '540px',
+        md: '730px',
+        lg: '960px',
+        xl: '1140px',
       },
+
     },
+
   },
   plugins: [],
 }

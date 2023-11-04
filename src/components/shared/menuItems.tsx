@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { NavSubMenu, Container } from '.'
 import { NavItem } from '@/types';
 
-const _MenuItems = ({ menu: nav }: { menu: NavItem }) => {
+const _MenuItems = ({ menu: nav, slug = false }: { menu: NavItem, slug?: boolean }) => {
     const [dropdown, setDropdown] = useState(false);
     const pathname = usePathname();
     return (
@@ -23,7 +23,7 @@ const _MenuItems = ({ menu: nav }: { menu: NavItem }) => {
                     >
                         {nav.title}{" "}
                     </button>
-                    <NavSubMenu subitem={nav.subNav} parenturl={nav.url} dropdown={dropdown} />
+                    <NavSubMenu subitem={nav.subNav} parenturl={nav.url} slug={slug} dropdown={dropdown} />
                 </>
             ) : (
                 <Link

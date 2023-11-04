@@ -5,7 +5,7 @@ const UniversityPage = () => {
 
     return (
         <main>
-            <Header />
+            <Header head='study in university of kentucky' />
             <University />
         </main>
     )

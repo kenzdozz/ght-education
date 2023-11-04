@@ -4,12 +4,12 @@ import Faqs from '../Faqs'
 
 const University = () => {
     return (
-        <Container className=' container my-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <Container className=' col-span-2'>
+        <Container className=' container my-16 grid grid-cols-1 lg:grid-cols-3 gap-8'>
+            <Container className=' col-span-1 lg:col-span-2'>
                 <Container className=" rounded-md shadow-md py-9 px-11 mb-8">
                     <Container
                         as="h5"
-                        className=" textBorder font-bold text-3xl capitalize"
+                        className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
                         About Study in kenth university
                     </Container>
@@ -27,7 +27,7 @@ const University = () => {
                 <Container className=" rounded-md shadow-md py-9 px-11">
                     <Container
                         as="h5"
-                        className=" textBorder font-bold text-3xl capitalize"
+                        className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
                         Guides and FAQ
                     </Container>
@@ -39,7 +39,7 @@ const University = () => {
                 <Container className=" rounded-md shadow-md py-9 px-11 mb-8">
                     <Container
                         as="h5"
-                        className=" textBorder font-bold text-2xl capitalize"
+                        className=" textBorder font-bold text-lg md:text-2xl capitalize"
                     >
                         Get In touch with us to start you application
                     </Container>

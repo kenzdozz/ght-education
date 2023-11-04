@@ -3,7 +3,7 @@ import React, { RefObject, useCallback, useRef } from "react";
 import Image from "next/image";
 import { AnimateScrollReveal, Container } from "../shared";
 import { studyCountries } from "@/data/studies";
-import { useRouter, useSearchParams, useParams } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import S from "@/styles/pages/studies/study.module.scss";
 import Faqs from "../Faqs";
 type SectionRef = RefObject<HTMLDivElement>;
@@ -63,7 +63,7 @@ const Country = () => {
     return (
         <>
             <Container className=" container grid grid-cols-1 lg:grid-cols-4 gap-10 my-16">
-                <Container as="aside" className="">
+                <Container as="aside" className="col-span-1">
                     <Container
                         as="h4"
                         className="textBorder font-bold text-2xl capitalize"
@@ -96,14 +96,14 @@ const Country = () => {
                         </Container>
                     </Container>
                 </Container>
-                <Container as="section" className=" col-span-3 ">
+                <Container as="section" className=" col-span-1 lg:col-span-3">
                     <Container
                         as="h4"
                         className="textBorder font-bold text-3xl capitalize"
                     >
                         Explore Universities
                     </Container>
-                    <Container className=" col-span-3 grid grid-cols-2 gap-4 mt-10">
+                    <Container className=" grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
                         {studyCountries.map(renderCountries)}
                     </Container>
                 </Container>
@@ -112,7 +112,7 @@ const Country = () => {
                 <div ref={aboutRef} className=" rounded-md shadow-md py-9 px-11 mb-8">
                     <Container
                         as="h5"
-                        className=" textBorder font-bold text-3xl capitalize"
+                        className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
                         About Study in Uk
                     </Container>
@@ -130,7 +130,7 @@ const Country = () => {
                 <div ref={contactRef} className=" rounded-md shadow-md py-9 px-11 mb-8">
                     <Container
                         as="h5"
-                        className=" textBorder font-bold text-3xl capitalize"
+                        className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
                         Get In touch with us to start you application
                     </Container>
@@ -236,7 +236,7 @@ const Country = () => {
                 <div ref={guideRef} className=" rounded-md shadow-md py-9 px-11">
                     <Container
                         as="h5"
-                        className=" textBorder font-bold text-3xl capitalize"
+                        className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
                         Guides and FAQ
                     </Container>

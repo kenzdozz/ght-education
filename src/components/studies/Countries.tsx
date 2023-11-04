@@ -39,10 +39,18 @@ const Countries = () => {
         [],
     )
     return (
-        <Container className=' container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-14'>
-            {
-                studyCountries.map(renderCountries)
-            }
+        <Container className=' container my-14'>
+            <Container
+                as="h4"
+                className="textBorder font-bold text-2xl md:text-3xl capitalize"
+            >
+                Explore Universities Around the World
+            </Container>
+            <Container className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14'>
+                {
+                    studyCountries.map(renderCountries)
+                }
+            </Container>
         </Container>
     )
 }

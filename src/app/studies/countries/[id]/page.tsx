@@ -6,7 +6,7 @@ const CountryPage = () => {
     const [countryRef] = useScrollReveal()
     return (
         <main ref={countryRef}>
-            <Header />
+            <Header head='study in uk universities' />
             <Country />
         </main>
     )

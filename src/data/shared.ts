@@ -21,6 +21,14 @@ export const navMenuItems = [
     },
 ]
 
+export const sideBarMenuItems = [
+    { name: 'Countries', url: '/studies/countries' },
+    { name: 'Schools', url: '/studies/schools' },
+    { name: 'Events', url: '/events' },
+    { name: 'Contact-Ibadan', url: '/contact/ibadan' },
+    { name: 'Contact-Portharcourt', url: '/contact/portharcourt' },
+]
+
 export const homeImgaes = [
     {
         img: '/img/img1.jpg',

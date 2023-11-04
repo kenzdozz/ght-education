@@ -3,13 +3,18 @@ import Image from 'next/image'
 import { Container, AnimateScrollReveal } from '../shared'
 import { homeCountries } from '@/data'
 import S from '@/styles/pages/home/home.module.scss'
+import { useRouter } from 'next/navigation'
 
 const Countries = () => {
+    const router = useRouter()
+    const navigateToCountry = (id: number) => {
+        router.push(`/studies/countries/${id}`);
+    };
     const renderCountries = useCallback(
         ({ img, name, url }: { img: string, name: string, url: string }, i: number) => {
             return (
                 <AnimateScrollReveal delay={i * 0.12} key={i} className={`rounded-md relative w-full h-[15rem] ${S.CountryImage}`}>
-                    <Container className={`${S.imageHover} bg-cyan-700 bg-opacity-70 cursor-pointer flex flex-col items-center justify-center gap-6`}>
+                    <Container onClick={() => navigateToCountry(i + 1)} className={`${S.imageHover} bg-cyan-700 bg-opacity-70 cursor-pointer flex flex-col items-center justify-center gap-6`}>
                         {
                             i >= homeCountries.length - 1 ? <Container as='h4' className=' capitalize text-white font-semibold text-lg'>Study anywhere around the world</Container> : <Container as='h4' className=' capitalize text-white font-semibold text-lg'>Study in {name}</Container>
                         }

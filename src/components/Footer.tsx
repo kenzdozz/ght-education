@@ -17,8 +17,8 @@ const Footer = () => {
 
     return (
         <Container as='footer' className=' bg-blue-default w-full py-10'>
-            <Container className=' container flex justify-between gap-6'>
-                <Container className=' w-1/3 shrink-0 flex flex-col gap-5'>
+            <Container className=' container flex justify-between gap-6 flex-wrap'>
+                <Container className=' w-full md:w-1/3 shrink-0 flex flex-col gap-5'>
                     <Container className=' text-white'>Logo</Container>
                     <Container as='p' className=' text-white'>We are a company that help you get your dream abroad school and study with low stress</Container>
                     <Container as='p' className=' text-white'>Email: @gmail.com</Container>
