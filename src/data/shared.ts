@@ -13,11 +13,27 @@ export const navMenuItems = [
             },
         ],
     },
-
-
     {
-        title: 'Events',
-        url: '/events',
+        title: 'Our Services',
+        url: '/services',
+    },
+    {
+        title: "About Us",
+        url: "/about",
+        subNav: [
+            {
+                title: "Who We Are",
+                url: "story",
+            },
+            {
+                title: "Our Team",
+                url: "teams",
+            },
+        ],
+    },
+    {
+        title: 'Contact Us',
+        url: '/contact',
     },
 ]
 
@@ -46,18 +62,25 @@ export const homeImgaes = [
 
 export const homeSteps = [
     {
-        title: 'Contact us to to initiate process.',
+        title: 'We are here to serve',
         head: "Contact us",
-        description: '"Our task at Teilemed is simple. We want to ensure that Nigerians from all walks of life have access to adequate and effective health care services when they need it, without financial constraints becoming a life-threatening hindrance or obstacle."',
+        description: 'We serve any person or group interested in pursuing some form of training abroad. This could be either High school, foundation, top-up, undergraduate, graduate degree, post graduate, doctorate degree, industrial and executive Short courses, Specialist trainings overseas and online training programs.',
         img: '/img/img1.jpg',
         id: 0
     },
     {
-        title: 'Send us your documents to complete.',
-        description: '"Our task at Teilemed is simple. We want to ensure that Nigerians from all walks of life have access to adequate and effective health care services when they need it, without financial constraints becoming a life-threatening hindrance or obstacle."',
+        title: 'We guide through the process',
+        description: 'We provide relevant career guidance taking into cognizance previous qualification, family and financial background; career interests and future goals to assist them choose the right course and institution.',
         img: '/img/img2.jpg',
-        head: 'Documentation',
+        head: 'Guidance',
         id: 1
+    },
+    {
+        title: 'Immigration Counseling',
+        description: 'We also provide immigration counseling for all categories of applicants, flight booking and hotel reservation for our clients.',
+        img: '/img/img2.jpg',
+        head: 'Counseling',
+        id: 2
     },
     // {
     //     subtitle: `We’ve been Nigeria's most trusted Telemed since 2013, empowering people to live healthier, fuller lives`,

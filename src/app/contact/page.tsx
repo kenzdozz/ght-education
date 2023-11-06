@@ -2,15 +2,17 @@
 import { Header } from '@/components/studies'
 import { Contact } from '@/components/contact'
 import React from 'react'
-import { useParams } from 'next/navigation'
+import { ContactTab, Container } from '@/components/shared'
 
 const ContactPage = () => {
-    const { location } = useParams()
-    const text = `contact our ${location} office`
+    const text = `contact our office around the country`
     return (
         <main>
             <Header head={text} />
             <Contact />
+            <Container className=' container mb-8'>
+                <ContactTab />
+            </Container>
         </main>
     )
 }

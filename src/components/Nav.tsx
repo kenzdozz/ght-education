@@ -6,28 +6,13 @@ import { navMenuItems, sideBarMenuItems } from "@/data";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const contact = {
-    title: "Contact Us",
-    url: "/contact",
-    subNav: [
-        {
-            title: "Portharcourt",
-            url: "portharcourt",
-        },
-        {
-            title: "Ibadan",
-            url: "ibadan",
-        },
-    ],
-};
-
 const Nav = () => {
-    const router = useRouter()
+    const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const navigateToPage = (route: string) => {
         router.push(route);
-        setSidebarOpen(false)
+        setSidebarOpen(false);
     };
     const renderNavs = useCallback((nav: NavItem) => {
         return <MenuItems menu={nav} key={nav.url} />;
@@ -36,7 +21,12 @@ const Nav = () => {
     const renderSideNavs = useCallback((nav: { name: string; url: string }) => {
         return (
             <Container onClick={() => navigateToPage(nav.url)}>
-                <Container as="span" className="text-white font-medium text-lg transition-all duration-200 hover:text-orange-200">{nav.name}</Container>
+                <Container
+                    as="span"
+                    className="text-white font-medium text-lg transition-all duration-200 hover:text-orange-200"
+                >
+                    {nav.name}
+                </Container>
             </Container>
         );
     }, []);
@@ -67,8 +57,28 @@ const Nav = () => {
                     <Container className="item-container hidden md:flex items-center gap-10">
                         {navMenuItems.map(renderNavs)}
                     </Container>
-                    <Container className="action-container hidden md:flex items-center">
-                        <MenuItems menu={contact} />
+                    <Container className=" hidden xl:flex ml-8 contact transition-all duration-300">
+                        <a
+                            href="tel:07032880693"
+                            className=" flex items-center transition-all duration-300"
+                        >
+                            <Container
+                                as="span"
+                                className=" w-14 h-14 rounded-full flex items-center justify-center glass-over"
+                            >
+                                <Container as="span" className="material-icons text-red-600">
+                                    call
+                                </Container>
+                            </Container>
+                            <Container as="span" className=" ml-3">
+                                <Container as="p" className=" font-semibold text-lg">
+                                    0700 277 9800
+                                </Container>
+                                <Container as="p" className=" font-medium text-base">
+                                    Contact Support
+                                </Container>
+                            </Container>
+                        </a>
                     </Container>
                     <Container
                         onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -101,9 +111,7 @@ const Nav = () => {
                     </button>
                 </Container>
                 <Container className=" w-full h-full flex mt-8 flex-col gap-5">
-                    {
-                        sideBarMenuItems.map(renderSideNavs)
-                    }
+                    {sideBarMenuItems.map(renderSideNavs)}
                 </Container>
             </Container>
         </>

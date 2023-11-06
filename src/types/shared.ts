@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, BlockquoteHTMLAttributes, FC, RefObject } from "react";
+import { DetailedHTMLProps, HTMLAttributes, BlockquoteHTMLAttributes, FC, RefObject, CSSProperties } from "react";
 
 export interface NavItem {
     title: string,
@@ -78,4 +78,15 @@ export interface NavItem {
         title: string,
         url: string,
     }[]
+}
+export type SVGIconName = 'tourist'
+
+export interface IconProps {
+    name?: SVGIconName & string;
+    className?: string;
+    size?: 'tiny' | 'small' | 'medium' | 'large' | 'inherit';
+    crop?: boolean;
+    style?: CSSProperties;
+    fontSize?: string;
+    children?: React.ReactNode;
 }

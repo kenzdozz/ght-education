@@ -43,11 +43,15 @@ body {
   background-color: $default-blue;
 }
 
+.text-default-blue {
+  color: $default-blue !important;
+}
+
 .textBorder {
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     width: 4rem;
     height: 3px;
     background: rgb(136, 37, 12);
@@ -69,7 +73,6 @@ body {
 
 .swiper-wrapper {
   align-items: center !important;
-
 }
 
 .swiper-slide {
@@ -87,3 +90,47 @@ body {
   display: none !important;
 }
 
+.text-gradient {
+  background: linear-gradient(
+    to right,
+    $default-blue,
+    $default-red,
+    $default-red,
+    $default-blue,
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.text-gradient-bottom {
+  background: linear-gradient(
+    to bottom,
+    $default-blue,
+    $default-red,
+    $default-red,
+    $default-blue,
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.glass-over {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  // border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+// Icon {
+//   display: inline-flex;
+//   font-size: inherit;
+//   align-items: center;
+//   justify-content: center;
+//   position: relative;
+//   font-style: normal;
+//   transition: opacity 0.3s, transform 0.3s;
+// }
+
+// svg {
+//   width: auto;
+// }

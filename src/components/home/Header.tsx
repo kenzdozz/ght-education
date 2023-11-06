@@ -60,9 +60,9 @@ const Header = () => {
             <Container className=" container relative z-20 w-full h-full flex items-center ">
                 <Container className=" flex flex-col gap-6 w-full lg:w-2/3">
                     <Container as="h1" className=" text-white font-extrabold text-3xl md:text-6xl">
-                        Travel To Your Dream Country Through GlobalHT Education
+                        Travel To Your Dream Country Through <Container as='p' className="text-gradient">GlobalHT</Container> Education
                     </Container>
-                    <Container className="text-white text-lg w-full md:w-2/3 lg:w-full">
+                    <Container className="text-white flex items-center flex-wrap text-lg w-full md:w-2/3 lg:w-full">
                         We assist in rendering support to individuals seeking any form of
                         educational advancement overseas through personalized admission
                         assistance and visa counseling.

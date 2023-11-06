@@ -30,7 +30,6 @@ const _MenuItems = ({ menu: nav, slug = false }: { menu: NavItem, slug?: boolean
                     href={nav.url}>
                     {nav.title}
                 </Link>
-                // <a href={nav.url}>{nav.title}</a>
             )}
         </Container>
     )

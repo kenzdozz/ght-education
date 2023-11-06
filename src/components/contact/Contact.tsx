@@ -69,6 +69,24 @@ const Contact = () => {
                             required
                         />
                     </Container>
+                    <Container>
+                        <Container
+                            as="label"
+                            className="block mb-2 text-sm font-medium text-slate-800"
+                        >
+                            Which state are you located
+                        </Container>
+                        <select
+                            id="states"
+                            className="bg-transparent border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
+                        >
+                            <option selected>Choose a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                    </Container>
 
                     <Container className=' col-span-1 md:col-span-2'>
                         <Container
