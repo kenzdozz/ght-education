@@ -43,6 +43,11 @@ body {
   background-color: $default-blue;
 }
 
+.bg-gradient-primary {
+  background-image: linear-gradient(to right, $default-blue , $default-red) !important;
+        color: white;
+}
+
 .text-default-blue {
   color: $default-blue !important;
 }

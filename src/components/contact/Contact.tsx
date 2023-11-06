@@ -106,7 +106,7 @@ const Contact = () => {
 
                 </Container>
                 <Container className=" flex items-center justify-center mt-3">
-                    <button className=" bg-blue-default w-60 h-16 text-white text-base font-semibold rounded-md flex items-center transition-all duration-300 justify-center hover:-translate-y-1">
+                    <button className=" bg-gradient-primary w-60 h-16 text-white text-base font-semibold rounded-md flex items-center transition-all duration-300 justify-center hover:-translate-y-1">
                         Send Message
                     </button>
                 </Container>

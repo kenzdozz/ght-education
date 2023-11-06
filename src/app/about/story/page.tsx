@@ -1,9 +1,10 @@
 'use client'
 import { Header } from '@/components/studies'
-import { WhoWeAre } from '@/components/about'
+import { Mission, Vision, WhoWeAre } from '@/components/about'
 import React from 'react'
 import useScrollReveal from '@/utils/useScrollReveal'
-import { Service } from '@/components/services'
+import { Patners } from '@/components/home'
+import { ContactTab, Container } from '@/components/shared'
 
 const StoryPage = () => {
     const [storyRef] = useScrollReveal()
@@ -11,6 +12,12 @@ const StoryPage = () => {
         <main ref={storyRef}>
             <Header head='Our story' />
             <WhoWeAre />
+            <Patners />
+            <Mission />
+            <Container className=' my-8 container'>
+                <ContactTab />
+            </Container>
+            <Vision />
         </main>
     )
 }
