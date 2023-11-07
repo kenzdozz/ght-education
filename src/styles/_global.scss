@@ -95,6 +95,24 @@ body {
   display: none !important;
 }
 
+.customer-swiper {
+  .swiper-slide {
+    width: 100% !important;
+    padding-bottom: 40px !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    .swiper-slide {
+      width: 48% !important;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .swiper-slide {
+      width: 31% !important;
+    }
+  }
+}
 .text-gradient {
   background: linear-gradient(
     to right,
@@ -139,3 +157,39 @@ body {
 // svg {
 //   width: auto;
 // }
+
+.container {
+  max-width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
+  }
+}
+
+.container{
+  @media screen and (min-width: 768px) {
+    max-width: 730px;
+  }
+}
+
+.container {
+  @media screen and (min-width: 992px) {
+    max-width: 960px;
+  }
+}
+
+.container {
+  @media screen and (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.container {
+  @media screen and (min-width: 1400px) {
+    max-width: 1250px;
+  }
+}

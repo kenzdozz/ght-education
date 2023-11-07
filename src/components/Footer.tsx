@@ -43,11 +43,11 @@ const Footer = () => {
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Links
                     </Container>
-                    <Container className="text-white flex flex-col gap-4 mt-6">
+                    <Container className="text-white flex flex-col gap-2 mt-6">
                         {footerLinks.map(renderLinks)}
                     </Container>
                 </Container>
-                <Container className=" w-[45%] md:w-[30%] shrink-0">
+                <Container className=" w-full md:w-[30%] shrink-0">
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Head Office
                     </Container>
@@ -62,7 +62,7 @@ const Footer = () => {
                         Email: <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                     </Container>
                 </Container>
-                <Container className="w-[45%] md:w-[20%] shrink-0">
+                <Container className="w-full md:w-[20%] shrink-0">
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Branch Office
                     </Container>

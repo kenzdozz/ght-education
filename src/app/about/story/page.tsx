@@ -10,7 +10,7 @@ const StoryPage = () => {
     const [storyRef] = useScrollReveal()
     return (
         <main ref={storyRef}>
-            <Header head='Our story' />
+            <Header head='Our story' isSearch={false} />
             <WhoWeAre />
             <Patners />
             <Mission />

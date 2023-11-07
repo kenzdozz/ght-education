@@ -11,7 +11,7 @@ const Testimonies = () => {
         ({ name, message, img, id }: { name: string, message: string, id: number, img: string }) => {
             return (
                 <SwiperSlide key={id}>
-                    <Container className=' w-[25rem] rounded-md bg-white relative shadow-md pt-10 pb-16 transition-all duration-300 px-8 hover:shadow-lg hover:-translate-y-1'>
+                    <Container className=' w-full rounded-md bg-white relative shadow-md pt-10 pb-16 transition-all duration-300 px-8 hover:shadow-lg hover:-translate-y-1'>
                         <Container as='p' className={`w-full mb-4 font-medium text-base ${S.quote}`}>
                             I found out about TGM Education when I saw an advert for their Roadshow in Port-Harcourt. I followed them after that and they  have been wonderful all through my application processing and I have gained Admission and on my way to the UK after getting my Visa with their help.
                         </Container>
