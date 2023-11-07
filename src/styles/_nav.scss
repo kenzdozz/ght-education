@@ -34,7 +34,7 @@
 .nav-menu {
   position: relative;
   color: $default-blue;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 
   &::after {
     content: "";
@@ -144,6 +144,7 @@
 
 .contact {
   position: relative;
+  color: $default-blue;
   .glass-over {
     background-color: white;
     transition: all 0.5s ease-in-out;
@@ -152,9 +153,9 @@
   &:hover {
     .glass-over {
       background-color: $default-red;
-      color: $default-blue;
+      // color: $default-blue;
       span {
-        color: $default-blue !important;
+        color: white !important;
       }
     }
   }

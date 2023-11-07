@@ -7,8 +7,8 @@ const Steps = () => {
     const renderSteps = useCallback(
         (item: any) => {
             return (
-                <AnimateScrollReveal id={`service${item.id}`} duration={0} key={item.id} className={`grid grid-cols-1 md:grid-cols-5 gap-12 items-center lg:gap-16 mt-20 mb-24`}>
-                    <AnimateScrollReveal id={`serice-img${item.id}`} animName='fadeInRight' className={`relative w-full col-span-1 md:col-span-2 h-[14rem] ${(item.id + 1) % 2 !== 0 ? ' ml-auto' : ' '}`}>
+                <AnimateScrollReveal id={`service${item.id}`} duration={1.3} key={item.id} className={`grid grid-cols-1 md:grid-cols-5 gap-12 items-center lg:gap-16 mt-20 mb-24`}>
+                    <AnimateScrollReveal duration={1.5} delay={0.123} id={`serice-img${item.id}`} animName='fadeInRight' className={`relative w-full col-span-1 md:col-span-2 h-[14rem] ${(item.id + 1) % 2 !== 0 ? ' ml-auto' : ' '}`}>
                         <Image
                             src={item.img}
                             alt="Your Image"
@@ -17,7 +17,7 @@ const Steps = () => {
                             objectFit="cover"
                         />
                     </AnimateScrollReveal>
-                    <AnimateScrollReveal id={`serice-txt${item.id}`} animName='fadeInLeft' className={` flex flex-col justify-between col-span-1 md:col-span-3 ${(item.id + 1) % 2 !== 0 ? ' -order-1' : ' '}`}>
+                    <AnimateScrollReveal id={`serice-txt${item.id}`} duration={1.5} delay={0.13} animName='fadeInLeft' className={` flex flex-col justify-between col-span-1 md:col-span-3 ${(item.id + 1) % 2 !== 0 ? ' -order-1' : ' '}`}>
                         <Container>
                             <Container as='h5' className=' text-slate-500 font-semibold text-lg mb-2 flex items-center'>
                                 <Container as='span' className="material-icons text-gradient-bottom mr-1">double_arrow</Container>

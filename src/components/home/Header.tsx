@@ -58,16 +58,16 @@ const Header = () => {
         <Container as="section" className={`${S.homeHead} w-full h-[40rem] overflow-x-hidden`}>
             {homeImgaes.map(renderImages)}
             <Container className=" overflow-hidden container relative z-20 w-full h-full flex items-center ">
-                <AnimateScrollReveal className=" flex flex-col gap-6 w-full lg:w-2/3">
-                    <AnimateScrollReveal duration={0.75} animName="fadeInRight" as="h1" className=" text-white font-extrabold text-3xl md:text-6xl">
+                <AnimateScrollReveal duration={1.5} className=" flex flex-col gap-6 w-full lg:w-2/3">
+                    <AnimateScrollReveal duration={1.75} animName="fadeInRight" as="h1" className=" text-white font-extrabold text-3xl md:text-6xl">
                         Travel To Your Dream Country Through <Container as='p' className="text-gradient">GlobalHT</Container> Education
                     </AnimateScrollReveal>
-                    <AnimateScrollReveal className="text-white flex items-center flex-wrap text-lg w-full md:w-2/3 lg:w-full">
+                    <AnimateScrollReveal duration={1.75} delay={0.12} className="text-white flex items-center flex-wrap text-lg w-full md:w-2/3 lg:w-full">
                         We assist in rendering support to individuals seeking any form of
                         educational advancement overseas through personalized admission
                         assistance and visa counseling.
                     </AnimateScrollReveal>
-                    <button onClick={() => navigateToCountries()} className=" rounded-md w-48 h-16 flex font-semibold text-lg items-center justify-center bg-gradient-primary text-white cursor-pointer border-0 outline-0 transition-all duration-300 hover:translate-y-2">
+                    <button onClick={() => navigateToCountries()} className=" rounded-md w-48 h-16 flex font-semibold text-lg items-center justify-center bg-gradient-primary text-white cursor-pointer border-0 outline-0 transition-all duration-300 hover:-translate-y-1">
                         View Schools
                     </button>
                 </AnimateScrollReveal>

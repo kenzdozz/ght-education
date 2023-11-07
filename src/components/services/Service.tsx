@@ -8,7 +8,7 @@ const Service = () => {
     const renderServices = useCallback(
         ({ text, icon, id }: { text: string, icon: SVGIconName, id: number }) => {
             return (
-                <AnimateScrollReveal delay={id * 0.12} allowOverflow key={id} className={`shrink-0 relative w-full h-36 px-6 flex flex-col justify-center items-center gap-2 rounded-md ${S.ServiceItem}`}>
+                <AnimateScrollReveal duration={1.2} delay={id * 0.125} allowOverflow key={id} className={`shrink-0 relative w-full h-36 px-6 flex flex-col justify-center items-center gap-2 rounded-md ${S.ServiceItem}`}>
                     <Container className=" w-10 10 absolute -top-2 bg-slate-100 rounded-full">
                         <SVGIcon name={icon} />
                     </Container>

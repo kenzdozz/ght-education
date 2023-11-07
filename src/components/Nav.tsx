@@ -57,24 +57,24 @@ const Nav = () => {
                     <Container className="item-container hidden md:flex items-center gap-10">
                         {navMenuItems.map(renderNavs)}
                     </Container>
-                    <Container className=" hidden xl:flex ml-8 contact transition-all duration-300">
+                    <Container className=" hidden md:flex contact transition-all duration-300">
                         <a
                             href="tel:07032880693"
                             className=" flex items-center transition-all duration-300"
                         >
                             <Container
                                 as="span"
-                                className=" w-14 h-14 rounded-full flex items-center justify-center glass-over"
+                                className=" w-8 h-8 lg:w-14 lg:h-14 rounded-full flex items-center justify-center glass-over"
                             >
                                 <Container as="span" className="material-icons text-red-600">
                                     call
                                 </Container>
                             </Container>
-                            <Container as="span" className=" ml-3">
-                                <Container as="p" className=" font-semibold text-lg">
+                            <Container as="span" className=" ml-1 lg:ml-3">
+                                <Container as="p" className=" text-sm font-medium lg:font-semibold lg:text-lg">
                                     0700 277 9800
                                 </Container>
-                                <Container as="p" className=" font-medium text-base">
+                                <Container as="p" className=" font-light text-sm lg:font-medium lg:text-base">
                                     Contact Support
                                 </Container>
                             </Container>
@@ -99,7 +99,7 @@ const Nav = () => {
                     </Container>
                 </Container>
             </Container>
-            <Container className={`side-bar ${sidebarOpen && "show-side-bar"}`}>
+            <Container className={`side-bar block md:hidden ${sidebarOpen && "show-side-bar"}`}>
                 <Container className=" flex items-end justify-end">
                     <button
                         onClick={() => setSidebarOpen(!sidebarOpen)}

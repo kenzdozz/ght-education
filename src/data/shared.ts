@@ -149,6 +149,34 @@ export const footerCountries = [
 
 ]
 
+export const footerLinks = [
+    {
+        name: 'Countries',
+        url: 'studies/countries/'
+    },
+    {
+        name: 'Uversities',
+        url: 'studies/schools'
+    },
+    {
+        name: 'Our Services',
+        url: 'services'
+    },
+    {
+        name: 'Who we are',
+        url: 'about/story'
+    },
+    {
+        name: 'Teams',
+        url: 'about/teams'
+    },
+    {
+        name: 'Contact',
+        url: 'contact'
+    },
+
+]
+
 export const faqs = [
     {
         title: 'Why are you gay',

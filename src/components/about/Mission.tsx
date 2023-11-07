@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import { Container } from '../shared'
+import { Container, AnimateScrollReveal } from '../shared'
 
 const Mission = () => {
     return (
         <Container>
-            <Container className=' container grid grid-cols-1 md:grid-cols-3 gap-20 mt-20 mb-10 items-center'>
-                <Container className=' w-full relative h-[18rem] rounded-md'>
+            <AnimateScrollReveal duration={1.2} className=' container grid grid-cols-1 md:grid-cols-3 gap-20 mt-20 mb-10 items-center'>
+                <AnimateScrollReveal duration={1.5} delay={0.12} animName='fadeInRight' className=' w-full relative h-[18rem] rounded-md'>
                     <Image
                         src='/img/about/mission.jpg'
                         alt='waho-we-are'
@@ -14,8 +14,8 @@ const Mission = () => {
                         className=' rounded-md'
                         objectFit='cover'
                     />
-                </Container>
-                <Container className=' col-span-2'>
+                </AnimateScrollReveal>
+                <AnimateScrollReveal duration={1.5} delay={0.125} animName='fadeInLeft' className=' col-span-2'>
                     <Container as='h2' className=' capitalize text-gradient font-semibold text-3xl'>Our Mission</Container>
                     <Container as='p' className=' mt-4'>
                         We assist in rendering support to individuals seeking any form of educational advancement overseas through personalized admission assistance and visa counseling, which are the first steps towards meeting their life ambitions. Our services also extend further throughout the student study period, to family members and those seeking tourist visas.
@@ -26,8 +26,8 @@ const Mission = () => {
 
 
                     </Container>
-                </Container>
-            </Container>
+                </AnimateScrollReveal>
+            </AnimateScrollReveal>
         </Container>
     )
 }

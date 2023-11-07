@@ -23,8 +23,8 @@ const _ContactTab = () => {
             <Container className=" flex flex-col gap-7 pl-0 md:pl-10">
                 <Container as='h5' className=" text-white font-bold text-xl">Contact</Container>
                 <Container className=" flex flex-col gap-6 mt-0 md:mt-4">
-                    <Container as='h5' className=" text-white font-bold">Portharcourt office: <Container className=" font-medium">070328803467</Container> </Container>
-                    <Container as='h5' className=" text-white font-bold">Ibadan office: <Container className=" font-medium">090328890768</Container> </Container>
+                    <Container as='h5' className=" text-white font-bold">Portharcourt office: <a href="tel:+234-803-6718-217" className=" font-medium">+234-803-6718-217</a> </Container>
+                    <Container as='h5' className=" text-white font-bold">Ibadan office: <a href="tel:+234-803-6718-217" className=" font-medium">+234-903-0143-401</a> </Container>
                 </Container>
 
             </Container>

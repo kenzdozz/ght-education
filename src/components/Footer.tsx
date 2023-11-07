@@ -1,47 +1,85 @@
-import React, { useCallback } from 'react'
-import { Container } from './shared'
-import Link from 'next/link'
-import { footerCountries } from '@/data'
+import React, { useCallback } from "react";
+import { Container } from "./shared";
+import Link from "next/link";
+import { footerCountries, footerLinks } from "@/data";
 
 const Footer = () => {
     const renderCountries = useCallback(
-        ({ name, url }: { name: string, url: string }, i: number) => {
+        ({ name, url }: { name: string; url: string }, i: number) => {
             return (
                 <Link href={url} key={i}>
                     {name}
                 </Link>
-            )
+            );
         },
-        [],
-    )
+        []
+    );
+
+    const renderLinks = useCallback(
+        ({ name, url }: { name: string; url: string }, i: number) => {
+            return (
+                <Link href={url} key={i} className=" hover:text-red-700">
+                    {name}
+                </Link>
+            );
+        },
+        []
+    );
 
     return (
-        <Container as='footer' className=' bg-blue-default w-full py-10'>
-            <Container className=' container flex justify-between gap-6 flex-wrap'>
-                <Container className=' w-full md:w-1/3 shrink-0 flex flex-col gap-5'>
-                    <Container className=' text-white'>Logo</Container>
-                    <Container as='p' className=' text-white'>We are a company that help you get your dream abroad school and study with low stress</Container>
-                    <Container as='p' className=' text-white'>Email: @gmail.com</Container>
-                </Container>
-                <Container>
-                    <Container as='h5' className='text-white'>Countries</Container>
-                    <Container className='text-white flex flex-col gap-4 mt-6'>
-                        {
-                            footerCountries.map(renderCountries)
-                        }
+        <Container as="footer" className=" bg-blue-default w-full py-10 overflow-x-clip">
+            <Container className=" container flex justify-between gap-6 flex-wrap">
+                <Container className=" w-[55%] md:w-[20%] shrink-0 flex flex-col gap-5">
+                    <Container className=" text-white">Logo</Container>
+                    <Container as="p" className=" text-white">
+                        We are a company that help you get your dream abroad school and
+                        study with low stress
+                    </Container>
+                    <Container as="p" className=" text-white">
+                        Email: info@ghteducation.com
                     </Container>
                 </Container>
-                <Container className=''>
-                    <Container as='h5' className='text-white'>Links</Container>
-                    <Container className='text-white flex flex-col gap-4 mt-6'>
-                        {
-                            footerCountries.map(renderCountries)
-                        }
+                <Container className=" w-[35%] md:w-[15%] shrink-0">
+                    <Container as="h5" className="text-white font-semibold text-xl">
+                        Links
+                    </Container>
+                    <Container className="text-white flex flex-col gap-4 mt-6">
+                        {footerLinks.map(renderLinks)}
+                    </Container>
+                </Container>
+                <Container className=" w-[45%] md:w-[30%] shrink-0">
+                    <Container as="h5" className="text-white font-semibold text-xl">
+                        Head Office
+                    </Container>
+                    <Container className=" text-white mt-4">
+                        No 18 Ezimgbu link Road GRA, Phase 4 Port Harcourt, Rivers State,
+                        Nigeria.
+                    </Container>
+                    <Container as="p" className=" text-white mt-3 flex items-center flex-wrap gap-1">
+                        Phone: <a href="tel:+234-903-0143-401">+234-903-0143-401</a> <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
+                    </Container>
+                    <Container as="p" className=" text-white mt-3 flex items-center gap-1 flex-wrap">
+                        Email: <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
+                    </Container>
+                </Container>
+                <Container className="w-[45%] md:w-[20%] shrink-0">
+                    <Container as="h5" className="text-white font-semibold text-xl">
+                        Branch Office
+                    </Container>
+                    <Container className=" text-white mt-4">
+                        Kwara State Office No 6 Pack Close, GRA Ilorin, Kwara State,
+                        Nigeria.
+                    </Container>
+                    <Container as="p" className=" text-white mt-3 flex items-center flex-wrap gap-1">
+                        Phone: <a href="tel:+234-903-0143-401">+234-903-0143-401</a> <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
+                    </Container>
+                    <Container as="p" className=" text-white mt-3 flex items-center gap-1 flex-wrap">
+                        Email: <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                     </Container>
                 </Container>
             </Container>
         </Container>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
