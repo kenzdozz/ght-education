@@ -1,11 +1,13 @@
-import React from 'react'
-import { Container } from '../shared'
-import Faqs from '../Faqs'
+import React from "react";
+import { Container } from "../shared";
+import Faqs from "../Faqs";
+import { states } from "@/data";
+import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
 const University = () => {
     return (
-        <Container className=' container my-16 grid grid-cols-1 lg:grid-cols-3 gap-8'>
-            <Container className=' col-span-1 lg:col-span-2'>
+        <Container className=" container my-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <Container className=" col-span-1 lg:col-span-2">
                 <Container className=" rounded-md shadow-md py-9 px-11 mb-8">
                     <Container
                         as="h5"
@@ -47,92 +49,116 @@ const University = () => {
                         <Container>
                             <Container
                                 as="label"
-                                className="block mb-2 text-sm font-medium text-slate-800 "
+                                className="block mb-2 text-sm font-medium capitalize text-blue-600 "
                             >
                                 First name
                             </Container>
-                            <input
-                                type="text"
-                                className="bg-transparent border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
-                                placeholder="John"
-                                required
-                            />
-                        </Container>
-                        <Container>
                             <Container
-                                as="label"
-                                className="block mb-2 text-sm font-medium text-slate-800 "
+                                as="span"
+                                className="relative text-gray-400  block h-12"
                             >
-                                Last name
+                                <UserIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
+                                <input
+                                    type="text"
+                                    name="firstname"
+                                    placeholder="first name"
+                                    className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
+                                />
                             </Container>
-                            <input
-                                type="text"
-                                className="bg-transparent border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
-                                placeholder="John"
-                                required
-                            />
                         </Container>
                         <Container>
                             <Container
                                 as="label"
-                                className="block mb-2 text-sm font-medium text-slate-800 "
+                                className="block mb-2 text-sm font-medium capitalize text-blue-600 "
                             >
-                                Email
+                                last name
                             </Container>
-                            <input
-                                type="email"
-                                className="bg-transparent border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
-                                placeholder="John@gmail.com"
-                                required
-                            />
-                        </Container>
-                        <Container>
                             <Container
-                                as="label"
-                                className="block mb-2 text-sm font-medium text-slate-800 "
+                                as="span"
+                                className="relative text-gray-400  block h-12"
                             >
-                                Phone Number
+                                <UserIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
+                                <input
+                                    type="text"
+                                    name="lastName"
+                                    placeholder="surname"
+                                    className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
+                                />
                             </Container>
-                            <input
-                                type="tel"
-                                className="bg-transparent border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
-                                placeholder="0904590894"
-                                required
-                            />
                         </Container>
                         <Container>
                             <Container
                                 as="label"
-                                className="block mb-2 text-sm font-medium text-slate-800"
+                                className="block mb-2 text-sm font-medium capitalize text-blue-600 "
+                            >
+                                email
+                            </Container>
+                            <Container
+                                as="span"
+                                className="relative text-gray-400  block h-12"
+                            >
+                                <EnvelopeIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="@gmail.com"
+                                    className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
+                                />
+                            </Container>
+                        </Container>
+                        <Container>
+                            <Container
+                                as="label"
+                                className="block mb-2 text-sm font-medium capitalize text-blue-600 "
+                            >
+                                phone number
+                            </Container>
+                            <Container
+                                as="span"
+                                className="relative text-gray-400  block h-12"
+                            >
+                                <PhoneIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
+                                <input
+                                    type="tel"
+                                    name="phoneNumner"
+                                    placeholder="0902345678"
+                                    className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
+                                />
+                            </Container>
+                        </Container>
+                        <Container>
+                            <Container
+                                as="label"
+                                className="block mb-2 text-sm font-medium text-blue-600"
                             >
                                 Highest Level of Education
                             </Container>
                             <select
                                 id="countries"
-                                className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:border-gray-700 block w-full p-2.5"
+                                className="bg-gray-50 h-12 border border-gray-300 text-gray-400 text-sm rounded-lg focus:border-gray-700 block w-full p-2.5"
                             >
-                                <option selected>Choose a country</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
+                                <option selected>Choose a education level</option>
+                                <option value="bsc">Bachelors</option>
+                                <option value="msc">Masters</option>
+                                <option value="high-school">High School</option>
+                                {/* <option value="DE">Germany</option> */}
                             </select>
                         </Container>
                         <Container>
                             <Container
                                 as="label"
-                                className="block mb-2 text-sm font-medium text-slate-800"
+                                className="block mb-2 text-sm font-medium text-blue-600"
                             >
-                                Which State Are You Located
+                                Which state are you located
                             </Container>
                             <select
-                                className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:border-gray-700 block w-full p-2.5"
+                                id="states"
+                                className="bg-transparent h-12 border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
                             >
                                 <option selected>Choose a state</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
+                                {states.map((el) => (
+                                    <option key={el.value} value={el.value}>{el.text}</option>
+                                ))}
                             </select>
                         </Container>
                     </Container>
@@ -143,9 +169,8 @@ const University = () => {
                     </Container>
                 </Container>
             </Container>
-
         </Container>
-    )
-}
+    );
+};
 
-export default University
+export default University;

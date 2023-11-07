@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { Container } from "./shared";
 import Link from "next/link";
 import { footerCountries, footerLinks } from "@/data";
+import { UserIcon, EnvelopeIcon, PhoneIcon, HomeIcon } from "@heroicons/react/20/solid";
 
 const Footer = () => {
     const renderCountries = useCallback(
@@ -51,30 +52,32 @@ const Footer = () => {
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Head Office
                     </Container>
-                    <Container className=" text-white mt-4">
+                    <Container className=" text-white mt-4 flex items-center">
+                        <HomeIcon className="pointer-events-none text-white w-6 h-6 mr-1" />
                         No 18 Ezimgbu link Road GRA, Phase 4 Port Harcourt, Rivers State,
                         Nigeria.
                     </Container>
                     <Container as="p" className=" text-white mt-3 flex items-center flex-wrap gap-1">
-                        Phone: <a href="tel:+234-903-0143-401">+234-903-0143-401</a> <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
+                        <PhoneIcon className="pointer-events-none text-white w-6 h-6 mr-1" /> <a href="tel:+234-903-0143-401">+234-903-0143-401</a> <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
                     </Container>
                     <Container as="p" className=" text-white mt-3 flex items-center gap-1 flex-wrap">
-                        Email: <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
+                        <EnvelopeIcon className="pointer-events-none text-white w-6 h-6 mr-1" /> <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                     </Container>
                 </Container>
                 <Container className="w-full text-sm md:w-[20%] shrink-0">
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Branch Office
                     </Container>
-                    <Container className=" text-white mt-4">
+                    <Container className=" text-white mt-4 flex items-center">
+                        <HomeIcon className="pointer-events-none text-white w-6 h-6 mr-1" />
                         Kwara State Office No 6 Pack Close, GRA Ilorin, Kwara State,
                         Nigeria.
                     </Container>
                     <Container as="p" className=" text-white mt-3 flex items-center flex-wrap gap-1">
-                        Phone: <a href="tel:+234-903-0143-401">+234-903-0143-401</a> <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
+                        <PhoneIcon className="pointer-events-none text-white w-6 h-6 mr-1" /> <a href="tel:+234-903-0143-401">+234-903-0143-401</a> <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
                     </Container>
                     <Container as="p" className=" text-white mt-3 flex items-center gap-1 flex-wrap">
-                        Email: <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
+                        <EnvelopeIcon className="pointer-events-none text-white w-6 h-6 mr-1" /> <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                     </Container>
                 </Container>
             </Container>
