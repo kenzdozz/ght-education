@@ -15,7 +15,7 @@ const Mission = () => {
                         objectFit='cover'
                     />
                 </AnimateScrollReveal>
-                <AnimateScrollReveal duration={1.5} delay={0.125} animName='fadeInLeft' className=' col-span-2'>
+                <AnimateScrollReveal duration={1.5} delay={0.125} animName='fadeInLeft' className='col-span-1 md:col-span-2'>
                     <Container as='h2' className=' capitalize text-gradient font-semibold text-3xl'>Our Mission</Container>
                     <Container as='p' className=' mt-4'>
                         We assist in rendering support to individuals seeking any form of educational advancement overseas through personalized admission assistance and visa counseling, which are the first steps towards meeting their life ambitions. Our services also extend further throughout the student study period, to family members and those seeking tourist visas.

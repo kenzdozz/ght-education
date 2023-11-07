@@ -66,7 +66,7 @@ const Country = () => {
                 <Container as="aside" className="col-span-1">
                     <Container
                         as="h4"
-                        className="textBorder font-bold text-2xl capitalize"
+                        className="textBorder font-bold text-xl md:text-2xl capitalize"
                     >
                         user guide
                     </Container>
@@ -99,7 +99,7 @@ const Country = () => {
                 <Container as="section" className=" col-span-1 lg:col-span-3">
                     <Container
                         as="h4"
-                        className="textBorder font-bold text-3xl capitalize"
+                        className="textBorder font-bold text-xl md:text-3xl capitalize"
                     >
                         Explore Universities
                     </Container>

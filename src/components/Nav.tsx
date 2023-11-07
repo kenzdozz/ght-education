@@ -49,7 +49,7 @@ const Nav = () => {
 
     return (
         <>
-            <Container as="nav" className="Nav bg-white relative shadow-lg py-5 h-20">
+            <Container as="nav" className="Nav bg-white relative shadow-lg py-2 md:py-5 h-14 md:h-20">
                 <Container className=" container flex items-center justify-between">
                     <Link href="/">
                         <Container as="span">Logo</Container>

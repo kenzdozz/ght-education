@@ -29,9 +29,9 @@ const Footer = () => {
     return (
         <Container as="footer" className=" bg-blue-default w-full py-10 overflow-x-clip">
             <Container className=" container flex justify-between gap-6 flex-wrap">
-                <Container className=" w-[55%] md:w-[20%] shrink-0 flex flex-col gap-5">
+                <Container className=" w-[55%] md:w-[20%] shrink-0 text-sm flex flex-col gap-5">
                     <Container className=" text-white">Logo</Container>
-                    <Container as="p" className=" text-white">
+                    <Container as="p" className=" text-white text-sm">
                         We are a company that help you get your dream abroad school and
                         study with low stress
                     </Container>
@@ -43,11 +43,11 @@ const Footer = () => {
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Links
                     </Container>
-                    <Container className="text-white flex flex-col gap-2 mt-6">
+                    <Container className="text-white text-sm flex flex-col gap-2 mt-6">
                         {footerLinks.map(renderLinks)}
                     </Container>
                 </Container>
-                <Container className=" w-full md:w-[30%] shrink-0">
+                <Container className=" w-full md:w-[30%] text-sm shrink-0">
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Head Office
                     </Container>
@@ -62,7 +62,7 @@ const Footer = () => {
                         Email: <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                     </Container>
                 </Container>
-                <Container className="w-full md:w-[20%] shrink-0">
+                <Container className="w-full text-sm md:w-[20%] shrink-0">
                     <Container as="h5" className="text-white font-semibold text-xl">
                         Branch Office
                     </Container>

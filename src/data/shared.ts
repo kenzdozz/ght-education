@@ -40,9 +40,10 @@ export const navMenuItems = [
 export const sideBarMenuItems = [
     { name: 'Countries', url: '/studies/countries' },
     { name: 'Schools', url: '/studies/schools' },
-    { name: 'Events', url: '/events' },
-    { name: 'Contact-Ibadan', url: '/contact/ibadan' },
-    { name: 'Contact-Portharcourt', url: '/contact/portharcourt' },
+    { name: 'Our Services', url: '/services' },
+    { name: 'Who We Are', url: '/about/story' },
+    { name: 'Our Team', url: '/about/teams' },
+    { name: 'Contact', url: '/contact' },
 ]
 
 export const homeImgaes = [

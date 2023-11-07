@@ -42,7 +42,7 @@ const Countries = () => {
         <Container className=' container my-14'>
             <Container
                 as="h4"
-                className="textBorder font-bold text-2xl md:text-3xl capitalize"
+                className="textBorder font-bold text-xl md:text-3xl capitalize"
             >
                 Explore Universities Around the World
             </Container>

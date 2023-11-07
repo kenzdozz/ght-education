@@ -24,7 +24,7 @@ const Steps = () => {
                                 <Container className=' text-2xl text-blue-600 font-semibold ml-1'>0{item.id}.</Container> {item.head}
                                 <Container as='span' className="material-icons text-gradient-bottom ml-1">double_arrow</Container>
                             </Container>
-                            <Container as='h4' className=' text-slate-700 font-bold text-3xl mb-7'>{item.title}</Container>
+                            <Container as='h4' className=' text-slate-700 font-bold text-lg md:text-3xl mb-7'>{item.title}</Container>
                             <Container as='p'>{item.description}</Container>
                         </Container>
                         <Container className=' w-1/2 mt-2'>

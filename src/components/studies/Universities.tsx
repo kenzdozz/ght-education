@@ -42,7 +42,7 @@ const Universities = () => {
         <Container className='container my-14'>
             <Container
                 as="h4"
-                className="textBorder font-bold text-3xl capitalize"
+                className="textBorder font-bold text-xl md:text-3xl capitalize"
             >
                 Explore Universities
             </Container>

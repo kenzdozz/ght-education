@@ -39,7 +39,7 @@ const Countries = () => {
 
     return (
         <Container as='section' className=' mt-20 container mb-8'>
-            <Container as='h2' className={`${S.TextHead}`}>
+            <Container as='h2' className={`${S.TextHead} text-lg md:text-3xl`}>
                 Explore Countries
             </Container>
 
