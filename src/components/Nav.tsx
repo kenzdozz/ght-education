@@ -31,12 +31,28 @@ const Nav = () => {
         );
     }, []);
 
+    // const handleScroll: EventListener = () => {
+    //     if (window.scrollY > 0) {
+    //         setScrolled(true);
+    //     } else {
+    //         setScrolled(false);
+    //     }
+    // };
+
+    let lastScrollY = 0;
+
     const handleScroll: EventListener = () => {
-        if (window.scrollY > 0) {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+            // Scrolling down
             setScrolled(true);
         } else {
+            // Scrolling up
             setScrolled(false);
         }
+
+        lastScrollY = currentScrollY;
     };
 
     useEffect(() => {
@@ -49,10 +65,16 @@ const Nav = () => {
 
     return (
         <>
-            <Container as="nav" className="Nav bg-white relative shadow-lg py-2 md:py-5 h-14 md:h-20">
+            <Container
+                as="nav"
+                className={`Nav transition-all duration-300 ${scrolled ? " bg-blue-100" : " bg-white"
+                    } shadow-lg py-2 md:py-5 h-14 md:h-20`}
+            >
                 <Container className=" container flex items-center justify-between">
                     <Link href="/">
-                        <Container as="span">Logo</Container>
+                        <Container as="span" className=" text-red-600">
+                            Logo
+                        </Container>
                     </Link>
                     <Container className="item-container hidden md:flex items-center gap-10">
                         {navMenuItems.map(renderNavs)}
@@ -71,10 +93,16 @@ const Nav = () => {
                                 </Container>
                             </Container>
                             <Container as="span" className=" ml-1 lg:ml-3">
-                                <Container as="p" className=" text-sm font-medium lg:font-semibold lg:text-lg">
+                                <Container
+                                    as="p"
+                                    className=" text-sm font-medium lg:font-semibold lg:text-lg"
+                                >
                                     0700 277 9800
                                 </Container>
-                                <Container as="p" className=" font-light text-sm lg:font-medium lg:text-base">
+                                <Container
+                                    as="p"
+                                    className=" font-light text-sm lg:font-medium lg:text-base"
+                                >
                                     Contact Support
                                 </Container>
                             </Container>
@@ -99,7 +127,9 @@ const Nav = () => {
                     </Container>
                 </Container>
             </Container>
-            <Container className={`side-bar block md:hidden ${sidebarOpen && "show-side-bar"}`}>
+            <Container
+                className={`side-bar block md:hidden ${sidebarOpen && "show-side-bar"}`}
+            >
                 <Container className=" flex items-end justify-end">
                     <button
                         onClick={() => setSidebarOpen(!sidebarOpen)}

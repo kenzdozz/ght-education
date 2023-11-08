@@ -16,7 +16,7 @@ const _Icon: FC<IconProps> = ({
     return (
         <Container
             as="i"
-            className={`Icon name__${name || ''} size__${size || 'inherit'} ${className || ''} ${crop ? 'overlow-clip' : ''
+            className={`Icon name__${name || ''} size__${size || 'inherit'} ${className || ''} ${crop ? 'overflow-clip' : ''
                 }`.trim()}
             role="img"
             aria-label={`${name || ''} icon`}

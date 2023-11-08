@@ -7,48 +7,53 @@ export const dataServices: { text: string, icon: SVGIconName, id: number }[] = [
         id: 0
     },
     {
-        text: `Immigration counseling for all categories of applicants. `,
-        icon: 'tourist',
+        text: `Professional Advisory Services on selection of study program Options`,
+        icon: 'school',
         id: 1
     },
     {
-        text: `Overseas universities admission placement.`,
-        icon: 'tourist',
+        text: `Immigration counseling for all categories of applicants. `,
+        icon: 'atom',
         id: 2
     },
     {
-        text: `Study visa Support`,
-        icon: 'tourist',
+        text: `Overseas universities admission placement.`,
+        icon: 'check',
         id: 3
     },
     {
-        text: `Flight booking and hotel reservation for our clients.`,
-        icon: 'tourist',
+        text: `Study visa Support`,
+        icon: 'ring',
         id: 4
     },
     {
-        text: `Pre-departure briefing`,
-        icon: 'tourist',
+        text: `Flight booking and hotel reservation for our clients.`,
+        icon: 'flight',
         id: 5
     },
     {
-        text: `Airport pick-up`,
-        icon: 'tourist',
+        text: `Pre-departure briefing`,
+        icon: 'speaker-phone',
         id: 6
+    },
+    {
+        text: `Airport pick-up`,
+        icon: 'plane-arrival',
+        id: 7
     },
     {
         text: `Visa refusal reversal`,
-        icon: 'tourist',
-        id: 6
+        icon: 'sad-face',
+        id: 8
     },
     {
         text: `Tourist visa guidance`,
-        icon: 'tourist',
-        id: 6
+        icon: 'petal',
+        id: 9
     },
     {
         text: `Private accommodation arrangement`,
-        icon: 'tourist',
-        id: 6
+        icon: 'accomodation',
+        id: 10
     },
 ]

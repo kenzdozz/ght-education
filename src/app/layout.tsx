@@ -30,7 +30,9 @@ export default function RootLayout({
       </head>
       <body className={popins.className}>
         <Nav />
-        {children}
+        <div className=' mt-14 md:mt-20'>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

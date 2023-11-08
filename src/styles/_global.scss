@@ -17,6 +17,10 @@ body {
   overflow-x: hidden !important;
 }
 
+main {
+  overflow-x: clip !important;
+}
+
 .homeHeadImage {
   position: absolute;
   top: 0;
@@ -107,11 +111,6 @@ body {
     }
   }
 
-  // @media screen and (min-width: 992px) {
-  //   .swiper-slide {
-  //     width: 31% !important;
-  //   }
-  // }
 }
 .text-gradient {
   background: linear-gradient(
@@ -143,20 +142,6 @@ body {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
-
-// Icon {
-//   display: inline-flex;
-//   font-size: inherit;
-//   align-items: center;
-//   justify-content: center;
-//   position: relative;
-//   font-style: normal;
-//   transition: opacity 0.3s, transform 0.3s;
-// }
-
-// svg {
-//   width: auto;
-// }
 
 .container {
   max-width: 96%;
@@ -191,5 +176,65 @@ body {
 .container {
   @media screen and (min-width: 1400px) {
     max-width: 1250px;
+  }
+}
+
+.Icon {
+  display: inline-flex;
+  font-size: inherit;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-style: normal;
+  color: inherit;
+  transition: opacity 0.3s, transform 0.3s;
+
+  &.size__tiny {
+    $size: 1.5rem;
+
+    width: $size;
+    min-width: $size;
+    height: $size;
+  }
+
+  &.size__small {
+    $size: 2rem;
+
+    width: $size;
+    min-width: $size;
+    height: $size;
+  }
+
+  &.size__medium {
+    $size: 3rem;
+
+    width: $size;
+    min-width: $size;
+    height: $size;
+  }
+
+  &.size__large {
+    $size: 4.5rem;
+
+    width: $size;
+    min-width: $size;
+    height: $size;
+  }
+
+  &.size__inherit {
+    $size: 1em;
+
+    width: $size;
+    min-width: $size;
+    height: $size;
+  }
+
+  > svg {
+    height: 100%;
+    width: 100%;
+    // fill: currentColor;
+    stroke: currentColor;
+    font-weight: inherit;
+    stroke-width: 2px;
   }
 }
