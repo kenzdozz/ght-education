@@ -2,7 +2,7 @@ import { SVGIconName } from "@/types";
 
 export const dataServices: { text: string, icon: SVGIconName, id: number }[] = [
     {
-        text: `Visa guidance and counseling to client's dependents, Visitor and Tourist for any choice country.`,
+        text: `Visa guidance and counseling to client's dependents, Visitor and Tourist.`,
         icon: 'tourist',
         id: 0
     },

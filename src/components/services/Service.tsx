@@ -13,7 +13,7 @@ const Service = () => {
                         <SVGIcon name={icon} />
                     </Container>
 
-                    <Container className=" mt-8 text-sm md:text-base text-center">{text}</Container>
+                    <Container className=" mt-8 text-sm text-center">{text}</Container>
                 </AnimateScrollReveal>
             )
         },
