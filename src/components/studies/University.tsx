@@ -8,7 +8,7 @@ const University = () => {
     return (
         <Container className=" container my-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <Container className=" col-span-1 lg:col-span-2">
-                <Container className=" rounded-md shadow-md py-9 px-11 mb-8">
+                <Container className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8">
                     <Container
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
@@ -26,7 +26,7 @@ const University = () => {
                         high standard of living.
                     </Container>
                 </Container>
-                <Container className=" rounded-md shadow-md py-9 px-11">
+                <Container className=" rounded-md shadow-md py-9 px-2 lg:px-11">
                     <Container
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
@@ -38,7 +38,7 @@ const University = () => {
             </Container>
 
             <Container>
-                <Container className=" rounded-md shadow-md py-9 px-11 mb-8">
+                <Container className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8">
                     <Container
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-2xl capitalize"

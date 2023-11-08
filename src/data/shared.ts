@@ -32,6 +32,10 @@ export const navMenuItems = [
         ],
     },
     {
+        title: 'Faqs',
+        url: '/faqs',
+    },
+    {
         title: 'Contact Us',
         url: '/contact',
     },
@@ -43,6 +47,7 @@ export const sideBarMenuItems = [
     { name: 'Our Services', url: '/services' },
     { name: 'Who We Are', url: '/about/story' },
     { name: 'Our Team', url: '/about/teams' },
+    { name: 'Faqs', url: '/faqs' },
     { name: 'Contact', url: '/contact' },
 ]
 
@@ -174,6 +179,10 @@ export const footerLinks = [
     {
         name: 'Contact',
         url: 'contact'
+    },
+    {
+        name: 'Faq',
+        url: 'faqs'
     },
 
 ]

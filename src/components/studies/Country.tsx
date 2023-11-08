@@ -110,7 +110,7 @@ const Country = () => {
                 </Container>
             </Container>
             <Container className=" container mb-8">
-                <div ref={aboutRef} className=" rounded-md shadow-md py-9 px-11 mb-8">
+                <div ref={aboutRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8">
                     <Container
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
@@ -128,14 +128,14 @@ const Country = () => {
                         high standard of living.
                     </Container>
                 </div>
-                <div ref={contactRef} className=" rounded-md shadow-md py-9 px-11 mb-8">
+                <div ref={contactRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8">
                     <Container
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
                         Get In touch with us to start you application
                     </Container>
-                    <Container className=" my-6 grid grid-cols-2 gap-5">
+                    <Container className=" my-6 grid grid-cols-1 md:grid-cols-2 gap-5">
                         <Container>
                             <Container
                                 as="label"
@@ -261,7 +261,7 @@ const Country = () => {
                         </button>
                     </Container>
                 </div>
-                <div ref={guideRef} className=" rounded-md shadow-md py-9 px-11">
+                <div ref={guideRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11">
                     <Container
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
