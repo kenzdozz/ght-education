@@ -125,17 +125,19 @@
 }
 
 .side-bar {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: $default-blue;
+  background-image: linear-gradient(to right,rgba(33, 33, 99, 0.95),rgba(33, 33, 99, 0.95), rgba(88, 11, 11, 0.95) );
+  // background-color: rgba(33, 33, 99, 0.95);
   padding: 2rem;
   transform: translateX(-100%);
   transition: all 0.5s ease-in-out;
+  z-index: 200;
 }
 
 .show-side-bar {

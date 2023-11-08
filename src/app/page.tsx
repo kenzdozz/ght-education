@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import { Header, Steps, Patners, Countries, Testimonies } from '@/components/home'
 import useScrollReveal from '@/utils/useScrollReveal'
 import { SearchInput } from '@/components/shared'

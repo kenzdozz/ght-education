@@ -1,3 +1,4 @@
+'use client'
 import React, { useCallback } from 'react'
 import Image from 'next/image'
 import { Container } from '../shared'
@@ -35,8 +36,10 @@ const Testimonies = () => {
 
     return (
         <Container className=' container my-20 bg-slate-100 rounded-sm py-9 px-5'>
-            <Container as='h4' className=' text-slate-700 text-center font-semibold text-xl mb-3 capitalize'>what our customers say</Container>
-            <Container className=' mt-14 overflow-x-hidden pt-6 relative transition-all pb-6 duration-300'
+            <Container className=' flex justify-center'>
+                <Container as='h4' className=' text-slate-700 font-semibold text-xl mb-0 capitalize textBorder relative'>what our customers say</Container>
+            </Container>
+            <Container className=' mt-14 overflow-x-hidden pt-3 relative transition-all pb-6 duration-300'
 
             >
                 <Swiper

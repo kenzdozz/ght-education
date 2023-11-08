@@ -13,9 +13,6 @@ const Header = () => {
         router.push(`/studies/countries/`);
     };
 
-    const navigateToCountry = (id: number) => {
-        router.push(`/studies/countries/${id}`);
-    };
     useEffect(() => {
         let slider = setInterval(() => {
             setIndex((oldIndex) => {

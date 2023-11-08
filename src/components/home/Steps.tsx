@@ -2,8 +2,13 @@ import React, { useCallback } from 'react'
 import Image from 'next/image'
 import { Container, AnimateScrollReveal } from '../shared'
 import { homeSteps } from '@/data'
+import { useRouter } from 'next/navigation'
 
 const Steps = () => {
+    const router = useRouter()
+    const navigateToContact = () => {
+        router.push(`/contact`);
+    };
     const renderSteps = useCallback(
         (item: any) => {
             return (
@@ -17,7 +22,7 @@ const Steps = () => {
                             objectFit="cover"
                         />
                     </AnimateScrollReveal>
-                    <AnimateScrollReveal id={`serice-txt${item.id}`} duration={1.5} delay={0.13} animName='fadeInLeft' className={` flex flex-col justify-between col-span-1 md:col-span-3 ${(item.id + 1) % 2 !== 0 ? ' -order-1' : ' '}`}>
+                    <AnimateScrollReveal id={`serice-txt${item.id}`} duration={1.34} delay={0.1} animName='fadeInLeft' className={` flex flex-col justify-between col-span-1 md:col-span-3 ${(item.id + 1) % 2 !== 0 ? ' -order-1' : ' '}`}>
                         <Container>
                             <Container as='h5' className=' text-slate-500 font-semibold text-lg mb-2 flex items-center'>
                                 <Container as='span' className="material-icons text-gradient-bottom mr-1">double_arrow</Container>
@@ -28,7 +33,7 @@ const Steps = () => {
                             <Container as='p'>{item.description}</Container>
                         </Container>
                         <Container className=' w-1/2 mt-2'>
-                            <button className='button button-primary'>Get Started</button>
+                            <button onClick={() => navigateToContact()} className='button button-primary'>Get Started</button>
                         </Container>
                     </AnimateScrollReveal>
                 </AnimateScrollReveal>

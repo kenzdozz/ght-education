@@ -1,5 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import { Container, MenuItems } from "./shared";
 import { NavItem } from "@/types";
 import { navMenuItems, sideBarMenuItems } from "@/data";
@@ -67,21 +68,24 @@ const Nav = () => {
         <>
             <Container
                 as="nav"
-                className={`Nav transition-all duration-300 ${scrolled ? " bg-blue-100" : " bg-white"
+                className={`Nav transition-all duration-300 ${scrolled ? " bg-white" : " bg-white"
                     } shadow-lg py-2 md:py-5 h-14 md:h-20`}
             >
                 <Container className=" container flex items-center justify-between">
-                    <Link href="/">
-                        <Container as="span" className=" text-red-600">
-                            Logo
-                        </Container>
+                    <Link href="/" className=" relative ">
+                        <Image
+                            src='/img/logo.png'
+                            alt="company logo"
+                            width={140}
+                            height={60}
+                        />
                     </Link>
                     <Container className="item-container hidden md:flex items-center gap-10">
                         {navMenuItems.map(renderNavs)}
                     </Container>
-                    <Container className=" hidden md:flex contact transition-all duration-300">
+                    <Container className=" hidden lg:flex contact transition-all duration-300">
                         <a
-                            href="tel:07032880693"
+                            href="tel:+234-903-0143-401"
                             className=" flex items-center transition-all duration-300"
                         >
                             <Container
@@ -97,7 +101,7 @@ const Nav = () => {
                                     as="p"
                                     className=" text-sm font-medium lg:font-semibold lg:text-lg"
                                 >
-                                    0700 277 9800
+                                    +234-903-0143-401
                                 </Container>
                                 <Container
                                     as="p"
