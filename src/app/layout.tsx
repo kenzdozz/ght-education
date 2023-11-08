@@ -27,6 +27,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={popins.className}>
         <Nav />
