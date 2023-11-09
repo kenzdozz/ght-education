@@ -20,6 +20,7 @@ const Steps = () => {
                             className=" rounded-2xl"
                             layout="fill"
                             objectFit="cover"
+                            priority={true}
                         />
                     </AnimateScrollReveal>
                     <AnimateScrollReveal id={`serice-txt${item.id}`} duration={1.34} delay={0.1} animName='fadeInLeft' className={` flex flex-col justify-between col-span-1 md:col-span-3 ${(item.id + 1) % 2 !== 0 ? ' -order-1' : ' '}`}>

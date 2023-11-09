@@ -19,9 +19,9 @@ const Nav = () => {
         return <MenuItems menu={nav} key={nav.url} />;
     }, []);
 
-    const renderSideNavs = useCallback((nav: { name: string; url: string }) => {
+    const renderSideNavs = useCallback((nav: { name: string; url: string }, i: number) => {
         return (
-            <Container onClick={() => navigateToPage(nav.url)}>
+            <Container key={i} onClick={() => navigateToPage(nav.url)}>
                 <Container
                     as="span"
                     className="text-white font-medium text-lg transition-all duration-200 hover:text-orange-200"

@@ -45,6 +45,7 @@ const Header = () => {
                         className=""
                         layout="fill"
                         objectFit="cover"
+                        priority={true}
                     />
                 </Container>
             );
