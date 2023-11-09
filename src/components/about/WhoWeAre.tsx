@@ -14,7 +14,7 @@ const WhoWeAre = () => {
                 </AnimateScrollReveal>
                 <AnimateScrollReveal duration={1.5} animName='fadeInLeft' delay={0.113} className=' w-full relative h-[24rem] rounded-md'>
                     <Image
-                        src='/img/about/about.jpg'
+                        src='/img/about/about.webp'
                         alt='waho-we-are'
                         layout='fill'
                         className=' rounded-md'

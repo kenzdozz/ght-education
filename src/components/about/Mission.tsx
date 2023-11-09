@@ -8,7 +8,7 @@ const Mission = () => {
             <AnimateScrollReveal duration={1.2} className=' container grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-20 mt-20 mb-10 items-center'>
                 <AnimateScrollReveal duration={1.5} delay={0.1} animName='fadeInRight' className=' w-full relative h-[18rem] rounded-md'>
                     <Image
-                        src='/img/about/mission.jpg'
+                        src='/img/about/mission.webp'
                         alt='waho-we-are'
                         layout='fill'
                         className=' rounded-md'

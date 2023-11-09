@@ -21,7 +21,7 @@ const Testimonies = () => {
                         </Container>
                         <Container className='rounded-full absolute z-10 left-1/2 -translate-x-1/2 -bottom-7 h-20 w-20 overflow-hidden '>
                             <Image
-                                src='/img/img1.jpg'
+                                src='/img/img1.webp'
                                 alt='img-pop'
                                 layout='fill'
                                 objectFit='cover'
@@ -82,7 +82,7 @@ const Testimonies = () => {
                     </Container>
                     <Container className='rounded-full absolute z-10 left-1/2 -translate-x-1/2 -bottom-7 h-20 w-20 overflow-hidden '>
                         <Image
-                            src='/img/img1.jpg'
+                            src='/img/img1.webp'
                             alt='img-pop'
                             layout='fill'
                             objectFit='cover'

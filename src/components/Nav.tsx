@@ -99,7 +99,7 @@ const Nav = () => {
                             <Container as="span" className=" ml-1 lg:ml-3">
                                 <Container
                                     as="p"
-                                    className=" text-sm font-medium lg:font-semibold lg:text-lg"
+                                    className=" text-sm font-medium lg:font-semibold lg:text-base"
                                 >
                                     +234-903-0143-401
                                 </Container>

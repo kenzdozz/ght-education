@@ -29,7 +29,7 @@ const Patners = () => {
                         <SwiperSlide key={i}>
 
                             <Image
-                                src='/img/img1.jpg'
+                                src='/img/img1.webp'
                                 alt='img-pop'
                                 width={100}
                                 height={50}

@@ -8,7 +8,7 @@ const Header = ({ img, head, text, isSearch = true }: { img?: string, head?: str
         <Container className={` w-full relative h-[30rem] ${S.Header}`}>
             <Container className={`absolute top-0 left-0 z-[1] w-full h-full`}>
                 <Image
-                    src={`${img ? img : '/img/img3.jpg'}`}
+                    src={`${img ? img : '/img/img3.webp'}`}
                     alt="Your Image"
                     className=""
                     layout="fill"
