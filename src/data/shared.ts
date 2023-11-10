@@ -398,3 +398,7 @@ export const process: { icon: SVGIconName, head: string, text: string }[] = [
         text: 'Your payment validates that your car reservation has been completed'
     },
 ]
+
+export const patners = [
+    '/img/logos/californialogo.webp', '/img/logos/cambridgelogo.svg', '/img/logos/harvardlogo.jpg', '/img/logos/kentuckylogo.jpg', '/img/logos/californialogo.webp', '/img/logos/cambridgelogo.svg', '/img/logos/harvardlogo.jpg', '/img/logos/kentuckylogo.jpg'
+]

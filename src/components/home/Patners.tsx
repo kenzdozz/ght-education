@@ -1,20 +1,36 @@
-'use client'
-import React from 'react'
-import Image from 'next/image'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Grid } from 'swiper/modules';
-import { Container } from '../shared'
+"use client";
+import React, { useCallback } from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Grid } from "swiper/modules";
+import { Container } from "../shared";
+import { patners } from "@/data";
 
 const Patners = () => {
+    const renderPatners = useCallback((item: string, i: number) => {
+        return (
+            <SwiperSlide key={i} >
+                <Container as='span' className=" relative flex items-center w-[150px] h-[110px]" >
+                    <Image
+                        src={item}
+                        alt="logo patners"
+                        width={140}
+                        height={100}
+                        className="transition-all duration-300 shrink-0 hover:-translate-y-1 cursor-pointer"
+                    />
+                </Container>
+            </SwiperSlide>
+        );
+    }, []);
+
     return (
-        <Container className=' container flex items-center gap-7 py-2 overflow-x-hidden'>
+        <Container className=" container flex items-center gap-7 py-2 overflow-x-hidden">
             <Swiper
-                slidesPerView={'auto'}
+                slidesPerView={"auto"}
                 speed={600}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
-                    pauseOnMouseEnter: true
                 }}
                 spaceBetween={30}
                 loop={true}
@@ -25,24 +41,20 @@ const Patners = () => {
                 className="mySwiper"
             >
                 {
-                    Array.from(Array(10)).map((_, i: number) => (
-                        <SwiperSlide key={i}>
-
-                            <Image
-                                src='/img/img1.webp'
-                                alt='img-pop'
-                                width={100}
-                                height={50}
-                                className='transition-all duration-300 shadow shrink-0 hover:-translate-y-1 cursor-pointer'
-                            />
-                        </SwiperSlide>
-                    ))
+                    patners.map(renderPatners)
                 }
-
             </Swiper>
-
+            {/* <Container as='span' className=" relative w-[100px] h-[80px] bg-red-100 overflow-hidden" >
+                <Image
+                    src='/img/logos/kentuckylogo.jpg'
+                    alt="logo patners"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-all duration-300 shrink-0 hover:-translate-y-1 cursor-pointer"
+                />
+            </Container> */}
         </Container>
-    )
-}
+    );
+};
 
-export default Patners
+export default Patners;
