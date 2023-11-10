@@ -1,3 +1,5 @@
+import { SVGIconName } from "@/types"
+
 export const navMenuItems = [
     {
         title: 'Study Abroad',
@@ -371,5 +373,28 @@ export const states: { text: string, value: string }[] = [
     {
         text: 'Zamfara',
         value: 'zamfara'
+    },
+]
+
+export const process: { icon: SVGIconName, head: string, text: string }[] = [
+    {
+        icon: 'apply',
+        head: 'CHECK REQUIREMENTS',
+        text: 'contact us with information to get you started'
+    },
+    {
+        icon: 'badge',
+        head: 'SEND DOCUMENTS',
+        text: 'complete the online booking, our team confirms booking and proceed'
+    },
+    {
+        icon: 'grad-cap',
+        head: 'ADMISSION/VISA',
+        text: 'Your payment validates that your car reservation has been completed'
+    },
+    {
+        icon: 'world',
+        head: 'TRAVEL',
+        text: 'Your payment validates that your car reservation has been completed'
     },
 ]
