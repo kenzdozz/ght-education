@@ -49,13 +49,21 @@ main {
 }
 
 .bg-gradient-primary {
-  background-image: linear-gradient(to right, $default-blue , $default-red) !important;
-        color: white;
+  background-image: linear-gradient(
+    to right,
+    $default-blue,
+    $default-red
+  ) !important;
+  color: white;
 }
 
 .bg-gradient-primary-bottom {
-  background-image: linear-gradient(to bottom, $default-red , $default-blue ) !important;
-        color: white;
+  background-image: linear-gradient(
+    to bottom,
+    $default-red,
+    $default-blue
+  ) !important;
+  color: white;
 }
 
 .text-default-blue {
@@ -116,7 +124,6 @@ main {
       width: 48% !important;
     }
   }
-
 }
 .text-gradient {
   background: linear-gradient(
@@ -124,7 +131,7 @@ main {
     $default-blue,
     $default-red,
     $default-red,
-    $default-blue,
+    $default-blue
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -136,7 +143,7 @@ main {
     $default-blue,
     $default-red,
     $default-red,
-    $default-blue,
+    $default-blue
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -149,43 +156,49 @@ main {
   backdrop-filter: blur(5px);
 }
 
-.container, .container-inner {
+.container,
+.container-inner {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.container, .container-inner {
+.container,
+.container-inner {
   @media screen and (min-width: 576px) {
     max-width: 540px;
   }
 }
 
-.container, .container-inner{
+.container,
+.container-inner {
   @media screen and (min-width: 768px) {
     max-width: 730px;
   }
 }
 
-.container, .container-inner {
+.container,
+.container-inner {
   @media screen and (min-width: 992px) {
     max-width: 960px;
   }
 }
 
-.container, .container-inner {
+.container,
+.container-inner {
   @media screen and (min-width: 1200px) {
     max-width: 1140px;
   }
 }
 
-.container, .container-inner {
+.container,
+.container-inner {
   @media screen and (min-width: 1400px) {
     max-width: 1250px;
   }
 }
 
-.container{
+.container {
   max-width: 100%;
   padding-left: 1.3rem;
   padding-right: 1.3rem;
@@ -255,12 +268,12 @@ main {
 
 .glass {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    min-width: auto;
-    // padding: 0.5rem 1.5rem;
-    height: max-content;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  min-width: auto;
+  // padding: 0.5rem 1.5rem;
+  height: max-content;
 }
 
 .header-home {
@@ -268,8 +281,12 @@ main {
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    background-image: linear-gradient(to right, $default-blue , $default-blue) !important;
-    >span {
+    background-image: linear-gradient(
+      to right,
+      $default-blue,
+      $default-blue
+    ) !important;
+    > span {
       color: white !important;
     }
     div {
@@ -281,15 +298,15 @@ main {
 .quote {
   position: relative;
   &:before {
-    content: open-quote; 
+    content: open-quote;
     position: absolute;
     left: -20px;
     top: 0;
-    font-size: 34px; 
+    font-size: 34px;
     color: rgb(17, 77, 77);
   }
   &::after {
-    content: close-quote; 
+    content: close-quote;
     font-size: 34px;
     color: rgb(17, 77, 77) !important;
   }
@@ -309,5 +326,5 @@ main {
 
 .animate-fading-pulse {
   animation: fadingPulse 5s infinite;
-  animation-delay: 5s; 
+  animation-delay: 5s;
 }

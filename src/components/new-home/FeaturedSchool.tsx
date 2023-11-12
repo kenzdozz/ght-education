@@ -2,10 +2,16 @@ import React, { useCallback, useRef } from 'react'
 import Image from 'next/image'
 import { Container } from '../shared'
 import { featureSchools } from '@/data/studies'
+import { useRouter } from 'next/navigation'
 
 const FeaturedSchool = () => {
     const [index, setIndex] = React.useState(0);
+    const router = useRouter()
     const intervalIdRef = useRef<any | undefined>(undefined);
+
+    const navigateToSchool = () => {
+        router.push(`/studies/countries/1/university/1`);
+    };
     const increaseCurrentIndex = () => {
         clearInterval(intervalIdRef.current);
         setIndex((prev) => {
@@ -46,7 +52,7 @@ const FeaturedSchool = () => {
                         <Container className=' pt-9'>
                             <Container as='h3' className=' text-white font-semibold mb-5 text-2xl'>{item.name}</Container>
                             <Container as='p' className=' text-white font-medium mb-3 text-xl'>{item.text}</Container>
-                            <button className=' bg-transparent border-2 border-white text-white rounded-md py-2 px-3 outline-none cursor-pointer'>Apply School</button>
+                            <button onClick={() => navigateToSchool()} className=' bg-transparent border-2 border-white text-white rounded-md py-2 px-3 outline-none cursor-pointer'>Apply School</button>
                         </Container>
                     </Container>
                     <Container className=' bg-white relative h-[15rem] md:h-full'>

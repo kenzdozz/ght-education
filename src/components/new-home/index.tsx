@@ -6,16 +6,20 @@ import useScrollReveal from '@/utils/useScrollReveal'
 import FeaturedSchool from './FeaturedSchool'
 import Testimonies from './Testimonies'
 import Patners from './Patners'
+import { ContactTab, Container } from '../shared'
 
 const HomeIndex = () => {
     const [newhomeRef] = useScrollReveal()
     return (
-        <main ref={newhomeRef} className='pt-10 lg:pt-20 pb-10'>
+        <main ref={newhomeRef} className='pt-10 lg:pt-14 pb-10'>
             <Header />
             <HeroSection />
             <FeaturedSchool />
             <Testimonies />
             <Patners />
+            {/* <Container className=' container-inner my-3'>
+                <ContactTab />
+            </Container> */}
         </main>
     )
 }
