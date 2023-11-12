@@ -43,7 +43,7 @@ const Steps = () => {
         [],
     )
     return (
-        <Container className='container'>
+        <Container className='container-inner'>
             {
                 homeSteps.map(renderSteps)
             }

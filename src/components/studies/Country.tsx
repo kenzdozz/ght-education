@@ -63,7 +63,7 @@ const Country = () => {
     );
     return (
         <>
-            <Container className=" container grid grid-cols-1 lg:grid-cols-4 gap-10 my-16">
+            <Container className=" container-inner grid grid-cols-1 lg:grid-cols-4 gap-10 my-16">
                 <Container as="aside" className="col-span-1">
                     <Container
                         as="h4"
@@ -109,7 +109,7 @@ const Country = () => {
                     </Container>
                 </Container>
             </Container>
-            <Container className=" container mb-8">
+            <Container className=" container-inner mb-8">
                 <div ref={aboutRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8">
                     <Container
                         as="h5"

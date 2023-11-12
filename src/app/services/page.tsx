@@ -13,7 +13,7 @@ const ServicePage = () => {
             <Header head='Our Services' />
             <Steps />
             <Service />
-            <Container className=' container mb-10'>
+            <Container className=' container-inner mb-10'>
                 <ContactTab />
             </Container>
             <Patners />

@@ -205,26 +205,26 @@ export const testimonies = [
     {
         name: 'Olinya Chaimaka',
         message: `teilmed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
-        img: '/img/img1.webp',
+        img: '/img/about/about.webp',
         id: 0
     },
     {
         name: 'Vivain Mmesoma',
         message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
-        img: '/img/img1.webp',
+        img: '/img/about/about.webp',
         id: 1
     },
 
     {
         name: 'Abimbola Okenwa',
         message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
-        img: '/img/img1.webp',
+        img: '/img/about/about.webp',
         id: 2
     },
     {
         name: 'Marylin Nkechi',
         message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
-        img: '/img/img1.webp',
+        img: '/img/about/about.webp',
         id: 3
     },
 ]

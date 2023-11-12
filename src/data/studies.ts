@@ -30,3 +30,42 @@ export const studyCountries = [
         url: 'countries'
     },
 ]
+
+export const featureSchools = [
+    {
+        img: '/img/img1.webp',
+        name: 'University of Alabama',
+        text: 'this is the best university to study in',
+        url: 'countries/uk'
+    },
+    {
+        img: '/img/img1.webp',
+        name: 'University of Alabama',
+        text: 'this is the best university to study in',
+        url: 'countries/uk'
+    },
+    {
+        img: '/img/img1.webp',
+        name: 'University of Alabama',
+        text: 'this is the best university to study in',
+        url: 'countries/uk'
+    },
+    {
+        img: '/img/img1.webp',
+        name: 'University of Alabama',
+        text: 'this is the best university to study in',
+        url: 'countries/uk'
+    },
+    {
+        img: '/img/img1.webp',
+        name: 'University of Alabama',
+        text: 'this is the best university to study in',
+        url: 'countries/uk'
+    },
+    {
+        img: '/img/img1.webp',
+        name: 'University of Alabama',
+        text: 'this is the best university to study in',
+        url: 'countries/uk'
+    },
+]

@@ -12,7 +12,7 @@ const ContactPage = () => {
         <main ref={contactRef}>
             <Header head={text} />
             <Contact />
-            <Container className=' container mb-8'>
+            <Container className=' container-inner mb-8'>
                 <ContactTab />
             </Container>
         </main>

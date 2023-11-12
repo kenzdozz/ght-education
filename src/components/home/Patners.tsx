@@ -24,7 +24,7 @@ const Patners = () => {
     }, []);
 
     return (
-        <Container className=" container flex items-center gap-7 py-2 overflow-x-hidden">
+        <Container className=" container-inner flex items-center gap-7 py-2 overflow-x-hidden">
             <Swiper
                 slidesPerView={"auto"}
                 speed={600}

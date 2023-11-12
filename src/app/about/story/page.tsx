@@ -14,7 +14,7 @@ const StoryPage = () => {
             <WhoWeAre />
             <Patners />
             <Mission />
-            <Container className=' my-8 container'>
+            <Container className=' my-8 container-inner'>
                 <ContactTab />
             </Container>
             <Vision />

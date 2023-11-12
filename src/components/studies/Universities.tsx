@@ -39,7 +39,7 @@ const Universities = () => {
         [],
     )
     return (
-        <Container className='container my-14'>
+        <Container className='container-inner my-14'>
             <Container
                 as="h4"
                 className="textBorder font-bold text-xl md:text-3xl capitalize"

@@ -5,7 +5,7 @@ import { Container, AnimateScrollReveal } from '../shared'
 const Vision = () => {
     return (
         <Container>
-            <AnimateScrollReveal duration={1.2} className=' container grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-20 mt-14 mb-10 items-center'>
+            <AnimateScrollReveal duration={1.2} className=' container-inner grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-20 mt-14 mb-10 items-center'>
                 <AnimateScrollReveal duration={1.5} delay={0.1} animName='fadeInRight' className='col-span-1 md:col-span-2'>
                     <Container as='h2' className=' capitalize text-gradient font-semibold text-3xl'>Our Vision</Container>
                     <Container as='p' className=' mt-4'>
