@@ -74,80 +74,27 @@ export const homeSteps = [
         head: "Contact us",
         description:
             "We serve any person or group interested in pursuing some form of training abroad. This could be either High school, foundation, top-up, undergraduate, graduate degree, post graduate, doctorate degree, industrial and executive Short courses, Specialist trainings overseas and online training programs.",
-        img: "/img/img1.webp",
+        img: "/img/woman.webp",
+        btnText: 'get started',
         id: 0,
     },
     {
         title: "We guide through the process",
         description:
             "We provide relevant career guidance taking into cognizance previous qualification, family and financial background; career interests and future goals to assist them choose the right course and institution.",
-        img: "/img/img2.webp",
+        img: "/img/graduation.webp",
         head: "Guidance",
+        btnText: 'get guidance',
         id: 1,
     },
     {
         title: "Immigration Counseling",
         description:
             "We also provide immigration counseling for all categories of applicants, flight booking and hotel reservation for our clients.",
-        img: "/img/img2.webp",
+        img: "/img/counseling.webp",
         head: "Counseling",
+        btnText: 'get counseling',
         id: 2,
-    },
-];
-
-export const homeCountries = [
-    {
-        img: "/img/img1.webp",
-        name: "United Kingdom",
-        url: "countries/uk",
-    },
-    {
-        img: "/img/img2.webp",
-        name: "United State",
-        url: "countries/us",
-    },
-    {
-        img: "/img/img3.webp",
-        name: "Canada",
-        url: "countries/canada",
-    },
-    {
-        img: "/img/img4.webp",
-        name: "Germany",
-        url: "countries/germany",
-    },
-    {
-        img: "/img/img4.webp",
-        name: "Australia",
-        url: "countries/australia",
-    },
-    {
-        img: "/img/img4.webp",
-        name: "View Others",
-        url: "countries",
-    },
-];
-
-export const footerCountries = [
-    {
-        name: "United Kingdom",
-        url: "countries/uk",
-    },
-    {
-        name: "United State",
-        url: "countries/us",
-    },
-    {
-        name: "Canada",
-        url: "countries/canada",
-    },
-    {
-        name: "Germany",
-        url: "countries/germany",
-    },
-    {
-        name: "Australia",
-        url: "countries/australia",
     },
 ];
 
@@ -271,26 +218,26 @@ export const faqs = [
 export const testimonies = [
     {
         name: "Olinya Chaimaka",
-        message: `teilmed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        message: `some text of users testimonies needed`,
         img: "/img/about/about.webp",
         id: 0,
     },
     {
         name: "Vivain Mmesoma",
-        message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        message: `some text of users testimonies needed`,
         img: "/img/about/about.webp",
         id: 1,
     },
 
     {
         name: "Abimbola Okenwa",
-        message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        message: `some text of users testimonies needed`,
         img: "/img/about/about.webp",
         id: 2,
     },
     {
         name: "Marylin Nkechi",
-        message: `Teilemed, you are just the best. Thanks for making me feel special on a day like this and to know my life matters. Ngozi was the superwoman that helped me out. Not all heroes wear capes indeed. Thanks a lot.`,
+        message: `some text of users testimonies needed`,
         img: "/img/about/about.webp",
         id: 3,
     },

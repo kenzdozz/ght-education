@@ -13,13 +13,14 @@ const Steps = () => {
         (item: any) => {
             return (
                 <AnimateScrollReveal id={`service${item.id}`} duration={1.3} key={item.id} className={`grid grid-cols-1 md:grid-cols-5 gap-12 items-center lg:gap-16 mt-20 mb-24`}>
-                    <AnimateScrollReveal duration={1.5} delay={0.123} id={`serice-img${item.id}`} animName='fadeInRight' className={`relative w-full col-span-1 md:col-span-2 h-[14rem] ${(item.id + 1) % 2 !== 0 ? ' -order-1 md:order-1 ml-auto' : ' '}`}>
+                    <AnimateScrollReveal duration={1.5} delay={0.123} id={`serice-img${item.id}`} animName='fadeInRight' className={`relative bg-red-100 w-full col-span-1 md:col-span-2 h-[14rem] ${(item.id + 1) % 2 !== 0 ? ' -order-1 md:order-1 ml-auto' : ' '}`}>
                         <Image
                             src={item.img}
                             alt="Your Image"
                             className=" rounded-2xl"
                             layout="fill"
                             objectFit="cover"
+                            objectPosition="center"
                             priority={true}
                         />
                     </AnimateScrollReveal>
@@ -34,7 +35,7 @@ const Steps = () => {
                             <Container as='p'>{item.description}</Container>
                         </Container>
                         <Container className=' w-1/2 mt-2'>
-                            <button onClick={() => navigateToContact()} className='button button-primary'>Get Started</button>
+                            <button onClick={() => navigateToContact()} className='button button-primary capitalize'>{item.btnText}</button>
                         </Container>
                     </AnimateScrollReveal>
                 </AnimateScrollReveal>

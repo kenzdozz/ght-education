@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import Image from "next/image";
 import { Container } from "./shared";
 import Link from "next/link";
-import { footerCountries, footerLinks } from "@/data";
+import { footerLinks } from "@/data";
 import { UserIcon, EnvelopeIcon, PhoneIcon, HomeIcon } from "@heroicons/react/20/solid";
 
 const Footer = () => {

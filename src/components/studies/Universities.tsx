@@ -1,11 +1,25 @@
-import React, { useCallback } from 'react'
+'use client'
+import React, { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Container, AnimateScrollReveal } from '../shared'
-import { studyCountries, studies } from '@/data/studies'
+import { Container, AnimateScrollReveal, Pagination } from '../shared'
+import { studies } from '@/data/studies'
 import { useRouter } from 'next/navigation'
 
 const Universities = () => {
     const router = useRouter();
+    const [currentPage, setCurrentPage] = useState(1);
+    const [limit, setLimit] = useState(10);
+    const newData = useCallback((): { name: string; country: string }[] => {
+        return Object.entries(studies).flatMap(([country, { schools }]) => {
+            return schools.map((school) => ({
+                name: school.school,
+                country
+            }));
+        });
+    }, [studies]);
+
+    const [data, setData] = useState(newData().slice(0, limit));
+    const [pageCount, setPageCount] = useState<number>(newData().length);
 
     const navigateToIdPage = (schoolId: number) => {
         router.push(`/studies/countries/1/university/${schoolId}`);
@@ -13,34 +27,33 @@ const Universities = () => {
     const handleSchoolClick = (country: string, schoolKey: string) => {
         router.push(`/studies/countries/${country}/university/${schoolKey}`);
     };
-    // const renderUniversities = useCallback(
-    //     ({ img, name, url }: { img: string, name: string, url: string }, i: number) => {
-    //         return (
-    //             <AnimateScrollReveal delay={i * 0.12} key={i} onClick={() => navigateToIdPage(i + 1)} className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}>
 
-    //                 <Container className=' w-full relative h-[12rem] rounded-t-md'>
-    //                     <Image
-    //                         src={`${img}`}
-    //                         alt='name'
-    //                         layout='fill'
-    //                         objectFit='cover'
-    //                     />
-    //                 </Container>
-    //                 <Container className=' mt-4 px-7 mb-4'>
-    //                     <Container as='h5' className='text-slate-500 text-center font-semibold text-lg mb-2'>
-    //                         {name}
-    //                     </Container>
-    //                     <Container as='p' className=" text-lg text-center">
-    //                         We assist in rendering support to individuals seeking any form of
-    //                         educational advancement overseas through personalized admission
-    //                         assistance and visa counseling.
-    //                     </Container>
-    //                 </Container>
-    //             </AnimateScrollReveal>
-    //         )
-    //     },
-    //     [],
-    // )
+    const onNext = () => {
+        if (currentPage < pageCount) {
+            updatePage(currentPage + 1);
+        }
+    };
+
+    const onPrevious = () => {
+        if (currentPage > 1) {
+            updatePage(currentPage - 1);
+        }
+    };
+
+    const updatePage = (pageNo: number): void => {
+        if (pageNo > pageCount) {
+            pageNo = 1;
+        }
+        const skip = (currentPage - 1) * limit;
+        setData(newData().slice(skip, skip + limit));
+        setCurrentPage(pageNo);
+        console.log(data, 'data');
+
+    };
+
+    useEffect(() => {
+        updatePage(currentPage);
+    }, [currentPage]);
     return (
         <Container className='container my-14'>
             <Container
@@ -50,37 +63,42 @@ const Universities = () => {
                 Explore Universities
             </Container>
             <Container className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 '>
-                {/* {
-                    studyCountries.map(renderUniversities)
-                } */}
-                {Object.entries(studies).map(([country, { schools }]) => (
-                    schools.map(({ school }, i: number) => (
-                        <AnimateScrollReveal delay={i * 0.085} key={school + i} onClick={() => handleSchoolClick(country, school)} className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}>
+                {
+                    data.map((el, i: number) => (
+                        <Container key={el.name + i} onClick={() => handleSchoolClick(el.country, el.name)} className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}>
 
                             <Container className=' w-full bg-blue-400 relative h-[12rem] rounded-t-md'>
                                 {/* <Image
-                            src={`${img}`}
-                            alt='name'
-                            layout='fill'
-                            objectFit='cover'
-                        /> */}
+                        src={`${img}`}
+                        alt='name'
+                        layout='fill'
+                        objectFit='cover'
+                    /> */}
                             </Container>
                             <Container className=' mt-4 px-7 mb-4'>
                                 <Container as='h5' className='text-slate-500 text-center font-semibold text-lg mb-2'>
-                                    {school}
+                                    {el.name}
                                 </Container>
                                 <Container as='p' className=" text-lg text-center">
-                                    {school} is a prestigous school in {country}.
+                                    {el.name} is a prestigous school in {el.country}.
                                 </Container>
                             </Container>
-                        </AnimateScrollReveal>
-                        // <li className='bg-red-100' key={school} onClick={() => handleSchoolClick(country, school)}>
-                        //     {school}
-                        // </li>
+                        </Container>
                     ))
-
-                ))}
+                }
             </Container>
+            {data?.length > 0 && (
+                <Container className="mt-9 w-auto flex items-center justify-center ">
+                    <Pagination
+                        currentPage={currentPage}
+                        totalCount={newData().length}
+                        pageSize={limit}
+                        onNext={onNext}
+                        onPrev={onPrevious}
+                        onPageChange={updatePage}
+                    />
+                </Container>
+            )}
         </Container>
     )
 }

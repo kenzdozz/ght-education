@@ -1,10 +1,47 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import { Container } from "../shared";
 import Faqs from "../Faqs";
 import { states } from "@/data";
 import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
 const University = ({ school }: { school: string }) => {
+    const [formSubmit, setFormSubmit] = useState(false);
+
+    const [values, setValue] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        state: '',
+    })
+    const isAnyValueEmpty = Object.values(values).some(value => value === '');
+
+    const handleFormInput = (
+        e: React.ChangeEvent<
+            HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+        >
+    ) => {
+        const { value, name } = e.target;
+        setValue((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+
+    };
+
+    const submitMessage = async () => {
+        setFormSubmit(true)
+        try {
+            console.log('submited');
+
+        } catch (error) {
+            console.log(error);
+
+        } finally {
+            setFormSubmit(false)
+        }
+    }
     return (
         <Container className=" container my-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <Container className=" col-span-1 lg:col-span-2">
@@ -57,8 +94,10 @@ const University = ({ school }: { school: string }) => {
                                 <UserIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
                                 <input
                                     type="text"
-                                    name="firstname"
+                                    name="firstName"
                                     placeholder="first name"
+                                    onChange={handleFormInput}
+                                    value={values.firstName}
                                     className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
                                 />
                             </Container>
@@ -79,6 +118,8 @@ const University = ({ school }: { school: string }) => {
                                     type="text"
                                     name="lastName"
                                     placeholder="surname"
+                                    onChange={handleFormInput}
+                                    value={values.lastName}
                                     className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
                                 />
                             </Container>
@@ -99,6 +140,8 @@ const University = ({ school }: { school: string }) => {
                                     type="email"
                                     name="email"
                                     placeholder="@gmail.com"
+                                    onChange={handleFormInput}
+                                    value={values.email}
                                     className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
                                 />
                             </Container>
@@ -117,30 +160,15 @@ const University = ({ school }: { school: string }) => {
                                 <PhoneIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
                                 <input
                                     type="tel"
-                                    name="phoneNumner"
+                                    name="phoneNumber"
                                     placeholder="0902345678"
+                                    onChange={handleFormInput}
+                                    value={values.phoneNumber}
                                     className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
                                 />
                             </Container>
                         </Container>
-                        <Container>
-                            <Container
-                                as="label"
-                                className="block mb-2 text-sm font-medium text-blue-600"
-                            >
-                                Highest Level of Education
-                            </Container>
-                            <select
-                                id="countries"
-                                className="bg-gray-50 h-12 border border-gray-300 text-gray-400 text-sm rounded-lg focus:border-gray-700 block w-full p-2.5"
-                            >
-                                <option selected>Choose a education level</option>
-                                <option value="bsc">Bachelors</option>
-                                <option value="msc">Masters</option>
-                                <option value="high-school">High School</option>
-                                {/* <option value="DE">Germany</option> */}
-                            </select>
-                        </Container>
+
                         <Container>
                             <Container
                                 as="label"
@@ -150,6 +178,9 @@ const University = ({ school }: { school: string }) => {
                             </Container>
                             <select
                                 id="states"
+                                onChange={handleFormInput}
+                                value={values.state}
+                                name="state"
                                 className="bg-transparent h-12 border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
                             >
                                 <option selected>Choose a state</option>
@@ -160,7 +191,7 @@ const University = ({ school }: { school: string }) => {
                         </Container>
                     </Container>
                     <Container className=" flex items-center justify-center mt-3">
-                        <button className=" bg-gradient-primary w-60 h-16 text-white text-base font-semibold rounded-md flex items-center transition-all duration-300 justify-center hover:-translate-y-1">
+                        <button disabled={isAnyValueEmpty} onClick={() => submitMessage()} className={`${isAnyValueEmpty ? ' bg-gray-400' : 'bg-gradient-primary'} w-60 h-16 text-white text-base font-semibold rounded-md flex items-center transition-all duration-300 justify-center hover:-translate-y-1`}>
                             Contact me with more info
                         </button>
                     </Container>

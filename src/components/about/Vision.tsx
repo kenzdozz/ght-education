@@ -14,11 +14,10 @@ const Vision = () => {
                 </AnimateScrollReveal>
                 <AnimateScrollReveal duration={1.5} delay={0.115} animName='fadeInLeft' className=' w-full relative h-[24rem] rounded-md'>
                     <Image
-                        src='/img/about/about.webp'
+                        src='/img/about/vision.jpg'
                         alt='waho-we-are'
                         layout='fill'
-                        className=' rounded-md'
-                        objectFit='cover'
+                        className=' rounded-md object-cover object-center'
                     />
                 </AnimateScrollReveal>
             </AnimateScrollReveal>

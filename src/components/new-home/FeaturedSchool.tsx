@@ -9,8 +9,8 @@ const FeaturedSchool = () => {
     const router = useRouter()
     const intervalIdRef = useRef<any | undefined>(undefined);
 
-    const navigateToSchool = () => {
-        router.push(`/studies/countries/1/university/1`);
+    const navigateToSchool = (country: string, schoolId: string) => {
+        router.push(`/studies/countries/${country}/university/${schoolId}`);
     };
     const increaseCurrentIndex = () => {
         clearInterval(intervalIdRef.current);
@@ -29,7 +29,7 @@ const FeaturedSchool = () => {
     };
     const renderSchools = useCallback(
         (
-            item: { img: string; name: string; text: string; url: string },
+            item: { img: string; name: string; country: string },
             itemIndex: number
         ) => {
             let position = "nextSlide";
@@ -51,8 +51,8 @@ const FeaturedSchool = () => {
                         <Container as='h2' className=' text-white font-semibold text-2xl'>View Featured Schools</Container>
                         <Container className=' pt-9'>
                             <Container as='h3' className=' text-white font-semibold mb-5 text-2xl'>{item.name}</Container>
-                            <Container as='p' className=' text-white font-medium mb-3 text-xl'>{item.text}</Container>
-                            <button onClick={() => navigateToSchool()} className=' bg-transparent border-2 border-white text-white rounded-md py-2 px-3 outline-none cursor-pointer'>Apply School</button>
+                            <Container as='p' className=' text-white font-medium mb-3 text-xl'>{item.name} is located in {item.country}</Container>
+                            <button onClick={() => navigateToSchool(item.country, item.name)} className=' bg-transparent border-2 border-white text-white rounded-md py-2 px-3 outline-none cursor-pointer'>Apply School</button>
                         </Container>
                     </Container>
                     <Container className=' bg-white relative h-[15rem] md:h-full'>

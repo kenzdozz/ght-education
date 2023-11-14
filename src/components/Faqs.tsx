@@ -23,7 +23,7 @@ const Faqs = ({ isRow = false }: { isRow?: boolean }) => {
                     }`}>
                     <Container className='flex items-center justify-between text-3xl cursor-pointer' onClick={() => toggleShow(id + 1)}>
 
-                        <Container as='h6' className={`text-sm uppercase w-10/12 flex items-center ${clickedId === id + 1 ? 'text-blue-600' : ' text-slate-800'}`}>
+                        <Container as='h6' className={` text-xs md:text-sm uppercase w-11/12 flex items-center ${clickedId === id + 1 ? 'text-blue-600' : ' text-slate-800'}`}>
                             <Container as='span' className=' flex bg-blue-500 w-6 h-6 text-lg mr-2 rounded-full items-center justify-center'>
                                 <Container as='span' className="material-icons text-white">question_mark</Container>
                             </Container>
