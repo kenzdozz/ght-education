@@ -72,10 +72,10 @@ const Universities = () => {
                     /> */}
                             </Container>
                             <Container className=' mt-4 px-7 mb-4'>
-                                <Container as='h5' className='text-slate-500 text-center font-semibold text-lg mb-2'>
+                                <Container as='h5' className='text-blue-800 uppercase text-center font-semibold text-lg mb-2'>
                                     {el.name}
                                 </Container>
-                                <Container as='p' className=" text-lg text-center">
+                                <Container as='p' className=" text-base text-center">
                                     {el.name} is a prestigous school in {el.country}.
                                 </Container>
                             </Container>

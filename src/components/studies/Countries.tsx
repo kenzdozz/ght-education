@@ -24,10 +24,10 @@ const Countries = () => {
                         />
                     </Container>
                     <Container className=' mt-4 px-7 mb-4'>
-                        <Container as='h5' className='text-slate-500 text-center font-semibold text-lg mb-2'>
+                        <Container as='h5' className='text-blue-800 text-center uppercase font-semibold text-lg mb-2'>
                             {item}
                         </Container>
-                        <Container as='p' className=" text-lg text-center">
+                        <Container as='p' className=" text-base text-center">
                             We assist in rendering support to individuals seeking any form of
                             educational advancement overseas through personalized admission
                             assistance and visa counseling in {item}.

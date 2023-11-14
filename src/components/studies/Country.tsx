@@ -144,7 +144,7 @@ const Country = ({ country }: { country: string }) => {
                         {data.map((item, i: number) => (
                             <Container
                                 key={i}
-                                className={`rounded-md relative w-full h-[15rem] bg-slate-400 ${S.CountryImage}`}
+                                className={`rounded-md relative w-full h-[15rem] bg-slate-300 ${S.CountryImage}`}
                             >
                                 <Container
                                     onClick={() => navigateToIdPage(item.school)}
@@ -169,7 +169,7 @@ const Country = ({ country }: { country: string }) => {
                     /> */}
                                 <Container
                                     as="h5"
-                                    className="text-white font-semibold text-2xl absolute left-0 top-1/2 z-[2]"
+                                    className="text-blue-800 font-semibold text-2xl absolute left-0 top-1/2 z-[2]"
                                 >
                                     {item.school}
                                 </Container>
@@ -312,23 +312,7 @@ const Country = ({ country }: { country: string }) => {
                                 />
                             </Container>
                         </Container>
-                        {/* <Container>
-                            <Container
-                                as="label"
-                                className="block mb-2 text-sm font-medium text-blue-600"
-                            >
-                                Highest Level of Education
-                            </Container>
-                            <select
-                                id="countries"
-                                className="bg-gray-50 h-12 border border-gray-300 text-gray-400 text-sm rounded-lg focus:border-gray-700 block w-full p-2.5"
-                            >
-                                <option selected>Choose a education level</option>
-                                <option value="bsc">Bachelors</option>
-                                <option value="msc">Masters</option>
-                                <option value="high-school">High School</option>
-                            </select>
-                        </Container> */}
+
                         <Container>
                             <Container
                                 as="label"
