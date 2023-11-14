@@ -84,7 +84,7 @@ export const featureSchools = [
 
 export const studies: StudiesData = {
     USA: {
-        img: '/img/img1.webp',
+        img: '/img/usa.jpg',
         schools: [
             {
                 school: "American University",
@@ -143,7 +143,7 @@ export const studies: StudiesData = {
         ],
     },
     Uk: {
-        img: '/img/img1.webp',
+        img: '/img/uk.jpg',
         schools: [
             {
                 school: "University of Worcester",
@@ -214,7 +214,7 @@ export const studies: StudiesData = {
         ],
     },
     canada: {
-        img: '/img/img1.webp',
+        img: '/img/canada.webp',
         schools: [
             { school: "Georgia college" },
             { school: "Toronto Metropolitan University" },
@@ -258,7 +258,7 @@ export const studies: StudiesData = {
         ],
     },
     ireland: {
-        img: '/img/img1.webp',
+        img: '/img/ireland.jpg',
         schools: [
             { school: "Technological University of the Shannon" },
             { school: "Dublin Business School" },
@@ -277,7 +277,7 @@ export const studies: StudiesData = {
         ],
     },
     newZealand: {
-        img: '/img/img1.webp',
+        img: '/img/New-Zealand.webp',
         schools: [
             { school: "Auckland University of Technology" },
             { school: "Victoria University of Wellington" },
@@ -294,7 +294,7 @@ export const studies: StudiesData = {
         ],
     },
     australia: {
-        img: '/img/img1.webp',
+        img: '/img/australia.jpg',
         schools: [
             { school: "International College of Management" },
             { school: "Edith Cowan University" },

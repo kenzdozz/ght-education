@@ -20,7 +20,7 @@ const Footer = () => {
     const renderLinks = useCallback(
         ({ name, url }: { name: string; url: string }, i: number) => {
             return (
-                <Link href={url} key={i} className=" hover:text-red-700">
+                <Link href={url} key={i} className=" hover:text-red-700 w-auto">
                     {name}
                 </Link>
             );
@@ -48,7 +48,7 @@ const Footer = () => {
                         Email: info@ghteducation.com
                     </Container>
                 </Container>
-                <Container className=" w-[35%] md:w-[15%] shrink-0">
+                <Container className=" w-[35%] md:w-[10%] shrink-0">
                     <Container as="h5" className="text-slate-800 font-semibold text-xl">
                         Links
                     </Container>
@@ -56,7 +56,7 @@ const Footer = () => {
                         {footerLinks.map(renderLinks)}
                     </Container>
                 </Container>
-                <Container className=" w-full md:w-[30%] text-sm shrink-0">
+                <Container className=" w-full md:w-[27%] text-sm shrink-0">
                     <Container as="h5" className="text-slate-800 font-semibold text-xl">
                         Head Office
                     </Container>
@@ -72,7 +72,7 @@ const Footer = () => {
                         <EnvelopeIcon className="pointer-events-none text-slate-900 w-6 h-6 mr-1" /> <a href="mailto:info@ghteducation.com">info@ghteducation.com</a> <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                     </Container>
                 </Container>
-                <Container className="w-full text-sm md:w-[20%] shrink-0">
+                <Container className="w-full text-sm md:w-[27%] shrink-0">
                     <Container as="h5" className="text-slate-800 font-semibold text-xl">
                         Branch Office
                     </Container>
