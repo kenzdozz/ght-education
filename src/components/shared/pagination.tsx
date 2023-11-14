@@ -16,7 +16,7 @@ type TPagination = {
     onPrev: () => void;
 };
 
-export function Pagination({
+export const Pagination = ({
     onPageChange,
     onPageSizeOptionChange,
     totalCount,
@@ -25,7 +25,7 @@ export function Pagination({
     pageSizeOptions,
     onNext,
     onPrev,
-}: TPagination) {
+}: TPagination) => {
     const pageCount = Math.ceil(totalCount / pageSize);
     const paginationRange = usePagination({
         currentPage,
@@ -117,11 +117,11 @@ export function Pagination({
     );
 }
 
-Pagination.defaultProps = {
-    totalCount: 0,
-    currentPage: 1,
-    pageSize: 15,
-    //   pageSizeOptions: [15, 25, 50, 100],
-    onPageChange: () => { },
-    //   onPageSizeOptionChange: () => {},
-};
+// Pagination.defaultProps = {
+//     totalCount: 0,
+//     currentPage: 1,
+//     pageSize: 15,
+//     //   pageSizeOptions: [15, 25, 50, 100],
+//     onPageChange: () => { },
+//     //   onPageSizeOptionChange: () => {},
+// };

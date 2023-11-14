@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import Image from 'next/image'
 import { Container, AnimateScrollReveal } from '../shared'
-import { studyCountries, studies } from '@/data/studies'
+import { studies } from '@/data/studies'
 import { useRouter } from 'next/navigation'
 
 const Countries = () => {

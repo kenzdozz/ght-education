@@ -45,8 +45,6 @@ const Universities = () => {
         const skip = (currentPage - 1) * limit;
         setData(newData().slice(skip, skip + limit));
         setCurrentPage(pageNo);
-        console.log(data, 'data');
-
     };
 
     useEffect(() => {

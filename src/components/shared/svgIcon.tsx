@@ -20,8 +20,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-chalkboard"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M8 19h-3a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v11a1 1 0 0 1 -1 1" />
@@ -50,8 +50,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-atom"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M12 12v.01" />
@@ -66,8 +66,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-check"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M5 12l5 5l10 -10" />
@@ -80,8 +80,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-topology-star-ring-3"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M10 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
@@ -112,8 +112,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-plane"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
@@ -126,8 +126,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-speakerphone"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M18 8a3 3 0 0 1 0 6" />
@@ -142,8 +142,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-plane-arrival"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M15.157 11.81l4.83 1.295a2 2 0 1 1 -1.036 3.863l-14.489 -3.882l-1.345 -6.572l2.898 .776l1.414 2.45l2.898 .776l-.12 -7.279l2.898 .777l2.052 7.797z" />
@@ -157,8 +157,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-mood-sad-2"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
@@ -174,8 +174,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-plant-2"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M2 9a10 10 0 1 0 20 0" />
@@ -192,8 +192,8 @@ const _SVGIcon: FC<
                                 className="icon icon-tabler icon-tabler-building-skyscraper"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M3 21l18 0" />
@@ -314,8 +314,8 @@ const _SVGIcon: FC<
                                 height="56"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                             >
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
@@ -323,7 +323,7 @@ const _SVGIcon: FC<
                         );
                     case "instagram":
                         return (
-                            <SVG xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-instagram" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <SVG xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-instagram" viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                                 <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />

@@ -34,7 +34,7 @@ const Faqs = ({ isRow = false, isSlice = false }: { isRow?: boolean, isSlice?: b
     const renderFaqs = useCallback(
         (item: { title: string; text: string }, id: number) => {
             return (
-                <Container className={`shadow-xl w-full rounded-xl bg-white overflow-hidden transition-max-h duration-1000 py-2 px-3 ${clickedId === id + 1 ? ' max-h-screen' : ' max-h-20'
+                <Container key={id} className={`shadow-xl w-full rounded-xl bg-white overflow-hidden transition-max-h duration-1000 py-2 px-3 ${clickedId === id + 1 ? ' max-h-screen' : ' max-h-20'
                     }`}>
                     <Container className='flex items-center justify-between text-3xl cursor-pointer' onClick={() => toggleShow(id + 1)}>
 

@@ -183,7 +183,7 @@ const University = ({ school }: { school: string }) => {
                                 name="state"
                                 className="bg-transparent h-12 border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
                             >
-                                <option selected>Choose a state</option>
+                                <option >Choose a state</option>
                                 {states.map((el) => (
                                     <option key={el.value} value={el.value}>{el.text}</option>
                                 ))}
