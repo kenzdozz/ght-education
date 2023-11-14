@@ -1,20 +1,23 @@
-'use client'
-import { Header, University } from '@/components/studies'
-import useScrollReveal from '@/utils/useScrollReveal'
-import { useParams } from 'next/navigation'
+import { studies } from '@/data/studies'
 import React from 'react'
+import UniversityP from './University'
 
-const UniversityPage = () => {
-    const [universityIdRef] = useScrollReveal()
-    const { schoolId } = useParams()
-    const decodedText = (schoolId as string).replace(/%20/g, ' ')
-    const text = `study in ${decodedText} universities`
+export const generateStaticParams = () => {
+    const data: { id: string; schoolId: string }[] = []
+    Object.keys(studies).map(id => {
+        studies[id].schools.forEach(s => {
+            data.push({
+                id,
+                schoolId: s.school,
+            })
+        })
+    })
+    return data
+}
 
+const UniversityPage = ({ params }: { params: { schoolId: string } }) => {
     return (
-        <main ref={universityIdRef}>
-            <Header head={text} />
-            <University school={decodedText as string} />
-        </main>
+        <UniversityP sid={params.schoolId}/>
     )
 }
 
