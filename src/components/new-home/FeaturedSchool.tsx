@@ -57,14 +57,13 @@ const FeaturedSchool = () => {
                     </Container>
                     <Container className=' bg-white relative h-[15rem] md:h-full'>
                         <Container className=' absolute left-0 md:-left-[20%] bg-red-100 z-[2] w-full md:w-[120%] top-1/2 -translate-y-1/2 rounded-md h-full md:h-[24rem]'>
-                            {/* <Image
+                            <Image
                                 src={item.img}
                                 alt="Your Image"
                                 className="rounded-md"
                                 layout="fill"
                                 objectFit="cover"
-                            /> */}
-                            <Container as='h4'>Img needed here</Container>
+                            />
                         </Container>
                     </Container>
                 </Container>

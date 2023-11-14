@@ -45,32 +45,32 @@ export const studyCountries = [
 
 export const featureSchools = [
     {
-        img: "/img/img1.webp",
+        img: "/img/alabama.webp",
         name: "University of Alabama",
         country: "USA",
     },
     {
-        img: "/img/img1.webp",
+        img: "/img/illiniosis.webp",
         name: "Illinois institute of technology",
         country: "USA",
     },
     {
-        img: "/img/img1.webp",
+        img: "/img/st-mary.webp",
         name: "St Mary's University London",
         country: "UK",
     },
     {
-        img: "/img/img1.webp",
+        img: "/img/portsmouth.webp",
         name: "University of Portsmouth",
         country: "UK",
     },
     {
-        img: "/img/img1.webp",
+        img: "/img/toronto.webp",
         name: "Toronto Metropolitan University",
         country: "canada",
     },
     {
-        img: "/img/img1.webp",
+        img: "/img/dublin.webp",
         name: "Dublin City University",
         country: "ireland",
     },

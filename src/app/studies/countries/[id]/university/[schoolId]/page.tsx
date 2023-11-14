@@ -3,22 +3,25 @@ import React from 'react'
 import UniversityP from './University'
 
 export const generateStaticParams = () => {
-    const data: { id: string; schoolId: string }[] = []
-    Object.keys(studies).map(id => {
+    const data: { id: string; schoolId: string }[] = [];
+
+    Object.keys(studies).forEach(id => {
         studies[id].schools.forEach(s => {
             data.push({
-                id,
-                schoolId: s.school,
-            })
-        })
-    })
-    return data
-}
+                id, // Adding the 'id' parameter
+                schoolId: encodeURIComponent(s.school), // Encoding the school name
+            });
+        });
+    });
 
-const UniversityPage = ({ params }: { params: { schoolId: string } }) => {
+    return data;
+};
+
+const UniversityPage = ({ params }: { params: { id: string; schoolId: string } }) => {
     return (
-        <UniversityP sid={params.schoolId}/>
-    )
-}
+        <UniversityP sid={params.schoolId} />
+    );
+};
+
 
 export default UniversityPage

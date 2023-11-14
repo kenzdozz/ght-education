@@ -9,7 +9,7 @@ const ServicePage = () => {
     const [serviceRef] = useScrollReveal()
     return (
         <main ref={serviceRef}>
-            <Header head='Our Services' />
+            <Header head='Our Services' img='/img/img4.webp' />
             <Steps />
             <Service />
             <Patners />

@@ -10,7 +10,7 @@ const FaqsPage = () => {
 
     return (
         <main ref={faqRef}>
-            <Header head='Frequent Questions' isSearch={false} />
+            <Header head='Frequent Questions' img='/img/img1.webp' />
             <Container className=' mt-16 mb-10 container'>
                 <Container className=' flex items-center justify-center'>
                     <Container className='textBorder font-bold text-xl md:text-3xl' as='h2'>

@@ -2,7 +2,6 @@
 import { Header } from '@/components/studies'
 import { Contact } from '@/components/contact'
 import React from 'react'
-import { ContactTab, Container } from '@/components/shared'
 import useScrollReveal from '@/utils/useScrollReveal'
 
 const ContactPage = () => {
@@ -10,11 +9,9 @@ const ContactPage = () => {
     const text = `contact our office around the country`
     return (
         <main ref={contactRef}>
-            <Header head={text} />
+            <Header head={text} img='/img/img2.webp' />
             <Contact />
-            {/* <Container className=' container mb-8'>
-                <ContactTab />
-            </Container> */}
+
         </main>
     )
 }

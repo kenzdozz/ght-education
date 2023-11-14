@@ -4,7 +4,6 @@ import { Mission, Vision, WhoWeAre } from '@/components/about'
 import React from 'react'
 import useScrollReveal from '@/utils/useScrollReveal'
 import { Patners } from '@/components/home'
-import { ContactTab, Container } from '@/components/shared'
 
 const StoryPage = () => {
     const [storyRef] = useScrollReveal()
@@ -14,9 +13,6 @@ const StoryPage = () => {
             <WhoWeAre />
             <Patners />
             <Mission />
-            <Container className=' my-8 container'>
-                <ContactTab />
-            </Container>
             <Vision />
         </main>
     )
