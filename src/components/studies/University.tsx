@@ -6,7 +6,7 @@ import { states } from "@/data";
 import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
 const University = ({ school }: { school: string }) => {
-    const [formSubmit, setFormSubmit] = useState(false);
+    const [formSubmit, setFormSubmit] = useState(true);
 
     const [values, setValue] = useState({
         firstName: '',
@@ -67,7 +67,7 @@ const University = ({ school }: { school: string }) => {
                     >
                         Guides and FAQ
                     </Container>
-                    <Faqs isRow />
+                    <Faqs isRow isSlice />
                 </Container>
             </Container>
 

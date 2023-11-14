@@ -21,9 +21,7 @@ const Universities = () => {
     const [data, setData] = useState(newData().slice(0, limit));
     const [pageCount, setPageCount] = useState<number>(newData().length);
 
-    const navigateToIdPage = (schoolId: number) => {
-        router.push(`/studies/countries/1/university/${schoolId}`);
-    };
+
     const handleSchoolClick = (country: string, schoolKey: string) => {
         router.push(`/studies/countries/${country}/university/${schoolKey}`);
     };

@@ -79,7 +79,7 @@ export interface NavItem {
         url: string,
     }[]
 }
-export type SVGIconName = 'tourist' | 'petal' | 'school' | 'check' | 'atom' | 'ring' | 'flight' | 'speaker-phone' | 'plane-arrival' | 'sad-face' | 'accomodation' | 'apply' | 'badge' | 'grad-cap' | 'world'
+export type SVGIconName = 'tourist' | 'petal' | 'school' | 'check' | 'atom' | 'ring' | 'flight' | 'speaker-phone' | 'plane-arrival' | 'sad-face' | 'accomodation' | 'apply' | 'badge' | 'grad-cap' | 'world' | 'face-book' | 'instagram'
 
 export interface IconProps {
     name?: SVGIconName & string;

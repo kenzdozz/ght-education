@@ -1,11 +1,16 @@
 "use client"
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { faqs } from '@/data';
 import { Container } from '@/components/shared';
+import { useRouter } from 'next/navigation';
 
-const Faqs = ({ isRow = false }: { isRow?: boolean }) => {
+const Faqs = ({ isRow = false, isSlice = false }: { isRow?: boolean, isSlice?: boolean }) => {
     const [clickedId, setClickedId] = useState(0)
-
+    const [end, setEnd] = useState(faqs.length)
+    const router = useRouter()
+    const navigateToFaq = () => {
+        router.push(`/faqs`);
+    };
     const toggleShow = (id: number) => {
         setClickedId((prev) => {
             if (id === prev) {
@@ -15,6 +20,16 @@ const Faqs = ({ isRow = false }: { isRow?: boolean }) => {
             }
         })
     }
+
+    useEffect(() => {
+        if (isSlice) {
+            setEnd(5)
+        } else {
+            setEnd(faqs.length)
+        }
+
+    }, [isSlice])
+
 
     const renderFaqs = useCallback(
         (item: { title: string; text: string }, id: number) => {
@@ -51,9 +66,16 @@ const Faqs = ({ isRow = false }: { isRow?: boolean }) => {
                 FAQS
                 <Container as='span' className="material-icons text-blue-500 ml-1">double_arrow</Container>
             </Container> */}
-            <Container className={`grid grid-cols-1 ${isRow ? 'md:grid-cols-1' : 'md:grid-cols-2'} gap-9 mt-7`}>
+            <Container className={`grid grid-cols-1 transition-all duration-200 ${isSlice ? ' max-h-full' : 'max-h-full'} ${isRow ? 'md:grid-cols-1' : 'md:grid-cols-2'} gap-9 mt-7`}>
                 {
-                    faqs.map(renderFaqs)
+                    faqs.slice(0, end).map(renderFaqs)
+                }
+                {
+                    (isSlice) && (
+                        <button onClick={() => navigateToFaq()} className='border-0 outline-none w-[8rem] h-[2.5rem] capitalize rounded-lg ml-auto text-white py-1 px-3 bg-gradient-primary'>
+                            See More
+                        </button>
+                    )
                 }
             </Container>
         </Container>

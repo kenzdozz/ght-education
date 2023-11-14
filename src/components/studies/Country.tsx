@@ -368,7 +368,7 @@ const Country = ({ country }: { country: string }) => {
                     >
                         Guides and FAQ
                     </Container>
-                    <Faqs />
+                    <Faqs isSlice />
                 </div>
             </Container>
         </>

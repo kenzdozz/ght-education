@@ -423,3 +423,8 @@ export const patners = [
     "/img/logos/harvardlogo.jpg",
     "/img/logos/kentuckylogo.jpg",
 ];
+
+export const socialMedia: { icon: SVGIconName, link: string }[] = [
+    { icon: 'face-book', link: 'https://www.facebook.com/profile.php?id=100070652747952&mibextid=ZbWKwL' },
+    { icon: 'instagram', link: 'https://www.instagram.com/ght_education' },
+]

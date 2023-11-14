@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
 import Image from "next/image";
-import { Container } from "./shared";
+import { Container, SVGIcon } from "./shared";
 import Link from "next/link";
-import { footerLinks } from "@/data";
-import { UserIcon, EnvelopeIcon, PhoneIcon, HomeIcon } from "@heroicons/react/20/solid";
+import { footerLinks, socialMedia } from "@/data";
+import { EnvelopeIcon, PhoneIcon, HomeIcon } from "@heroicons/react/20/solid";
 
 const Footer = () => {
     const renderCountries = useCallback(
@@ -46,6 +46,11 @@ const Footer = () => {
                     </Container>
                     <Container as="p" className=" text-slate-800">
                         Email: info@ghteducation.com
+                    </Container>
+                    <Container className=" flex items-center gap-4 flex-wrap">
+                        {
+                            socialMedia.map((el) => (<a key={el.link} href={el.link} target="__blank" className=" text-slate-800 w-8"><SVGIcon name={el.icon} size="tiny" /></a>))
+                        }
                     </Container>
                 </Container>
                 <Container className=" w-[35%] md:w-[10%] shrink-0">
