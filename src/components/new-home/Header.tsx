@@ -32,8 +32,9 @@ const Header = () => {
                     <Image
                         src={`/img/woman.webp`}
                         alt="Your Image"
-                        className=" object-cover object-center"
+                        className=" object-cover object-center w-auto h-auto"
                         layout='fill'
+                        objectFit='cover'
                     />
                 </Container>
             </Container>
