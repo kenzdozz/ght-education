@@ -21,7 +21,7 @@ const Service = () => {
     )
 
     return (
-        <Container className=" container-inner bg-slate-100 rounded-md py-10 px-3 my-10">
+        <Container className=" container bg-slate-100 rounded-md py-10 px-3 my-10">
             <Container className=" flex items-center justify-center">
                 <Container
                     as="h4"

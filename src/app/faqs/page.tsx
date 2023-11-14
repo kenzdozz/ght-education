@@ -11,7 +11,7 @@ const FaqsPage = () => {
     return (
         <main ref={faqRef}>
             <Header head='Frequent Questions' isSearch={false} />
-            <Container className=' mt-16 mb-10 container-inner'>
+            <Container className=' mt-16 mb-10 container'>
                 <Container className=' flex items-center justify-center'>
                     <Container className='textBorder font-bold text-xl md:text-3xl' as='h2'>
                         FAQS

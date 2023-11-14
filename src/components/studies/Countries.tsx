@@ -1,23 +1,23 @@
 import React, { useCallback } from 'react'
 import Image from 'next/image'
 import { Container, AnimateScrollReveal } from '../shared'
-import { studyCountries } from '@/data/studies'
+import { studyCountries, studies } from '@/data/studies'
 import { useRouter } from 'next/navigation'
 
 const Countries = () => {
     const router = useRouter();
 
-    const navigateToIdPage = (id: number) => {
+    const navigateToIdPage = (id: string) => {
         router.push(`/studies/countries/${id}`);
     };
     const renderCountries = useCallback(
-        ({ img, name, url }: { img: string, name: string, url: string }, i: number) => {
+        (item: string, i: number) => {
             return (
-                <AnimateScrollReveal delay={i * 0.12} key={i} onClick={() => navigateToIdPage(i + 1)} className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}>
+                <AnimateScrollReveal delay={i * 0.12} key={i} onClick={() => navigateToIdPage(item)} className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}>
 
                     <Container className=' w-full relative h-[12rem] rounded-t-md'>
                         <Image
-                            src={`${img}`}
+                            src={`${studies[item].img}`}
                             alt='name'
                             layout='fill'
                             objectFit='cover'
@@ -25,12 +25,12 @@ const Countries = () => {
                     </Container>
                     <Container className=' mt-4 px-7 mb-4'>
                         <Container as='h5' className='text-slate-500 text-center font-semibold text-lg mb-2'>
-                            {name}
+                            {item}
                         </Container>
                         <Container as='p' className=" text-lg text-center">
                             We assist in rendering support to individuals seeking any form of
                             educational advancement overseas through personalized admission
-                            assistance and visa counseling.
+                            assistance and visa counseling in {item}.
                         </Container>
                     </Container>
                 </AnimateScrollReveal>
@@ -39,7 +39,7 @@ const Countries = () => {
         [],
     )
     return (
-        <Container className=' container-inner my-14'>
+        <Container className=' container my-14'>
             <Container
                 as="h4"
                 className="textBorder font-bold text-xl md:text-3xl capitalize"
@@ -48,7 +48,7 @@ const Countries = () => {
             </Container>
             <Container className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14'>
                 {
-                    studyCountries.map(renderCountries)
+                    Object.keys(studies).map(renderCountries)
                 }
             </Container>
         </Container>

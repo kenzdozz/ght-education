@@ -9,7 +9,7 @@ const _MenuItems = ({ menu: nav, slug = false }: { menu: NavItem, slug?: boolean
     const [dropdown, setDropdown] = useState(false);
     const pathname = usePathname();
     return (
-        <Container as='span' className={`relative nav-menu ${pathname !== "/" &&
+        <Container as='span' className={`relative py-2 nav-menu ${pathname !== "/" &&
             nav.url !== "/" &&
             pathname.includes(nav.url)
             ? "active"
@@ -17,7 +17,7 @@ const _MenuItems = ({ menu: nav, slug = false }: { menu: NavItem, slug?: boolean
             }`} onMouseLeave={() => setDropdown(false)} onMouseEnter={() => setDropdown((prev) => !prev)}>
             {nav.subNav ? (
                 <>
-                    <button type="button" className='py-2 outline-none border-0' aria-haspopup="menu"
+                    <button type="button" className=' outline-none border-0' aria-haspopup="menu"
                         aria-expanded={dropdown ? "true" : "false"}
 
                     >
@@ -27,7 +27,7 @@ const _MenuItems = ({ menu: nav, slug = false }: { menu: NavItem, slug?: boolean
                 </>
             ) : (
                 <Link
-                    href={nav.url}>
+                    href={nav.url} className=''>
                     {nav.title}
                 </Link>
             )}

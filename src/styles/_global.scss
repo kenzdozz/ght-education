@@ -156,53 +156,57 @@ main {
   backdrop-filter: blur(5px);
 }
 
-.container,
-.container-inner {
-  max-width: 100%;
+.container {
+  max-width: 98%;
   margin-left: auto;
   margin-right: auto;
 }
+// .container {
+//   max-width: 950%;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
 .container,
-.container-inner {
+.container {
   @media screen and (min-width: 576px) {
     max-width: 540px;
   }
 }
 
 .container,
-.container-inner {
+.container {
   @media screen and (min-width: 768px) {
     max-width: 730px;
   }
 }
 
 .container,
-.container-inner {
+.container {
   @media screen and (min-width: 992px) {
     max-width: 960px;
   }
 }
 
 .container,
-.container-inner {
+.container {
   @media screen and (min-width: 1200px) {
     max-width: 1140px;
   }
 }
 
 .container,
-.container-inner {
+.container {
   @media screen and (min-width: 1400px) {
     max-width: 1250px;
   }
 }
 
-.container {
-  max-width: 100%;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
-}
+// .container {
+//   max-width: 100%;
+//   padding-left: 1.3rem;
+//   padding-right: 1.3rem;
+// }
 
 .Icon {
   display: inline-flex;

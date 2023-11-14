@@ -30,7 +30,7 @@ const Team = () => {
         [],
     )
     return (
-        <Container className=' container-inner mt-14 mb-10'>
+        <Container className=' container mt-14 mb-10'>
             <Container as='h2' className='text-gradient mb-10 font-semibold text-2xl'>
                 Our Exciting Teams
             </Container>

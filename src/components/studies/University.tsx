@@ -4,7 +4,7 @@ import Faqs from "../Faqs";
 import { states } from "@/data";
 import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
-const University = () => {
+const University = ({ school }: { school: string }) => {
     return (
         <Container className=" container my-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <Container className=" col-span-1 lg:col-span-2">
@@ -13,17 +13,14 @@ const University = () => {
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
-                        About Study in kenth university
+                        About Study in {school}
                     </Container>
                     <Container as="p" className=" my-4">
-                        When people think of Australia, they see wide open spaces of outback
-                        bush, kangaroos, koalas, and clean air and water.
+                        Drop a message for information on how to study in {school}
                     </Container>
-                    <Container as="p">Australia is so much more than that.</Container>
+                    <Container as="p">Our team will get back to you via an email with details on what to do next.</Container>
                     <Container as="p">
-                        Many international students choose to study in Australia because of
-                        its friendly, laid-back nature, excellent education system, and a
-                        high standard of living.
+                        Once again we congratulate you for taking this specila journey with us
                     </Container>
                 </Container>
                 <Container className=" rounded-md shadow-md py-9 px-2 lg:px-11">
@@ -33,7 +30,7 @@ const University = () => {
                     >
                         Guides and FAQ
                     </Container>
-                    <Faqs />
+                    <Faqs isRow />
                 </Container>
             </Container>
 

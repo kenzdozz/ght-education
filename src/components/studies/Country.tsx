@@ -2,68 +2,60 @@
 import React, { RefObject, useCallback, useRef } from "react";
 import Image from "next/image";
 import { AnimateScrollReveal, Container } from "../shared";
-import { studyCountries } from "@/data/studies";
+import { studyCountries, studies } from "@/data/studies";
 import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { useRouter, useParams } from "next/navigation";
 import S from "@/styles/pages/studies/study.module.scss";
 import Faqs from "../Faqs";
 import { states } from "@/data";
+// import S from '@/styles/pages/home/home.module.scss'
+
 type SectionRef = RefObject<HTMLDivElement>;
 
-const Country = () => {
+const Country = ({ country }: { country: string }) => {
     const router = useRouter();
     const contactRef = useRef(null);
     const guideRef = useRef(null);
     const aboutRef = useRef(null);
-    const { id } = useParams();
+    // const { id } = useParams();
 
     function scrollToSection(ref: SectionRef) {
-        console.log(ref, "refs");
-
         if (ref.current) {
             ref.current.scrollIntoView({ behavior: "smooth" });
         }
     }
 
-    const navigateToIdPage = (schoolId: number) => {
-        router.push(`/studies/countries/${id}/university/${schoolId}`);
+    const navigateToIdPage = (schoolId: string) => {
+        router.push(`/studies/countries/${country}/university/${schoolId}`);
     };
-    const renderCountries = useCallback(
-        (
-            { img, name, url }: { img: string; name: string; url: string },
-            i: number
-        ) => {
+    const renderSchools = useCallback(
+        (item: { school: string }, i: number) => {
             return (
-                <AnimateScrollReveal
-                    onClick={() => navigateToIdPage(1)}
-                    delay={i * 0.12}
-                    key={i}
-                    className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}
-                >
-                    <Container className=" w-full relative h-[12rem] rounded-t-md">
-                        <Image src={`${img}`} alt="name" layout="fill" objectFit="cover" />
+                <AnimateScrollReveal delay={i * 0.1} key={i} className={`rounded-md relative w-full h-[15rem] bg-slate-400 ${S.CountryImage}`}>
+                    <Container onClick={() => navigateToIdPage(item.school)} className={`${S.imageHover} cursor-pointer flex flex-col items-center justify-center gap-6`}>
+                        <Container as='h4' className=' capitalize text-white font-semibold text-lg'>Study in {item.school}</Container>
+
+                        <button className=' border-2 border-white bg-transparent rounded-md w-28 h-12 text-white outline-none'>
+                            Apply
+                        </button>
                     </Container>
-                    <Container className=" mt-4 px-7 mb-4">
-                        <Container
-                            as="h5"
-                            className="text-slate-500 text-center font-semibold text-lg mb-2"
-                        >
-                            {name}
-                        </Container>
-                        <Container as="p" className=" text-lg text-center">
-                            We assist in rendering support to individuals seeking any form of
-                            educational advancement overseas through personalized admission
-                            assistance and visa counseling.
-                        </Container>
+                    {/* <Image
+                        src={`${img}`}
+                        alt='name'
+                        layout='fill'
+                        objectFit='cover'
+                    /> */}
+                    <Container as='h5' className='text-white font-semibold text-2xl absolute left-0 top-1/2 z-[2]'>
+                        {item.school}
                     </Container>
                 </AnimateScrollReveal>
-            );
+            )
         },
-        []
-    );
+        [],
+    )
     return (
         <>
-            <Container className=" container-inner grid grid-cols-1 lg:grid-cols-4 gap-10 my-16">
+            <Container className=" container grid grid-cols-1 lg:grid-cols-4 gap-10 my-16">
                 <Container as="aside" className="col-span-1">
                     <Container
                         as="h4"
@@ -102,30 +94,27 @@ const Country = () => {
                         as="h4"
                         className="textBorder font-bold text-xl md:text-3xl capitalize"
                     >
-                        Explore Universities
+                        Explore Universities in {country}
                     </Container>
                     <Container className=" grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
-                        {studyCountries.map(renderCountries)}
+                        {studies[country].schools.map(renderSchools)}
                     </Container>
                 </Container>
             </Container>
-            <Container className=" container-inner mb-8">
+            <Container className=" container mb-8">
                 <div ref={aboutRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8">
                     <Container
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
-                        About Study in Uk
+                        About Study in {country}
                     </Container>
                     <Container as="p" className=" my-4">
-                        When people think of Australia, they see wide open spaces of outback
-                        bush, kangaroos, koalas, and clean air and water.
+                        Drop a message for information on how to study in {country}
                     </Container>
-                    <Container as="p">Australia is so much more than that.</Container>
+                    <Container as="p">Our team will get back to you via an email with details on what to do next.</Container>
                     <Container as="p">
-                        Many international students choose to study in Australia because of
-                        its friendly, laid-back nature, excellent education system, and a
-                        high standard of living.
+                        Once again we congratulate you for taking this specila journey with us
                     </Container>
                 </div>
                 <div ref={contactRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8">

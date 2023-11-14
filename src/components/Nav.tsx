@@ -68,8 +68,8 @@ const Nav = () => {
         <>
             <Container
                 as="nav"
-                className={`Nav transition-all duration-300 ${scrolled ? " bg-white" : " bg-white"
-                    } shadow-lg py-2 md:py-5 h-14 md:h-20`}
+                className={`Nav transition-all duration-300 ${scrolled ? " bg-blue-100 bg-opacity-90 " : " bg-white"
+                    } py-2 md:py-5 h-14 md:h-20`}
             >
                 <Container className=" container flex items-center justify-between">
                     <Link href="/" className=" relative ">

@@ -17,7 +17,7 @@ const HomeIndex = () => {
             <FeaturedSchool />
             <Testimonies />
             <Patners />
-            {/* <Container className=' container-inner my-3'>
+            {/* <Container className=' container my-3'>
                 <ContactTab />
             </Container> */}
         </main>

@@ -43,3 +43,31 @@
         }
     }
 }
+
+.CountryImage {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  
+    .imageHover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-color: rgba(1, 101, 178, 0.5);
+      z-index: -1;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    &:hover {
+      .imageHover {
+        z-index: 5;
+        opacity: 1;
+        pointer-events: visible;
+      }
+    }
+  }

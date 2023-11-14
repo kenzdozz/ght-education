@@ -8,7 +8,7 @@ import { Container } from ".";
 const _SearchInput = (): JSX.Element => {
 
     return (
-        <Container className="container-inner relative z-20">
+        <Container className="container relative z-20">
             <Container className="absolute left-1/2 w-full -translate-x-1/2 -top-7 z-10 h-12 border-2 border-blue-400 rounded-md bg-white flex items-center">
                 <input
                     type="text"

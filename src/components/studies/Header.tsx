@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { AnimateScrollReveal, Container, SearchInput } from '../shared'
+import { AnimateScrollReveal, Container } from '../shared'
 import S from '@/styles/pages/studies/study.module.scss'
 
 const Header = ({ img, head, text, isSearch = true }: { img?: string, head?: string, text?: string, isSearch?: boolean }) => {
@@ -27,9 +27,7 @@ const Header = ({ img, head, text, isSearch = true }: { img?: string, head?: str
                     )
                 }
             </Container>
-            {
-                isSearch && <SearchInput />
-            }
+
         </Container>
     )
 }

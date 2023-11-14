@@ -5,7 +5,7 @@ import { Container, AnimateScrollReveal } from '../shared'
 const WhoWeAre = () => {
     return (
         <Container>
-            <AnimateScrollReveal duration={1.2} className=' container-inner grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-20 mt-14 mb-10 items-center'>
+            <AnimateScrollReveal duration={1.2} className=' container grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-20 mt-14 mb-10 items-center'>
                 <AnimateScrollReveal duration={1.5} animName='fadeInRight' delay={0.1} className=' col-span-1 md:col-span-2'>
                     <Container as='h2' className=' capitalize text-gradient font-semibold text-3xl'>Who we are</Container>
                     <Container as='p' className=' mt-4'>

@@ -5,7 +5,7 @@ import { states } from "@/data";
 
 const Contact = () => {
     return (
-        <Container className=" my-16 container-inner">
+        <Container className=" my-16 container">
             <Container
                 as="h5"
                 className=" textBorder font-bold text-lg md:text-3xl capitalize"

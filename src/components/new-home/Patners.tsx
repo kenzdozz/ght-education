@@ -24,7 +24,7 @@ const Patners = () => {
     }, []);
     return (
         <Container className=' bg-blue-default py-5'>
-            <Container className=" container-inner overflow-x-hidden">
+            <Container className=" container overflow-x-hidden">
                 <Swiper
                     slidesPerView={"auto"}
                     speed={600}
