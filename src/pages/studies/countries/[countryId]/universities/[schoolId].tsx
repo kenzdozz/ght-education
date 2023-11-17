@@ -34,6 +34,8 @@ const UniversityPage = () => {
 
     useEffect(() => {
         if (router && router.query) {
+            console.log(router.query, 'query');
+
             const { countryId, schoolId } = router.query as Record<string, string>
 
             const country = studyCountries.find(c => c.slug === countryId);

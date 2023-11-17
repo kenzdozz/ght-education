@@ -10,7 +10,7 @@ const FeaturedSchool = () => {
     const intervalIdRef = useRef<any | undefined>(undefined);
 
     const navigateToSchool = (country: string, schoolId: string) => {
-        router.push(`/studies/countries/${country}/university/${schoolId}`);
+        router.push(`/studies/countries/${country}/universities/${schoolId}`);
     };
     const increaseCurrentIndex = () => {
         clearInterval(intervalIdRef.current);
@@ -29,7 +29,7 @@ const FeaturedSchool = () => {
     };
     const renderSchools = useCallback(
         (
-            item: { img: string; name: string; country: string },
+            item: { img: string; name: string; country: string, slug: string },
             itemIndex: number
         ) => {
             let position = "nextSlide";
@@ -52,7 +52,7 @@ const FeaturedSchool = () => {
                         <Container className=' pt-9'>
                             <Container as='h3' className=' text-white font-semibold mb-5 text-2xl'>{item.name}</Container>
                             <Container as='p' className=' text-white font-medium mb-3 text-xl'>{item.name} is located in {item.country}</Container>
-                            <button onClick={() => navigateToSchool(item.country, item.name)} className=' bg-transparent border-2 border-white text-white rounded-md py-2 px-3 outline-none cursor-pointer'>Apply School</button>
+                            <button onClick={() => navigateToSchool(item.country, item.slug)} className=' bg-transparent border-2 border-white text-white rounded-md py-2 px-3 outline-none cursor-pointer'>Apply School</button>
                         </Container>
                     </Container>
                     <Container className=' bg-white relative h-[15rem] md:h-full'>
@@ -62,7 +62,7 @@ const FeaturedSchool = () => {
                                 alt="Your Image"
                                 className="rounded-md"
                                 fill
-                                style={{objectFit:"cover"}}
+                                style={{ objectFit: "cover" }}
                             />
                         </Container>
                     </Container>

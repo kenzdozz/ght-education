@@ -20,13 +20,17 @@ interface StudiesData {
 }
 export const studyCountries: ICountry[] = [
     {
-        img: '/img/usa.jpg',
+        img: "/img/usa.jpg",
         name: "United States of America",
         slug: "usa",
         schools: [
             {
                 name: "American University",
                 slug: "american-university",
+            },
+            {
+                name: "University of Alabama",
+                slug: "university-of-alabam",
             },
             {
                 name: "Pace University",
@@ -99,7 +103,7 @@ export const studyCountries: ICountry[] = [
         ],
     },
     {
-        img: '/img/uk.jpg',
+        img: "/img/uk.jpg",
         name: "United Kingdom",
         slug: "uk",
         schools: [
@@ -194,29 +198,29 @@ export const studyCountries: ICountry[] = [
         ],
     },
     {
-        img: '/img/canada.webp',
+        img: "/img/canada.webp",
         name: "Canada",
         slug: "canada",
         schools: [
             {
                 name: "Georgia college",
-                slug: "georgia-college"
+                slug: "georgia-college",
             },
             {
                 name: "Toronto Metropolitan University",
-                slug: "toronto-metropolitan-university"
+                slug: "toronto-metropolitan-university",
             },
             {
                 name: "Fashawe college of Applied Arts and Technology",
-                slug: "fashawe-college-of-applied-arts-and-technology"
+                slug: "fashawe-college-of-applied-arts-and-technology",
             },
             {
                 name: "Brock University",
-                slug: "brock-university"
+                slug: "brock-university",
             },
             {
                 name: "LaSalle college Montreal",
-                slug: "lasalle-college-montreal"
+                slug: "lasalle-college-montreal",
             },
             {
                 name: "St Mary's University Canada",
@@ -224,178 +228,178 @@ export const studyCountries: ICountry[] = [
             },
             {
                 name: "Mount Allison University",
-                slug: "mount-allison-university"
+                slug: "mount-allison-university",
             },
             {
                 name: "Durham college",
-                slug: "durham-college"
+                slug: "durham-college",
             },
             {
                 name: "Coast mountain college",
-                slug: "coast-mountain-college"
+                slug: "coast-mountain-college",
             },
             {
                 name: "Great plain college",
-                slug: "great-plain-college"
+                slug: "great-plain-college",
             },
             {
                 name: "Centennial college",
-                slug: "centennial-college"
+                slug: "centennial-college",
             },
             {
                 name: "Conestoga college",
-                slug: "conestoga-college"
+                slug: "conestoga-college",
             },
             {
                 name: "Lakeland college",
-                slug: "lakeland-college"
+                slug: "lakeland-college",
             },
             {
                 name: "Niagara college Toronto",
-                slug: "niagara-college-toronto"
+                slug: "niagara-college-toronto",
             },
             {
                 name: "Fraser international College",
-                slug: "fraser-international-college"
+                slug: "fraser-international-college",
             },
             {
                 name: "Durham college",
-                slug: "durham-college"
+                slug: "durham-college",
             },
             {
                 name: "Great plain college",
-                slug: "great-plain-college"
+                slug: "great-plain-college",
             },
             {
                 name: "Mount Saint college",
-                slug: "mount-saint-college"
+                slug: "mount-saint-college",
             },
             {
                 name: "Canadore college",
-                slug: "canadore-college"
+                slug: "canadore-college",
             },
             {
                 name: "International college of Manitoba",
-                slug: "international-college-of-manitoba"
+                slug: "international-college-of-manitoba",
             },
             {
                 name: "University of Regina",
-                slug: "university-of-regina"
+                slug: "university-of-regina",
             },
             {
                 name: "Canadian college of technology and business",
-                slug: "canadian-college-of-technology-and-business"
+                slug: "canadian-college-of-technology-and-business",
             },
             {
                 name: "Nipssing University",
-                slug: "nipssing-university"
+                slug: "nipssing-university",
             },
             {
                 name: "Sault college",
-                slug: "sault-college"
+                slug: "sault-college",
             },
             {
                 name: "Algonquin college",
-                slug: "algonquin-college"
+                slug: "algonquin-college",
             },
             {
                 name: "Royal Road University",
-                slug: "royal-road-university"
+                slug: "royal-road-university",
             },
             {
                 name: "Seneca college",
-                slug: "seneca-college"
+                slug: "seneca-college",
             },
             {
                 name: "Alexander college",
-                slug: "alexander-college"
+                slug: "alexander-college",
             },
             {
                 name: "George Brown college",
-                slug: "george-brown-college"
+                slug: "george-brown-college",
             },
             {
                 name: "Cape Breton University",
-                slug: "cape-breton-university"
+                slug: "cape-breton-university",
             },
             {
                 name: "Tent University",
-                slug: "tent-university"
+                slug: "tent-university",
             },
             {
                 name: "St Lawrence college",
-                slug: "st-lawrence-college"
+                slug: "st-lawrence-college",
             },
             {
                 name: "Capitolano University",
-                slug: "capitolano-university"
+                slug: "capitolano-university",
             },
             {
                 name: "University of Canada west",
-                slug: "university-of-canada-west"
+                slug: "university-of-canada-west",
             },
             {
                 name: "Crandall University",
-                slug: "crandall-university"
+                slug: "crandall-university",
             },
             {
                 name: "Saskatchewan polytechnic",
-                slug: "saskatchewan-polytechnic"
+                slug: "saskatchewan-polytechnic",
             },
             {
                 name: "Adler University",
-                slug: "adler-university"
+                slug: "adler-university",
             },
             {
                 name: "Lambton college",
-                slug: "lambton-college"
+                slug: "lambton-college",
             },
             {
                 name: "Sheridan college",
-                slug: "sheridan-college"
+                slug: "sheridan-college",
             },
         ],
     },
     {
-        img: '/img/ireland.jpg',
+        img: "/img/ireland.jpg",
         name: "Ireland",
         slug: "ireland",
         schools: [
             {
                 name: "Technological University of the Shannon",
-                slug: "technological-university-of-the-shannon"
+                slug: "technological-university-of-the-shannon",
             },
             {
                 name: "Dublin Business School",
-                slug: "dublin-business-school"
+                slug: "dublin-business-school",
             },
             {
                 name: "Griffith College",
-                slug: "griffith-college"
+                slug: "griffith-college",
             },
             {
                 name: "University of Maynooth",
-                slug: "university-of-maynooth"
+                slug: "university-of-maynooth",
             },
             {
                 name: "University of Galway",
-                slug: "university-of-galway"
+                slug: "university-of-galway",
             },
             {
                 name: "Dublin City University",
-                slug: "dublin-city-university"
+                slug: "dublin-city-university",
             },
             {
                 name: "University of Limerick",
-                slug: "university-of-limerick"
+                slug: "university-of-limerick",
             },
             {
                 name: "Trinity College Dublin",
-                slug: "trinity-college-dublin"
+                slug: "trinity-college-dublin",
             },
             {
                 name: "Shannon college of Hotel Management",
-                slug: "shannon-college-of-hotel-management"
+                slug: "shannon-college-of-hotel-management",
             },
             {
                 name: "TU, Dublin (Dublin Institute of Technology and TU Blanchard's town",
@@ -403,85 +407,85 @@ export const studyCountries: ICountry[] = [
             },
             {
                 name: "University college cork",
-                slug: "university-college-cork"
+                slug: "university-college-cork",
             },
         ],
     },
     {
-        img: '/img/australia.jpg',
+        img: "/img/australia.jpg",
         name: "Australia",
         slug: "australia",
         schools: [
             {
                 name: "International College of Management",
-                slug: "international-college-of-management"
+                slug: "international-college-of-management",
             },
             {
                 name: "Edith Cowan University",
-                slug: "edith-cowan-university"
+                slug: "edith-cowan-university",
             },
             {
                 name: "Charles Darwin University",
-                slug: "charles-darwin-university"
+                slug: "charles-darwin-university",
             },
             {
                 name: "Central Queensland University",
-                slug: "central-queensland-university"
+                slug: "central-queensland-university",
             },
         ],
     },
     {
-        img: '/img/New-Zealand.webp',
+        img: "/img/New-Zealand.webp",
         name: "New Zealand",
         slug: "new-zealand",
         schools: [
             {
                 name: "Auckland University of Technology",
-                slug: "auckland-university-of-technology"
+                slug: "auckland-university-of-technology",
             },
             {
                 name: "Victoria University of Wellington",
-                slug: "victoria-university-of-wellington"
+                slug: "victoria-university-of-wellington",
             },
             {
                 name: "National Technology Institute NTEC",
-                slug: "national-technology-institute-ntec"
+                slug: "national-technology-institute-ntec",
             },
             {
                 name: "Southern Institute of Technology",
-                slug: "southern-institute-of-technology"
+                slug: "southern-institute-of-technology",
             },
             {
                 name: "Whitireia WelTec",
-                slug: "whitireia-weltec"
+                slug: "whitireia-weltec",
             },
             {
                 name: "Auckland Institute of Technology",
-                slug: "auckland-institute-of-technology"
+                slug: "auckland-institute-of-technology",
             },
             {
                 name: "Auckland Institute of Studies UG and Diplomas",
-                slug: "auckland-institute-of-studies-ug-and-diplomas"
+                slug: "auckland-institute-of-studies-ug-and-diplomas",
             },
             {
                 name: "Ara Institute of Canterbury",
-                slug: "ara-institute-of-canterbury"
+                slug: "ara-institute-of-canterbury",
             },
             {
                 name: "Unitec Institute of Technology",
-                slug: "unitec-institute-of-technology"
+                slug: "unitec-institute-of-technology",
             },
             {
                 name: "Pacific International Hotel Management School",
-                slug: "pacific-international-hotel-management-school"
+                slug: "pacific-international-hotel-management-school",
             },
             {
                 name: "New Zealand Tertiary College",
-                slug: "new-zealand-tertiary-college"
+                slug: "new-zealand-tertiary-college",
             },
             {
                 name: "Institute of Pacific United",
-                slug: "institute-of-pacific-united"
+                slug: "institute-of-pacific-united",
             },
         ],
     },
@@ -491,31 +495,37 @@ export const featureSchools = [
     {
         img: "/img/alabama.webp",
         name: "University of Alabama",
-        country: "USA",
+        country: "usa",
+        slug: "university-of-alabam",
     },
     {
         img: "/img/illiniosis.webp",
         name: "Illinois institute of technology",
-        country: "USA",
+        country: "usa",
+        slug: "illinois-institute-of-technology",
     },
     {
         img: "/img/st-mary.webp",
         name: "St Mary's University London",
-        country: "UK",
+        country: "uk",
+        slug: "st-mary-university-london",
     },
     {
         img: "/img/portsmouth.webp",
+        country: "uk",
         name: "University of Portsmouth",
-        country: "UK",
+        slug: "university-of-portsmouth",
     },
     {
         img: "/img/toronto.webp",
         name: "Toronto Metropolitan University",
         country: "canada",
+        slug: "toronto-metropolitan-university",
     },
     {
         img: "/img/dublin.webp",
         name: "Dublin City University",
         country: "ireland",
+        slug: "dublin-city-university",
     },
 ];
