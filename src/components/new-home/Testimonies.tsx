@@ -32,8 +32,8 @@ const Testimonies = () => {
                             src={item.img}
                             alt="Your Image"
                             className=""
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{objectFit:"cover"}}
                             priority={true}
                         /> */}
                         <Container as='h4'>Img needed here</Container>

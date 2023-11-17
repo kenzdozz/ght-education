@@ -16,9 +16,9 @@ const WhoWeAre = () => {
                     <Image
                         src='/img/about/about.webp'
                         alt='waho-we-are'
-                        layout='fill'
+                        fill
                         className=' rounded-md'
-                        objectFit='cover'
+                        style={{objectFit:"cover"}}
                     />
                 </AnimateScrollReveal>
             </AnimateScrollReveal>

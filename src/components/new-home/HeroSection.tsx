@@ -14,7 +14,7 @@ const HeroSection = () => {
                 <Image
                     src={`/img/woman.webp`}
                     alt="Your Image"
-                    layout="fill"
+                    fill
                     className=" object-cover object-center"
                 />
             </Container>

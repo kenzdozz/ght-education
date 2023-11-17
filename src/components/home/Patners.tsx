@@ -48,8 +48,8 @@ const Patners = () => {
                 <Image
                     src='/img/logos/kentuckylogo.jpg'
                     alt="logo patners"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{objectFit:"cover"}}
                     className="transition-all duration-300 shrink-0 hover:-translate-y-1 cursor-pointer"
                 />
             </Container> */}

@@ -18,9 +18,8 @@ const Steps = () => {
                             src={item.img}
                             alt="Your Image"
                             className=" rounded-2xl"
-                            layout="fill"
-                            objectFit="cover"
-                            objectPosition="center"
+                            fill
+                            style={{objectFit:"cover", objectPosition:"center"}}
                             priority={true}
                         />
                     </AnimateScrollReveal>

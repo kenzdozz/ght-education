@@ -1,29 +1,28 @@
 'use client'
 import React, { useCallback, useEffect, useState } from 'react'
-import Image from 'next/image'
-import { Container, AnimateScrollReveal, Pagination } from '../shared'
-import { studies } from '@/data/studies'
+import { Container, Pagination } from '../shared'
 import { useRouter } from 'next/navigation'
+import { ICountry, ISchool, studyCountries } from '@/data/studies'
 
 const Universities = () => {
     const router = useRouter();
     const [currentPage, setCurrentPage] = useState(1);
     const [limit, setLimit] = useState(10);
-    const newData = useCallback((): { name: string; country: string }[] => {
-        return Object.entries(studies).flatMap(([country, { schools }]) => {
-            return schools.map((school) => ({
-                name: school.school,
-                country
+    const newData = useCallback((): { country: ICountry; school: ISchool }[] => {
+        return studyCountries.flatMap((country) => {
+            return country.schools.map((school) => ({
+                school,
+                country,
             }));
         });
-    }, [studies]);
+    }, []);
 
     const [data, setData] = useState(newData().slice(0, limit));
     const [pageCount, setPageCount] = useState<number>(newData().length);
 
 
-    const handleSchoolClick = (country: string, schoolKey: string) => {
-        router.push(`/studies/countries/${country}/university/${schoolKey}`);
+    const handleSchoolClick = (item: { country: ICountry; school: ISchool; }) => {
+        router.push(`/studies/countries/${item.country.slug}/universities/${item.school.slug}`);
     };
 
     const onNext = () => {
@@ -60,23 +59,23 @@ const Universities = () => {
             </Container>
             <Container className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 '>
                 {
-                    data.map((el, i: number) => (
-                        <Container key={el.name + i} onClick={() => handleSchoolClick(el.country, el.name)} className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}>
+                    data.map((item, i: number) => (
+                        <Container key={item.school.slug + i} onClick={() => handleSchoolClick(item)} className={`rounded-md border-[1px]  relative w-full h-auto transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1`}>
 
                             <Container className=' w-full bg-blue-400 relative h-[12rem] rounded-t-md'>
                                 {/* <Image
                         src={`${img}`}
                         alt='name'
-                        layout='fill'
-                        objectFit='cover'
+                        fill
+                        style={{objectFit:"cover"}}
                     /> */}
                             </Container>
                             <Container className=' mt-4 px-7 mb-4'>
                                 <Container as='h5' className='text-blue-800 uppercase text-center font-semibold text-lg mb-2'>
-                                    {el.name}
+                                    {item.school.name}
                                 </Container>
                                 <Container as='p' className=" text-base text-center">
-                                    {el.name} is a prestigous school in {el.country}.
+                                    {item.school.name} is a prestigous school in {item.country.name}.
                                 </Container>
                             </Container>
                         </Container>

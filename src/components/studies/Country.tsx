@@ -1,8 +1,7 @@
 "use client";
 import React, { RefObject, useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import { AnimateScrollReveal, Container, Pagination } from "../shared";
-import { studies } from "@/data/studies";
+import { Container, Pagination } from "../shared";
+import { ICountry, ISchool } from "@/data/studies";
 import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/navigation";
 import S from "@/styles/pages/studies/study.module.scss";
@@ -11,7 +10,7 @@ import { states } from "@/data";
 
 type SectionRef = RefObject<HTMLDivElement>;
 
-const Country = ({ country }: { country: string }) => {
+const Country = ({ country }: { country: ICountry }) => {
     const router = useRouter();
     const contactRef = useRef(null);
     const guideRef = useRef(null);
@@ -20,10 +19,10 @@ const Country = ({ country }: { country: string }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [limit, setLimit] = useState(6);
     const newData = useCallback(() => {
-        return studies[country].schools.map((el) => el);
-    }, [studies, country]);
+        return country.schools.map((el) => el);
+    }, [country]);
 
-    const [data, setData] = useState(newData().slice(0, limit));
+    const [schools, setSchools] = useState(newData().slice(0, limit));
     const [pageCount, setPageCount] = useState<number>(newData().length);
     const [formSubmit, setFormSubmit] = useState(false);
 
@@ -55,8 +54,8 @@ const Country = ({ country }: { country: string }) => {
         }
     }
 
-    const navigateToIdPage = (schoolId: string) => {
-        router.push(`/studies/countries/${country}/university/${schoolId}`);
+    const navigateToIdPage = (school: ISchool) => {
+        router.push(`/studies/countries/${country.slug}/universities/${school.slug}`);
     };
     const onNext = () => {
         if (currentPage < pageCount) {
@@ -89,7 +88,7 @@ const Country = ({ country }: { country: string }) => {
             pageNo = 1;
         }
         const skip = (currentPage - 1) * limit;
-        setData(newData().slice(skip, skip + limit));
+        setSchools(newData().slice(skip, skip + limit));
         setCurrentPage(pageNo);
     };
 
@@ -138,23 +137,23 @@ const Country = ({ country }: { country: string }) => {
                         as="h4"
                         className="textBorder font-bold text-xl md:text-3xl capitalize"
                     >
-                        Explore Universities in {country}
+                        Explore Universities in {country.name}
                     </Container>
                     <Container className=" grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
-                        {data.map((item, i: number) => (
+                        {schools.map((item, i: number) => (
                             <Container
                                 key={i}
                                 className={`rounded-md relative w-full h-[15rem] bg-slate-300 ${S.CountryImage}`}
                             >
                                 <Container
-                                    onClick={() => navigateToIdPage(item.school)}
+                                    onClick={() => navigateToIdPage(item)}
                                     className={`${S.imageHover} cursor-pointer flex flex-col items-center justify-center gap-6`}
                                 >
                                     <Container
                                         as="h4"
                                         className=" capitalize text-white font-semibold text-lg"
                                     >
-                                        Study in {item.school}
+                                        Study in {item.name}
                                     </Container>
 
                                     <button className=" border-2 border-white bg-transparent rounded-md w-28 h-12 text-white outline-none">
@@ -164,19 +163,19 @@ const Country = ({ country }: { country: string }) => {
                                 {/* <Image
                         src={`${img}`}
                         alt='name'
-                        layout='fill'
-                        objectFit='cover'
+                        fill
+                        style={{objectFit:"cover"}}
                     /> */}
                                 <Container
                                     as="h5"
                                     className="text-blue-800 font-semibold text-2xl absolute left-0 top-1/2 z-[2]"
                                 >
-                                    {item.school}
+                                    {item.name}
                                 </Container>
                             </Container>
                         ))}
                     </Container>
-                    {data?.length > 0 && (
+                    {schools?.length > 0 && (
                         <Container className="mt-9 w-auto flex items-center justify-center ">
                             <Pagination
                                 currentPage={currentPage}
@@ -199,10 +198,10 @@ const Country = ({ country }: { country: string }) => {
                         as="h5"
                         className=" textBorder font-bold text-lg md:text-3xl capitalize"
                     >
-                        About Study in {country}
+                        About Study in {country.name}
                     </Container>
                     <Container as="p" className=" my-4">
-                        Drop a message for information on how to study in {country}
+                        Drop a message for information on how to study in {country.name}
                     </Container>
                     <Container as="p">
                         Our team will get back to you via an email with details on what to

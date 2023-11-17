@@ -1,5 +1,6 @@
 'use client'
 import Faqs from '@/components/Faqs'
+import Page from '@/components/Page'
 import { Container } from '@/components/shared'
 import { Header } from '@/components/studies'
 import useScrollReveal from '@/utils/useScrollReveal'
@@ -9,7 +10,7 @@ const FaqsPage = () => {
     const [faqRef] = useScrollReveal()
 
     return (
-        <main ref={faqRef}>
+        <Page mainRef={faqRef}>
             <Header head='Frequent Questions' img='/img/img1.webp' />
             <Container className=' mt-16 mb-10 container'>
                 <Container className=' flex items-center justify-center'>
@@ -19,7 +20,7 @@ const FaqsPage = () => {
                 </Container>
                 <Faqs />
             </Container>
-        </main>
+        </Page>
     )
 }
 

@@ -22,19 +22,9 @@ export const navMenuItems = [
     {
         title: "About Us",
         url: "/about",
-        subNav: [
-            {
-                title: "Who We Are",
-                url: "story",
-            },
-            {
-                title: "Our Team",
-                url: "teams",
-            },
-        ],
     },
     {
-        title: "Faqs",
+        title: "FAQs",
         url: "/faqs",
     },
     {
@@ -104,7 +94,7 @@ export const footerLinks = [
         url: "studies/countries/",
     },
     {
-        name: "Uversities",
+        name: "Universities",
         url: "studies/schools",
     },
     {
@@ -112,19 +102,15 @@ export const footerLinks = [
         url: "services",
     },
     {
-        name: "Who we are",
-        url: "about/story",
-    },
-    {
-        name: "Teams",
-        url: "about/teams",
+        name: "About us",
+        url: "about",
     },
     {
         name: "Contact",
         url: "contact",
     },
     {
-        name: "Faq",
+        name: "FAQs",
         url: "faqs",
     },
 ];

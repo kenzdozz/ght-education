@@ -11,8 +11,8 @@ const Header = ({ img, head, text, isSearch = true }: { img?: string, head?: str
                     src={`${img ? img : '/img/img3.webp'}`}
                     alt="Your Image"
                     className=""
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{objectFit:"cover"}}
                 />
             </Container>
             <Container className=' container relative h-full overflow-hidden z-20 flex flex-col justify-center'>
