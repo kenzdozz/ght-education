@@ -10,9 +10,9 @@ const Mission = () => {
                     <Image
                         src='/img/about/mission.webp'
                         alt='waho-we-are'
-                        layout='fill'
+                        fill
                         className=' rounded-md'
-                        objectFit='cover'
+                        style={{objectFit:"cover"}}
                     />
                 </AnimateScrollReveal>
                 <AnimateScrollReveal duration={1.5} delay={0.115} animName='fadeInLeft' className='col-span-1 md:col-span-2'>

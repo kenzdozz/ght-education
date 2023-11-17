@@ -22,8 +22,7 @@ const _NavSubMenu = ({
         <Container as='ul' className={`dropdown ${dropdown ? "show" : ""}`}>
             {subitem.map((submenu, index) => (
                 <Container as='li' key={index} >
-                    <Link
-                        href={`${parenturl}/${submenu.url}`} className="menu-items">
+                    <Link href={`${parenturl}/${submenu.url}`} className="menu-items">
                         {submenu.title}
                         <Container as='span' className="material-icons submenu-icon text-blue-500">double_arrow</Container>
                     </Link>

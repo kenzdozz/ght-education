@@ -5,7 +5,7 @@ import { Container, MenuItems } from "./shared";
 import { NavItem } from "@/types";
 import { navMenuItems, sideBarMenuItems } from "@/data";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 const Nav = () => {
     const router = useRouter();

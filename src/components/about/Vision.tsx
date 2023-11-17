@@ -16,7 +16,7 @@ const Vision = () => {
                     <Image
                         src='/img/about/vision.jpg'
                         alt='waho-we-are'
-                        layout='fill'
+                        fill
                         className=' rounded-md object-cover object-center'
                     />
                 </AnimateScrollReveal>

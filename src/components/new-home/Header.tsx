@@ -33,14 +33,14 @@ const Header = () => {
                         src={`/img/woman.webp`}
                         alt="Your Image"
                         className=" object-cover object-center w-auto h-auto"
-                        layout='fill'
-                        objectFit='cover'
+                        fill
+                        style={{objectFit:"cover"}}
                     />
                 </Container>
             </Container>
             <Container className={`container mt-10 mb-10 ${S.headBottomPsuedo}`}>
                 <AnimateScrollReveal>
-                    <AnimateScrollReveal animName='fadeInLeft' duration={1.12} delay={0.12} as='p' className=' text-slate-800 mb-0 font-semibold text-xl md:text-3xl'>below are our processes</AnimateScrollReveal>
+                    <AnimateScrollReveal animName='fadeInLeft' duration={1.12} delay={0.12} as='p' className=' text-slate-800 mb-0 font-semibold text-xl md:text-3xl'>begin your journey with us</AnimateScrollReveal>
                 </AnimateScrollReveal>
                 <AnimateScrollReveal duration={1.5} allowOverflow className=' relative z-[2] grid grid-cols-2 md:grid-cols-4 gap-3 mt-5'>
                     {

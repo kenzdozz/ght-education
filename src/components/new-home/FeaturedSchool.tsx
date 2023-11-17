@@ -61,8 +61,8 @@ const FeaturedSchool = () => {
                                 src={item.img}
                                 alt="Your Image"
                                 className="rounded-md"
-                                layout="fill"
-                                objectFit="cover"
+                                fill
+                                style={{objectFit:"cover"}}
                             />
                         </Container>
                     </Container>
@@ -110,8 +110,8 @@ const FeaturedSchool = () => {
                             src={`/img/hero1.webp`}
                             alt="Your Image"
                             className="rounded-md"
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{objectFit:"cover"}}
                         />
                     </Container>
                 </Container>

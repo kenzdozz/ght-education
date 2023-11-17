@@ -21,8 +21,8 @@ const Team = () => {
                         src={item.img}
                         alt={item.name}
                         className=" rounded-2xl shadow-2xl"
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{objectFit:"cover"}}
                     /> */}
                     <Container>Image needed</Container>
                 </AnimateScrollReveal>
