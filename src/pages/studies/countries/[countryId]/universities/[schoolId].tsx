@@ -1,6 +1,6 @@
 import Page from '@/components/Page'
 import { Header, University } from '@/components/studies'
-import { ISchool, studyCountries } from '@/data/studies'
+import { ISchool, STUDY_COUNTRIES } from '@/data/studies'
 import useScrollReveal from '@/utils/useScrollReveal'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react'
 export async function getStaticPaths() {
     const paths: { params: { countryId: string; schoolId: string } }[] = [];
 
-    studyCountries.map(country => {
+    STUDY_COUNTRIES.map(country => {
         country.schools.forEach(school => {
             paths.push({
                 params: {
@@ -38,7 +38,7 @@ const UniversityPage = () => {
 
             const { countryId, schoolId } = router.query as Record<string, string>
 
-            const country = studyCountries.find(c => c.slug === countryId);
+            const country = STUDY_COUNTRIES.find(c => c.slug === countryId);
             setSchool(country?.schools.find(s => s.slug === schoolId));
         }
     }, [router]);

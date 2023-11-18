@@ -2,14 +2,14 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { Container, Pagination } from '../shared'
 import { useRouter } from 'next/navigation'
-import { ICountry, ISchool, studyCountries } from '@/data/studies'
+import { ICountry, ISchool, STUDY_COUNTRIES } from '@/data/studies'
 
 const Universities = () => {
     const router = useRouter();
     const [currentPage, setCurrentPage] = useState(1);
     const [limit, setLimit] = useState(10);
     const newData = useCallback((): { country: ICountry; school: ISchool }[] => {
-        return studyCountries.flatMap((country) => {
+        return STUDY_COUNTRIES.flatMap((country) => {
             return country.schools.map((school) => ({
                 school,
                 country,

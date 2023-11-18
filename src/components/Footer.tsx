@@ -41,8 +41,7 @@ const Footer = () => {
                         />
                     </Link>
                     <Container as="p" className=" text-slate-800 text-sm">
-                        We are a company that help you get your dream abroad school and
-                        study with low stress
+                        Your partner for successful education abroad since 2017. Expert admissions and visa support.
                     </Container>
                     <Container as="p" className=" text-slate-800">
                         Email: info@ghteducation.com

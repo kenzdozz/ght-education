@@ -3,10 +3,10 @@ import { Header, Country } from '@/components/studies'
 import useScrollReveal from '@/utils/useScrollReveal'
 import { useRouter } from 'next/router'
 import Page from '@/components/Page'
-import { ICountry, studyCountries } from '@/data/studies'
+import { ICountry, STUDY_COUNTRIES } from '@/data/studies'
 
 export async function getStaticPaths() {
-    const paths = studyCountries.map(country => ({
+    const paths = STUDY_COUNTRIES.map(country => ({
         params: { countryId: country.slug },
     }))
 
@@ -26,7 +26,7 @@ const CountryPage = () => {
     useEffect(() => {
         if (router && router.query) {
             const { countryId } = router.query as Record<string, string>;
-            setCountry(studyCountries.find(c => c.slug === countryId));
+            setCountry(STUDY_COUNTRIES.find(c => c.slug === countryId));
         }
     }, [router]);
 

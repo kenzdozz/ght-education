@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { AnimateScrollReveal, Container } from '../shared'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
+import S from "@/styles/pages/home/home.module.scss";
 
 const HeroSection = () => {
     const router = useRouter()
@@ -19,15 +20,15 @@ const HeroSection = () => {
                 />
             </Container>
             <Container className=' container flex flex-col items-center md:items-end justify-center h-full'>
-                <AnimateScrollReveal duration={1.3} className=' glass w-full md:w-2/3 lg:w-1/2 py-20 px-8'>
-                    <AnimateScrollReveal animName='fadeInRight' duration={1.75} delay={0.12} as='h3' className=' text-2xl font-bold text-default-blue capitalize'>
-                        See Schools of your choice and choose
+                <AnimateScrollReveal duration={1.3} className={` glass w-full md:w-2/3 lg:w-1/2 py-20 px-8 ${S.bgWhite50t}`}>
+                    <AnimateScrollReveal animName='fadeInRight' duration={1.75} delay={0.12} as='h3' className=' mb-2 text-2xl font-bold text-default-blue capitalize'>
+                        Explore and Choose Your Preferred Schools
                     </AnimateScrollReveal>
-                    <Container as='p' className=' text-lg font-semibold text-slate-700 capitalize'>
-                        here you can see all schools you select from
+                    <Container as='p' className=' mb-5 text-lg text-slate-700'>
+                        Explore top-tier schools worldwide. Find the perfect match for your educational journey with ease.
                     </Container>
                     <AnimateScrollReveal allowOverflow duration={1.75} delay={0.12} className=' w-1/2 mt-2'>
-                        <button onClick={() => navigateToSchools()} className='button button-primary'>See Schools</button>
+                        <button onClick={() => navigateToSchools()} className='button button-primary px-3'>Explore Schools</button>
                     </AnimateScrollReveal>
                 </AnimateScrollReveal>
             </Container>

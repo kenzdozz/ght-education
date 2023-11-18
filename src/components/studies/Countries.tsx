@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import Image from 'next/image'
 import { Container, AnimateScrollReveal } from '../shared'
-import { ICountry, studyCountries } from '@/data/studies'
+import { ICountry, STUDY_COUNTRIES } from '@/data/studies'
 import { useRouter } from 'next/navigation'
 
 const Countries = () => {
@@ -20,7 +20,7 @@ const Countries = () => {
                             src={`${item.img}`}
                             alt='name'
                             fill
-                            style={{objectFit:"cover"}}
+                            style={{ objectFit: "cover" }}
                         />
                     </Container>
                     <Container className=' mt-4 px-7 mb-4'>
@@ -47,9 +47,7 @@ const Countries = () => {
                 Explore Universities Around the World
             </Container>
             <Container className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14'>
-                {
-                    studyCountries.map(renderCountries)
-                }
+                {STUDY_COUNTRIES.map(renderCountries)}
             </Container>
         </Container>
     )
