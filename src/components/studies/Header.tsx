@@ -6,8 +6,8 @@ import S from '@/styles/pages/studies/study.module.scss'
 const Header = ({ head, text }: { head: string, text?: string }) => {
     return (
         <Container className={`PageHeader`}>
-            <Container as='h2' className='text-gradient capitalize text-4xl font-bold'>{head}</Container>
-            <Container as='p' className=' text-slate-500 text-lg w-full md:w-[40%] text-center mt-4 font-medium'>{text}</Container>
+            <AnimateScrollReveal duration={1.75} animName='fadeInRight' as='h2' className='text-gradient capitalize text-4xl font-bold'>{head}</AnimateScrollReveal>
+            <AnimateScrollReveal duration={1.75} delay={0.12} as='p' className=' text-slate-500 text-lg w-full md:w-[40%] text-center mt-4 font-medium'>{text}</AnimateScrollReveal>
             <Container className={`__after`}>
             </Container>
 
