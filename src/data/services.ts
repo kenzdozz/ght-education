@@ -1,59 +1,83 @@
 import { SVGIconName } from "@/types";
 
-export const dataServices: { text: string, icon: SVGIconName, id: number }[] = [
+export interface ISubService {
+    id: number;
+    text: string;
+    description: string;
+    icon: SVGIconName;
+}
+
+export const SUB_SERVICES: ISubService[] = [
     {
-        text: `Visa guidance and counseling to client's dependents, Visitor and Tourist.`,
+        text: "Profile Evaluation",
+        description: "Assessing academic history and goals for suitable program recommendations.",
         icon: 'tourist',
-        id: 0
+        id: 0,
     },
     {
-        text: `Professional Advisory Services on selection of study program Options`,
+        text: "University Selection",
+        description: "Guidance in choosing institutions aligned with academic aspirations.",
         icon: 'school',
-        id: 1
+        id: 1,
     },
     {
-        text: `Immigration counseling for all categories of applicants. `,
+        text: "Application Preparation",
+        description: "Assistance in compiling and refining application materials.",
         icon: 'atom',
-        id: 2
+        id: 2,
     },
     {
-        text: `Overseas universities admission placement.`,
-        icon: 'check',
-        id: 3
-    },
-    {
-        text: `Study visa Support`,
+        text: "Admission Representation",
+        description: "Advocating for clients during the admissions process with institutions.",
         icon: 'ring',
-        id: 4
+        id: 3,
     },
     {
-        text: `Flight booking and hotel reservation for our clients.`,
+        text: "Visa Application Review",
+        description: "Thorough review of documentation before submission.",
         icon: 'flight',
-        id: 5
+        id: 4,
     },
     {
-        text: `Pre-departure briefing`,
+        text: "Visa Interview Preparation",
+        description: "Guidance and mock interviews to prepare for visa interviews.",
         icon: 'speaker-phone',
-        id: 6
+        id: 5,
     },
     {
-        text: `Airport pick-up`,
+        text: "Visa Refusal Reversal",
+        description: "Assistance in addressing and reversing previous visa refusals.",
         icon: 'plane-arrival',
-        id: 7
+        id: 6,
     },
     {
-        text: `Visa refusal reversal`,
+        text: "Documentation Assistance",
+        description: "Guidance in preparing and organizing necessary visa documents.",
         icon: 'sad-face',
-        id: 8
+        id: 7,
     },
     {
-        text: `Tourist visa guidance`,
+        text: "Travel Logistics",
+        description: "Assistance in flight bookings, travel insurance, airports pick-up and itinerary planning.",
         icon: 'petal',
-        id: 9
+        id: 8,
     },
     {
-        text: `Private accommodation arrangement`,
+        text: "Accommodation Search",
+        description: "Aid in finding suitable housing options, considering preferences.",
         icon: 'accomodation',
-        id: 10
+        id: 9,
+    },
+    {
+        text: "Cultural Guidance",
+        description: "Information on local customs, culture, and regulations in the destination country.",
+        icon: 'accomodation',
+        id: 10,
+    },
+    {
+        text: "Settlement Support",
+        description: "Advice on settling into the new environment and handling initial challenges.",
+        icon: 'accomodation',
+        id: 11,
     },
 ]

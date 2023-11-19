@@ -10,15 +10,14 @@ export interface ICountry {
     schools: ISchool[];
 }
 
-interface CountryData {
+export interface IFeaturedCountry {
     img: string;
-    schools: ISchool[];
+    slug: string;
+    name: string;
+    description: string;
 }
 
-interface StudiesData {
-    [country: string]: CountryData;
-}
-export const studyCountries: ICountry[] = [
+export const STUDY_COUNTRIES: ICountry[] = [
     {
         img: "/img/usa.jpg",
         name: "United States of America",
@@ -491,41 +490,23 @@ export const studyCountries: ICountry[] = [
     },
 ];
 
-export const featureSchools = [
+export const FEATURED_COUNTRIES: IFeaturedCountry[] = [
     {
-        img: "/img/alabama.webp",
-        name: "University of Alabama",
-        country: "usa",
-        slug: "university-of-alabam",
+        img: '/img/usa.jpg',
+        name: "United States of America",
+        description: "A global education leader, renowned for top universities and diverse opportunities, inviting students to explore academic excellence and innovation.",
+        slug: "usa",
     },
     {
-        img: "/img/illiniosis.webp",
-        name: "Illinois institute of technology",
-        country: "usa",
-        slug: "illinois-institute-of-technology",
+        img: '/img/canada.webp',
+        name: "Canada",
+        description: "Exceptional education, inclusive culture. Renowned for excellence, inviting global students to explore diverse opportunities in a welcoming environment.",
+        slug: "canada",
     },
     {
-        img: "/img/st-mary.webp",
-        name: "St Mary's University London",
-        country: "uk",
-        slug: "st-mary-university-london",
-    },
-    {
-        img: "/img/portsmouth.webp",
-        country: "uk",
-        name: "University of Portsmouth",
-        slug: "university-of-portsmouth",
-    },
-    {
-        img: "/img/toronto.webp",
-        name: "Toronto Metropolitan University",
-        country: "canada",
-        slug: "toronto-metropolitan-university",
-    },
-    {
-        img: "/img/dublin.webp",
-        name: "Dublin City University",
-        country: "ireland",
-        slug: "dublin-city-university",
+        img: '/img/uk.jpg',
+        name: "United Kingdom",
+        description: "A global education hub with top-tier universities and rich cultural experiences, offering academic excellence and diverse opportunities for international students.",
+        slug: "uk",
     },
 ];

@@ -58,33 +58,30 @@ export const homeImgaes = [
     },
 ];
 
-export const homeSteps = [
+export const SERVICES_STEPS = [
     {
-        title: "We are here to serve",
-        head: "Contact us",
-        description:
-            "We serve any person or group interested in pursuing some form of training abroad. This could be either High school, foundation, top-up, undergraduate, graduate degree, post graduate, doctorate degree, industrial and executive Short courses, Specialist trainings overseas and online training programs.",
-        img: "/img/woman.webp",
-        btnText: 'get started',
-        id: 0,
-    },
-    {
-        title: "We guide through the process",
-        description:
-            "We provide relevant career guidance taking into cognizance previous qualification, family and financial background; career interests and future goals to assist them choose the right course and institution.",
-        img: "/img/graduation.webp",
-        head: "Guidance",
-        btnText: 'get guidance',
         id: 1,
+        head: "Admission",
+        title: "Admission Assistance",
+        description: "We offer personalized support for students of varied academic backgrounds, ensuring fair access to top institutions worldwide. Our tailored guidance and representation empower students, including those with lower academic standings, to secure admissions confidently. Leveraging our network, we navigate the complexities of the process, providing strategic aid and meticulous preparation for successful placements in esteemed educational institutions.",
+        img: "/img/woman.webp",
+        btnText: 'Get Admitted',
     },
     {
-        title: "Immigration Counseling",
-        description:
-            "We also provide immigration counseling for all categories of applicants, flight booking and hotel reservation for our clients.",
-        img: "/img/counseling.webp",
-        head: "Counseling",
-        btnText: 'get counseling',
         id: 2,
+        head: "Visa",
+        title: "Visa Consultation & Counseling",
+        description: "Our Visa Consultation & Counseling service provides personalized guidance for diverse visa applications. With expertise in documentation and interviews, we assist step-by-step through the process. We're dedicated to avoiding visa refusals and ensuring fair representation for genuine applicants. Committed to professionalism, we empower clients with confidence during their visa journey.",
+        img: "/img/graduation.webp",
+        btnText: 'Get Consultation',
+    },
+    {
+        id: 3,
+        head: "Travel",
+        title: "Travel & Stay",
+        description: "We provide assistance that covers comprehensive support for a seamless transition abroad. We facilitate travel logistics, including flight bookings and documentation, while securing suitable accommodations tailored to individual preferences. Additionally, we provide valuable insights into local culture and regulations, ensuring a comfortable and stress-free stay to focus on academic or professional pursuits.",
+        img: "/img/counseling.webp",
+        btnText: 'Plan Journey',
     },
 ];
 
@@ -376,26 +373,26 @@ export const states: { text: string; value: string }[] = [
     },
 ];
 
-export const process: { icon: SVGIconName; head: string; text: string }[] = [
+export const HOME_STEPS: { icon: SVGIconName; head: string; text: string }[] = [
     {
         icon: "apply",
         head: "CHECK REQUIREMENTS",
-        text: "contact us with information to get you started",
+        text: "Contact us an we will get you started on the requirements",
     },
     {
         icon: "badge",
-        head: "SEND DOCUMENTS",
-        text: "complete the online booking, our team confirms booking and proceed",
+        head: "ADMISSION ASSISTANCE",
+        text: "We would help you process your admission from start to finish",
     },
     {
         icon: "grad-cap",
-        head: "ADMISSION/VISA",
-        text: "Your payment validates that your car reservation has been completed",
+        head: "VISA CONSULTATION",
+        text: "Our experts would provide you with the information and guidance you need",
     },
     {
         icon: "world",
-        head: "TRAVEL",
-        text: "Your payment validates that your car reservation has been completed",
+        head: "TRAVEL AND STAY",
+        text: "We would assist in your travel and accommodation for a happy stay abroad",
     },
 ];
 
