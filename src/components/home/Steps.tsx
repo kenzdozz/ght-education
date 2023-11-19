@@ -19,7 +19,7 @@ const Steps = () => {
                             alt="Your Image"
                             className=" rounded-2xl"
                             fill
-                            style={{objectFit:"cover", objectPosition:"center"}}
+                            style={{ objectFit: "cover", objectPosition: "center" }}
                             priority={true}
                         />
                     </AnimateScrollReveal>
@@ -34,7 +34,7 @@ const Steps = () => {
                             <Container as='p'>{item.description}</Container>
                         </Container>
                         <Container className=' w-1/2 mt-5'>
-                            <button onClick={() => navigateToContact()} className='button button-primary capitalize px-3'>{item.btnText}</button>
+                            <button onClick={() => navigateToContact()} className='button button-primary capitalize px-3 py-4'>{item.btnText}</button>
                         </Container>
                     </AnimateScrollReveal>
                 </AnimateScrollReveal>
@@ -43,7 +43,7 @@ const Steps = () => {
         [],
     )
     return (
-        <Container className='container'>{ SERVICES_STEPS.map(renderSteps) }</Container>
+        <Container className='container'>{SERVICES_STEPS.map(renderSteps)}</Container>
     )
 }
 

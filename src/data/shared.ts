@@ -397,14 +397,21 @@ export const HOME_STEPS: { icon: SVGIconName; head: string; text: string }[] = [
 ];
 
 export const patners = [
-    "/img/logos/californialogo.webp",
-    "/img/logos/cambridgelogo.svg",
-    "/img/logos/harvardlogo.jpg",
-    "/img/logos/kentuckylogo.jpg",
-    "/img/logos/californialogo.webp",
-    "/img/logos/cambridgelogo.svg",
-    "/img/logos/harvardlogo.jpg",
-    "/img/logos/kentuckylogo.jpg",
+    "/img/logos/logo-1.jpeg",
+    "/img/logos/logo-2.jpeg",
+    "/img/logos/logo-3.jpeg",
+    "/img/logos/logo-4.jpeg",
+    "/img/logos/logo-5.jpeg",
+    "/img/logos/logo-6.jpeg",
+    "/img/logos/logo-7.jpeg",
+    "/img/logos/logo-8.jpeg",
+    "/img/logos/logo-9.jpeg",
+    "/img/logos/logo-10.jpeg",
+    "/img/logos/logo-11.jpeg",
+    "/img/logos/logo-12.jpeg",
+    "/img/logos/logo-13.jpeg",
+    "/img/logos/logo-14.jpeg",
+
 ];
 
 export const socialMedia: { icon: SVGIconName, link: string }[] = [

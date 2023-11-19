@@ -2,11 +2,14 @@
 import React, { RefObject, useCallback, useEffect, useRef, useState } from "react";
 import { Container, Pagination } from "../shared";
 import { ICountry, ISchool } from "@/data/studies";
-import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import { UserIcon, EnvelopeIcon, PhoneIcon, AcademicCapIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/navigation";
 import S from "@/styles/pages/studies/study.module.scss";
 import Faqs from "../Faqs";
 import { states } from "@/data";
+import { contactUs } from "@/services/contact.service";
+import { ToastContainer, toast } from "react-toastify";
+
 
 type SectionRef = RefObject<HTMLDivElement>;
 
@@ -27,12 +30,13 @@ const Country = ({ country }: { country: ICountry }) => {
     const [formSubmit, setFormSubmit] = useState(false);
 
     const [values, setValue] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        state: '',
-    })
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        state: "",
+        school: "",
+    });
     const isAnyValueEmpty = Object.values(values).some(value => value === '');
 
     const handleFormInput = (
@@ -63,19 +67,33 @@ const Country = ({ country }: { country: ICountry }) => {
         }
     };
 
-
     const submitMessage = async () => {
-        setFormSubmit(true)
-        try {
-            console.log('submited');
-
-        } catch (error) {
-            console.log(error);
-
-        } finally {
-            setFormSubmit(false)
+        setFormSubmit(true);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(values.email)) {
+            toast.error("Please enter a valid email address.");
+            setFormSubmit(false);
+            return;
         }
-    }
+        try {
+            const resp = await contactUs({ ...values, message: `I would like to know about stuying in ${country.slug}`, country: country.slug });
+            if (resp) {
+                toast.success("your message has been recieved");
+                setValue({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    phone: "",
+                    state: "",
+                    school: "",
+                });
+            }
+        } catch (error: any) {
+            toast.error(error.message || "message could not be sent try again");
+        } finally {
+            setFormSubmit(false);
+        }
+    };
 
     const onPrevious = () => {
         if (currentPage > 1) {
@@ -190,6 +208,7 @@ const Country = ({ country }: { country: ICountry }) => {
                 </Container>
             </Container>
             <Container className=" container mb-8">
+                <ToastContainer />
                 <div
                     ref={aboutRef}
                     className=" rounded-md shadow-md py-9 px-2 lg:px-11 mb-8"
@@ -303,10 +322,10 @@ const Country = ({ country }: { country: ICountry }) => {
                                 <PhoneIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
                                 <input
                                     type="tel"
-                                    name="phoneNumber"
+                                    name="phone"
                                     placeholder="0902345678"
                                     onChange={handleFormInput}
-                                    value={values.phoneNumber}
+                                    value={values.phone}
                                     className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
                                 />
                             </Container>
@@ -334,10 +353,29 @@ const Country = ({ country }: { country: ICountry }) => {
                                 ))}
                             </select>
                         </Container>
+                        <Container>
+                            <Container
+                                as="label"
+                                className="block mb-2 text-sm font-medium capitalize text-blue-600 "
+                            >
+                                Study School
+                            </Container>
+                            <Container as="span" className="relative text-gray-400  block h-12">
+                                <AcademicCapIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
+                                <input
+                                    type="text"
+                                    name="school"
+                                    placeholder="university of alabama"
+                                    onChange={handleFormInput}
+                                    value={values.school}
+                                    className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
+                                />
+                            </Container>
+                        </Container>
                     </Container>
                     <Container className=" flex items-center justify-center mt-3">
                         <button disabled={isAnyValueEmpty} onClick={() => submitMessage()} className={`${isAnyValueEmpty ? ' bg-gray-400' : 'bg-gradient-primary'} w-60 h-16 text-white text-base font-semibold rounded-md flex items-center transition-all duration-300 justify-center hover:-translate-y-1`}>
-                            Contact me with more info
+                            {formSubmit ? "Contacting.." : "Contact me with more info"}
                         </button>
                     </Container>
                 </div>

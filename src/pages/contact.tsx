@@ -7,10 +7,10 @@ import Page from '@/components/Page'
 
 const ContactPage = () => {
     const [contactRef] = useScrollReveal()
-    const text = `contact our office around the country`
+    const text = `Contact our office around the country`
     return (
         <Page mainRef={contactRef}>
-            <Header head={text} img='/img/img2.webp' />
+            <Header head={text} />
             <Contact />
         </Page>
     )

@@ -33,8 +33,8 @@ const Service = () => {
                 {SUB_SERVICES.map(renderServices)}
             </Container>
 
-            <AnimateScrollReveal duration={1.2} delay={SUB_SERVICES.length * 0.1} className='flex justify-center my-7'>
-                <Link href="/contact" className='button button-primary capitalize px-7'>{`Let's Get You Started`}</Link>
+            <AnimateScrollReveal duration={1.2} allowOverflow delay={SUB_SERVICES.length * 0.1} className='flex justify-center my-7'>
+                <Link href="/contact" className='button button-primary capitalize px-7 py-5'>{`Let's Get You Started`}</Link>
             </AnimateScrollReveal>
         </Container>
     );

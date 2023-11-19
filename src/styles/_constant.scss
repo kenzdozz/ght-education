@@ -7,3 +7,36 @@ $default-red: #ee3a36;
 $button-bg: rgb(14 116 144);
 $button-box-shadow: 0 0.375em 1em rgba(25, 113, 245, 0.08);
 $button-box-shadow-hover: 0 0.125em 0.25em rgba(15, 103, 235, 0.25);
+
+@mixin before-or-after(
+  $bg: #98bdda,
+  $w: 100%,
+  $h: 100%,
+  $br: inherit,
+  $tr: (
+    transform 0.3s,
+    opacity 0.3s
+  ),
+  $t: 0,
+  $l: 0,
+  $r: 0,
+  $b: 0,
+  $o: inherit,
+  $zi: 0,
+  $bs: none
+) {
+  position: absolute;
+  content: ' ';
+  width: $w;
+  height: $h;
+  top: $t;
+  left: $l;
+  right: $r;
+  bottom: $b;
+  z-index: $zi;
+  background: $bg;
+  border-radius: $br;
+  box-shadow: $bs;
+  opacity: $o;
+  transition: $tr;
+}

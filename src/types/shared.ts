@@ -90,3 +90,14 @@ export interface IconProps {
     fontSize?: string;
     children?: React.ReactNode;
 }
+
+export interface ISendInput {
+    email: string;
+    lastName: string;
+    firstName: string;
+    phone: string;
+    state: string;
+    message: string;
+    country: string;
+    school: string;
+}

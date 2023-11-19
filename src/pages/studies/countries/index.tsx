@@ -9,7 +9,7 @@ const CountriesPage = () => {
     const [countriesRef] = useScrollReveal()
     return (
         <Page mainRef={countriesRef}>
-            <Header />
+            <Header head='Study in countries of choice' text='Select from amazing countries to study in' />
             <Countries />
         </Page>
     )

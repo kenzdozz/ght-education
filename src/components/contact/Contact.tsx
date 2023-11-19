@@ -1,21 +1,30 @@
-'use client'
+"use client";
 import React, { useState } from "react";
-import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import {
+    UserIcon,
+    EnvelopeIcon,
+    PhoneIcon,
+    AcademicCapIcon,
+} from "@heroicons/react/20/solid";
 import { Container } from "../shared";
-import { states } from "@/data";
+import { states, STUDY_COUNTRIES } from "@/data";
+import { contactUs } from "@/services/contact.service";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
     const [formSubmit, setFormSubmit] = useState(false);
 
     const [values, setValue] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        state: '',
-        message: ''
-    })
-    const isAnyValueEmpty = Object.values(values).some(value => value === '');
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        state: "",
+        message: "",
+        country: "",
+        school: "",
+    });
+    const isAnyValueEmpty = Object.values(values).some((value) => value === "");
 
     const handleFormInput = (
         e: React.ChangeEvent<
@@ -27,23 +36,40 @@ const Contact = () => {
             ...prev,
             [name]: value,
         }));
-
     };
 
     const submitMessage = async () => {
-        setFormSubmit(true)
-        try {
-            console.log('submited');
-
-        } catch (error) {
-            console.log(error);
-
-        } finally {
-            setFormSubmit(false)
+        setFormSubmit(true);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(values.email)) {
+            toast.error("Please enter a valid email address.");
+            setFormSubmit(false);
+            return;
         }
-    }
+        try {
+            const resp = await contactUs(values);
+            if (resp) {
+                toast.success("your message has been recieved");
+                setValue({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    phone: "",
+                    state: "",
+                    message: "",
+                    country: "",
+                    school: "",
+                });
+            }
+        } catch (error: any) {
+            toast.error(error.message || "message could not be sent try again");
+        } finally {
+            setFormSubmit(false);
+        }
+    };
     return (
         <Container className=" my-16 container">
+            <ToastContainer />
             <Container
                 as="h5"
                 className=" textBorder font-bold text-lg md:text-3xl capitalize"
@@ -121,14 +147,15 @@ const Contact = () => {
                             <PhoneIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
                             <input
                                 type="tel"
-                                name="phoneNumner"
+                                name="phone"
                                 placeholder="0902345678"
                                 onChange={handleFormInput}
-                                value={values.phoneNumber}
+                                value={values.phone}
                                 className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
                             />
                         </Container>
                     </Container>
+
                     <Container>
                         <Container
                             as="label"
@@ -143,16 +170,57 @@ const Contact = () => {
                             value={values.state}
                             className="bg-transparent h-12 border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
                         >
-                            <option >Choose a state</option>
-                            {
-                                states.map((el) => (
-                                    <option key={el.value} value={el.value}>{el.text}</option>
-                                ))
-                            }
-
+                            <option>Choose a state</option>
+                            {states.map((el) => (
+                                <option key={el.value} value={el.value}>
+                                    {el.text}
+                                </option>
+                            ))}
                         </select>
                     </Container>
 
+                    <Container>
+                        <Container
+                            as="label"
+                            className="block mb-2 text-sm font-medium text-blue-600"
+                        >
+                            Country of Study
+                        </Container>
+                        <select
+                            id="country"
+                            name="country"
+                            onChange={handleFormInput}
+                            value={values.country}
+                            className="bg-transparent h-12 border border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
+                        >
+                            <option>Choose a Country</option>
+                            {STUDY_COUNTRIES.map((el) => (
+                                <option key={el.slug} value={el.slug}>
+                                    {el.name}
+                                </option>
+                            ))}
+                        </select>
+                    </Container>
+
+                    <Container>
+                        <Container
+                            as="label"
+                            className="block mb-2 text-sm font-medium capitalize text-blue-600 "
+                        >
+                            Study School
+                        </Container>
+                        <Container as="span" className="relative text-gray-400  block h-12">
+                            <AcademicCapIcon className="pointer-events-none text-blue-600 w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3" />
+                            <input
+                                type="text"
+                                name="school"
+                                placeholder="university of alabama"
+                                onChange={handleFormInput}
+                                value={values.school}
+                                className="bg-transparent border px-3 border-gray-300 focus:border-gray-400 text-gray-900 text-sm rounded-lg outline-none block h-full w-full"
+                            />
+                        </Container>
+                    </Container>
 
                     <Container className=" col-span-1 md:col-span-2">
                         <Container
@@ -172,8 +240,13 @@ const Contact = () => {
                     </Container>
                 </Container>
                 <Container className=" flex items-center justify-center mt-3">
-                    <button disabled={isAnyValueEmpty} onClick={() => submitMessage()} className={`${isAnyValueEmpty ? ' bg-gray-400' : 'bg-gradient-primary'} w-60 h-16 text-white text-base font-semibold rounded-md flex items-center transition-all duration-300 justify-center hover:-translate-y-1`}>
-                        Send Message
+                    <button
+                        disabled={isAnyValueEmpty}
+                        onClick={() => submitMessage()}
+                        className={`${isAnyValueEmpty ? " bg-gray-400" : "bg-gradient-primary"
+                            } w-60 h-16 text-white text-base font-semibold rounded-md flex items-center transition-all duration-300 justify-center hover:-translate-y-1`}
+                    >
+                        {formSubmit ? "Sending Message.." : "Send Message"}
                     </button>
                 </Container>
             </Container>
