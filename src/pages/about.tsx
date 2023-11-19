@@ -13,7 +13,7 @@ const AboutPage = () => {
             <Header head='GlobalHT Education In Details' text='We help you secure admission and travel visa to the best universities around the worl with ease and at your comfort' />
             <WhoWeAre />
             <Patners />
-            <Mission />
+            {/* <Mission /> */}
             <Vision />
             <Team />
         </Page>

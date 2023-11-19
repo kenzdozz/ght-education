@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+:root {
+ 
+  --base-border-radius: 0.25rem;
+  --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --duration: 0.75s;
+}
+
 html,
 body {
   font-size: 100%;
@@ -161,11 +168,7 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-// .container {
-//   max-width: 950%;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+
 
 .container,
 .container {
@@ -331,4 +334,68 @@ main {
 .animate-fading-pulse {
   animation: fadingPulse 5s infinite;
   animation-delay: 5s;
+}
+
+
+
+.folded-paper, .folded-paper-mission {
+  position: relative;
+  width: 100%;
+  // max-width: 450px;
+  margin: 0 auto;
+  background-color: white;
+  transform: skewY(-5deg) translateY(10%) scale(0.94);
+  transition: 
+    box-shadow var(--duration) var(--ease),
+    background-color var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    background-color: rgba(102, 102, 187, 0.4);
+    width: 25%;
+    height: 100%;
+    transition: 
+      background-color var(--duration) var(--ease),
+      transform var(--duration) var(--ease);
+  }
+  
+  &:before {
+    top: 0;
+    right: calc(100% - 1px);
+    transform-origin: 100% 100%;
+    transform: skewY(-35deg) scaleX(-1);
+    z-index: -1;
+  }
+  
+  &:after {
+    top: 0;
+    left: calc(100% - 1px);
+    transform-origin: 0 0;
+    transform: skewY(-35deg) scaleX(-1);
+    z-index: 2;
+  }
+  
+  &:hover,
+  &:focus-within {
+    transform: scale(1.0001);
+    box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    
+    &:before,
+    &:after {
+      background-color: white;
+      transform: skewY(0);
+    }
+  }
+}
+
+.folded-paper-mission {
+  &:before,
+  &:after {
+    background-color: rgba(187, 102, 159, 0.4);
+   
+  }
 }
