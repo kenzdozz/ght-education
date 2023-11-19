@@ -10,8 +10,28 @@ export const navMenuItems = [
                 url: "countries",
             },
             {
-                title: "Schools",
-                url: "schools",
+                title: "study in usa",
+                url: "countries/usa",
+            },
+            {
+                title: "study in uk",
+                url: "countries/uk",
+            },
+            {
+                title: "study in canada",
+                url: "countries/canada",
+            },
+            {
+                title: "study in ireland",
+                url: "countries/ireland",
+            },
+            {
+                title: "study in australia",
+                url: "countries/australia",
+            },
+            {
+                title: "study in new-zealand",
+                url: "countries/new-zealand",
             },
         ],
     },

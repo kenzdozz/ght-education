@@ -67,8 +67,7 @@ export interface ContainerProps
     > {
     as?: TAs;
     dynamic?: boolean;
-    // noFade?: boolean;
-    //   'data-anim'?: TAnimatTransitionName;
+
 }
 
 export interface NavItem {

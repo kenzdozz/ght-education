@@ -19,14 +19,18 @@ export async function getStaticProps() {
 const CountryPage = () => {
     const router = useRouter()
     const [country, setCountry] = useState<ICountry>();
+    const [text, setText] = useState<string>();
 
     const [countryRef] = useScrollReveal()
-    const text = `Study in ${country?.name} Universities`
+    // const text = `Study in ${country?.name} Universities`
 
     useEffect(() => {
         if (router && router.query) {
+
             const { countryId } = router.query as Record<string, string>;
-            setCountry(STUDY_COUNTRIES.find(c => c.slug === countryId));
+            const selectedCountry = STUDY_COUNTRIES.find(c => c.slug === countryId)
+            setCountry(selectedCountry);
+            setText(`Study in ${selectedCountry?.slug} Universities`)
         }
     }, [router]);
 
@@ -34,7 +38,7 @@ const CountryPage = () => {
 
     return (
         <Page mainRef={countryRef}>
-            <Header head={text} />
+            <Header head={text as string} />
             <Country country={country} />
         </Page>
     )

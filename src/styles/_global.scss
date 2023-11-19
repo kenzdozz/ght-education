@@ -355,7 +355,7 @@ main {
     content: '';
     position: absolute;
     pointer-events: none;
-    background-color: rgba(102, 102, 187, 0.4);
+    background-color: rgba(102, 102, 187, 0.1);
     width: 25%;
     height: 100%;
     transition: 
@@ -386,7 +386,7 @@ main {
     
     &:before,
     &:after {
-      background-color: white;
+      // background-color: white;
       transform: skewY(0);
     }
   }
@@ -395,7 +395,7 @@ main {
 .folded-paper-mission {
   &:before,
   &:after {
-    background-color: rgba(187, 102, 159, 0.4);
+    background-color: rgba(187, 102, 159, 0.1);
    
   }
 }

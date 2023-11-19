@@ -8,12 +8,7 @@ const _Container: FC<ContainerProps> = ({
 }): JSX.Element => {
     const rendered = dynamic ? true : undefined;
 
-    // useEffect(() => {
-    //     if (!dynamic) {
-    //         return;
-    //     }
-    //     // Your logic for dynamic rendering, if needed
-    // }, [dynamic]);
+
     return createElement(as || "div", props, children);
 };
 

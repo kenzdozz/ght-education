@@ -6,13 +6,14 @@ import Link from "next/link";
 
 const Service = () => {
     const renderServices = useCallback(
-        ({ text, icon, id }: ISubService) => {
+        ({ text, icon, id, description }: ISubService) => {
             return (
-                <AnimateScrollReveal duration={1.2} delay={id * 0.1} allowOverflow key={id} className={`shrink-0 relative w-full h-32 px-2 flex flex-col justify-center items-center gap-2 rounded-md ${S.ServiceItem}`}>
-                    <Container className=" w-12 h-12 absolute -top-5 md:-top-3 bg-slate-100 rounded-full text-blue-600 flex items-center justify-center  text-4xl font-bold">
+                <AnimateScrollReveal duration={1.2} delay={id * 0.1} allowOverflow key={id} className={`shrink-0 shadow-lg relative w-full h-auto mb-1 px-2 flex flex-col justify-center items-center transition-all duration-200 gap-4 rounded-md ${S.ServiceItem} hover:shadow-xl`}>
+                    <Container className=" w-12 h-12 absolute -top-5 md:-top-3 bg-orange-100 rounded-full text-orange-300 flex items-center justify-center  text-4xl font-bold">
                         <SVGIcon name={icon} />
                     </Container>
-                    <Container className=" mt-8 text-sm text-center">{text}</Container>
+                    <Container className=" mt-8 text-xs md:text-sm text-default-blue mb-0 font-semibold text-center">{text}</Container>
+                    <Container className=" mt-0 text-xs md:text-sm text-center text-slate-600">{description}</Container>
                 </AnimateScrollReveal>
             )
         },
@@ -20,7 +21,7 @@ const Service = () => {
     )
 
     return (
-        <Container className=" container bg-slate-100 rounded-md py-10 px-3 my-10">
+        <Container className=" container bg-slate-50 rounded-md py-10 px-3 my-10">
             <Container className=" flex flex-col items-center justify-center">
                 <Container as="h4" className=" text-center font-semibold text-xl md:text-2xl textBorder">
                     Our Services Breakdown

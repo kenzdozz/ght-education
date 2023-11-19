@@ -1,11 +1,12 @@
 @import '@/styles/constant';
 .ServiceItem {
-    background-image: linear-gradient(to right, $default-blue-fade , $default-blue-fade) !important;
-    color: white;
+    // background-image: linear-gradient(to right, $default-blue-fade , $default-blue-fade) !important;
+    background-color: white;
+    // color: blue;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 
-    &:hover {
-        background-image: linear-gradient(to right, $default-red-fade, $default-blue-fade) !important; 
-    }
+    // &:hover {
+    //     background-image: linear-gradient(to right, $default-red-fade, $default-blue-fade) !important; 
+    // }
 }
