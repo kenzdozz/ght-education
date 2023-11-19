@@ -218,30 +218,24 @@ export const faqs = [
     },
 ];
 
-export const testimonies = [
+export const TESTIMONIALS = [
     {
-        name: "Olinya Chaimaka",
-        message: `some text of users testimonies needed`,
-        img: "/img/about/about.webp",
-        id: 0,
-    },
-    {
-        name: "Vivain Mmesoma",
-        message: `some text of users testimonies needed`,
-        img: "/img/about/about.webp",
+        name: "Julian",
+        message: "Global HT Education has been instrumental in shaping my academic journey to Anglia Ruskin University in the UK. Their expertise, dedication, and personalized approach were evident from the start, making the entire process smooth and stress-free. Thank you, Global HT Education, for being the guiding force behind my academic achievements in the UK.",
+        img: "/img/testimonials/julian.jpeg",
         id: 1,
     },
 
     {
-        name: "Abimbola Okenwa",
-        message: `some text of users testimonies needed`,
-        img: "/img/about/about.webp",
+        name: "Daniel",
+        message: "The team at Global HT Education demonstrated exceptional professionalism and genuine care for my educational journey. Their expertise and seamless coordination made the transition to studying at TUS Ireland a seamless experience. I am truly grateful for their support and highly recommend Global HT Education to anyone seeking reliable assistance in pursuing education abroad. They are not just consultants; they are your dedicated consultant in shaping a successful academic future.",
+        img: "/img/testimonials/daniel.jpeg",
         id: 2,
     },
     {
-        name: "Marylin Nkechi",
-        message: `some text of users testimonies needed`,
-        img: "/img/about/about.webp",
+        name: "Ruth Cadmus",
+        message: "Dear Global HT Education, I would like to appreciate the smooth process of my application into BCU . The reception and the lecture has been smooth we have various activities and good tutors who takes their time to ensure your foundation year is smooth to catapult you to BCU .I am truly happy to be at BCUIC",
+        img: "/img/testimonials/ruth.jpeg",
         id: 3,
     },
 ];

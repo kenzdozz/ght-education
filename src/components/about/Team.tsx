@@ -32,7 +32,7 @@ const Team = () => {
     )
     return (
         <Container className=' container mt-14 mb-10'>
-            <Container as='h2' className='text-gradient mb-10 font-semibold text-2xl'>
+            <Container as='h2' className='text-blue-600 mb-10 font-semibold text-3xl'>
                 Our Exciting Teams
             </Container>
             <Container className=' container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-20 gap-6'>
