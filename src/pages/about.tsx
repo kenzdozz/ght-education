@@ -10,12 +10,13 @@ const AboutPage = () => {
     const [storyRef] = useScrollReveal()
     return (
         <Page mainRef={storyRef}>
-            <Header head='GlobalHT Education In Details' text='We help you secure admission and travel visa to the best universities around the worl with ease and at your comfort' />
+            <Header
+                head='Discover GlobalHT Education' 
+                text='Empowering educational aspirations, bridging pathways to global success' />
             <WhoWeAre />
-            <Patners />
-            {/* <Mission /> */}
             <Vision />
             <Team />
+            <Patners />
         </Page>
     )
 }

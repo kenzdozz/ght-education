@@ -34,7 +34,7 @@ const Steps = () => {
                             <Container as='p'>{item.description}</Container>
                         </Container>
                         <Container className=' w-1/2 mt-5'>
-                            <button onClick={() => navigateToContact()} className='button button-primary capitalize px-3 py-4'>{item.btnText}</button>
+                            <button onClick={() => navigateToContact()} className=' bg-transparent border-2 border-blue-601 text-blue-600 rounded-md py-2 px-3 outline-none cursor-pointer'>{item.btnText}</button>
                         </Container>
                     </AnimateScrollReveal>
                 </AnimateScrollReveal>

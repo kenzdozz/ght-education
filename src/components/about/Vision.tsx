@@ -20,17 +20,10 @@ const Vision = () => {
                             as="h4"
                             className="capitalize text-gradient font-semibold text-3xl text-center mb-4"
                         >
-                            Our Vission
+                            Our Vision
                         </Container>
                         <Container as="p" className=" text-center font-medium text-slate-600">
-                            {" "}
-                            We provide support to individuals, corporate organizations and
-                            scholarship bodies, who desire quality academic and professional
-                            development overseas. Our organization GlobalHT Education Limited,
-                            have been in the business of recruiting students for overseas
-                            schools since it was established in 2017, given the experience of
-                            our staff who have worked in similar organizations with more than 5
-                            years’ work experience before joining our organization;
+                            Pioneering global access to quality education and professional growth. Guiding individuals and entities toward prestigious educational opportunities worldwide.
                         </Container>
                         <Container className="w-full relative mt-7 h-[15rem] rounded-md">
                             <Image
@@ -42,7 +35,7 @@ const Vision = () => {
                         </Container>
                     </AnimateScrollReveal>
                 </Container>
-                <Container className=" pt-[12rem]">
+                <Container className=" pt-[6rem]">
                     <AnimateScrollReveal
                         duration={1.5}
                         delay={0.1}
@@ -56,10 +49,7 @@ const Vision = () => {
                             Our Mission
                         </Container>
                         <Container as="p" className=" text-center font-medium text-slate-600">
-                            {" "}
-                            We assist in rendering support to individuals seeking any form of educational advancement overseas through personalized admission assistance and visa counseling, which are the first steps towards meeting their life ambitions. Our services also extend further throughout the student study period, to family members and those seeking tourist visas.
-
-                            We thoroughly go through the visa process, providing advice, making informed changes based on our array of experience while filling applications to minimize any prospect of rejection.
+                        Empowering aspirations with tailored admission and visa support for global education. Extending expertise to ensure fair opportunities and successful journeys.
                         </Container>
                         <Container className="w-full relative mt-7 h-[15rem] rounded-md">
                             <Image

@@ -378,18 +378,6 @@ main {
     transform: skewY(-35deg) scaleX(-1);
     z-index: 2;
   }
-  
-  &:hover,
-  &:focus-within {
-    transform: scale(1.0001);
-    box-shadow: 0 1rem 3rem rgba(black, 0.1);
-    
-    &:before,
-    &:after {
-      // background-color: white;
-      transform: skewY(0);
-    }
-  }
 }
 
 .folded-paper-mission {
@@ -398,4 +386,12 @@ main {
     background-color: rgba(187, 102, 159, 0.1);
    
   }
+}
+
+.text-blue-600 {
+  color: #0166b4;
+}
+
+.border-blue-601 {
+  border-color: #0166b4;
 }

@@ -10,7 +10,9 @@ const ServicePage = () => {
     const [serviceRef] = useScrollReveal()
     return (
         <Page mainRef={serviceRef}>
-            <Header head='GlobalHT Education For Your Travels' text='Our Services ranges from helping you start you school application, completeing and securing admission, visa processing, travel arrangement, flight booking and accomodation on landing' />
+            <Header
+                head="Our Comprehensive Offerings"
+                text="Tailored Services for Your Educational Journey" />
             <Steps />
             <Service />
             <Patners />
