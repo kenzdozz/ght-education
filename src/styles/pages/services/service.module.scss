@@ -1,12 +1,25 @@
 @import '@/styles/constant';
 .ServiceItem {
-    // background-image: linear-gradient(to right, $default-blue-fade , $default-blue-fade) !important;
     background-color: white;
-    // color: blue;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    // transition: max-height 0.5s ease-in-out, visibility 0.5s ease-in-out 0.5s !important;
 
-    // &:hover {
-    //     background-image: linear-gradient(to right, $default-red-fade, $default-blue-fade) !important; 
-    // }
+    .description {
+        opacity: 0;
+        transform: scaleY(0);
+      transform-origin: top;
+        // visibility: hidden;
+        transition: transform 0.5s ease 0.25s, opacity 0.5s ease 0.25s;
+    }
+
+    &:hover {
+        // max-height: 100vh;
+        .description {
+            // max-height: 100vh;
+            transform: scaleY(1);
+          opacity: 1;
+            // visibility: visible;
+            // transition: max-height 0.35s ease-in-out, opacity 0.35s ease-in-out, visibility 0s;
+        }
+    }
 }

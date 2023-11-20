@@ -3,35 +3,32 @@ import { SVGIconName } from "@/types";
 export const navMenuItems = [
     {
         title: "Study Abroad",
-        url: "/studies",
+        url: "/studies/countries",
         subNav: [
-            {
-                title: "Countries",
-                url: "countries",
-            },
+
             {
                 title: "study in usa",
-                url: "countries/usa",
+                url: "usa",
             },
             {
                 title: "study in uk",
-                url: "countries/uk",
+                url: "uk",
             },
             {
                 title: "study in canada",
-                url: "countries/canada",
+                url: "canada",
             },
             {
                 title: "study in ireland",
-                url: "countries/ireland",
+                url: "ireland",
             },
             {
                 title: "study in australia",
-                url: "countries/australia",
+                url: "australia",
             },
             {
                 title: "study in new-zealand",
-                url: "countries/new-zealand",
+                url: "new-zealand",
             },
         ],
     },
@@ -63,20 +60,6 @@ export const sideBarMenuItems = [
     { name: "Contact", url: "/contact" },
 ];
 
-export const homeImgaes = [
-    {
-        img: "/img/img1.webp",
-    },
-    {
-        img: "/img/img2.webp",
-    },
-    {
-        img: "/img/img3.webp",
-    },
-    {
-        img: "/img/img4.webp",
-    },
-];
 
 export const SERVICES_STEPS = [
     {
@@ -110,10 +93,7 @@ export const footerLinks = [
         name: "Countries",
         url: "studies/countries/",
     },
-    {
-        name: "Universities",
-        url: "studies/schools",
-    },
+
     {
         name: "Our Services",
         url: "services",

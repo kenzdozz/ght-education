@@ -7,7 +7,7 @@ const _NavSubMenu = ({
     subitem,
     dropdown,
     parenturl,
-    slug,
+    closeSideBar,
 }: {
     subitem: {
         title: string;
@@ -15,17 +15,37 @@ const _NavSubMenu = ({
     }[];
     dropdown: boolean;
     parenturl: string;
-    slug: boolean
+    closeSideBar?: (url1: string, url2: string) => void;
 }) => {
-
     return (
-        <Container as='ul' className={`dropdown ${dropdown ? "show" : ""}`}>
+        <Container as="ul" className={`dropdown ${dropdown ? "show" : ""}`}>
             {subitem.map((submenu, index) => (
-                <Container as='li' key={index} >
-                    <Link href={`${parenturl}/${submenu.url}`} className="menu-items">
-                        {submenu.title}
-                        <Container as='span' className="material-icons submenu-icon text-blue-500">double_arrow</Container>
-                    </Link>
+                <Container as="li" key={index}>
+                    {closeSideBar ? (
+                        <Container
+                            onClick={() => closeSideBar(parenturl, submenu.url)}
+                            as="span"
+                            className="menu-items"
+                        >
+                            {submenu.title}
+                            <Container
+                                as="span"
+                                className="material-icons submenu-icon text-blue-500"
+                            >
+                                double_arrow
+                            </Container>
+                        </Container>
+                    ) : (
+                        <Link href={`${parenturl}/${submenu.url}`} className="menu-items">
+                            {submenu.title}
+                            <Container
+                                as="span"
+                                className="material-icons submenu-icon text-blue-500"
+                            >
+                                double_arrow
+                            </Container>
+                        </Link>
+                    )}
                 </Container>
             ))}
         </Container>

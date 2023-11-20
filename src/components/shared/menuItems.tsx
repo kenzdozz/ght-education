@@ -21,11 +21,16 @@ const _MenuItems = ({ menu: nav, slug = false }: { menu: NavItem, slug?: boolean
         >
             {nav.subNav ? (
                 <>
-                    <button type="button" className=' outline-none border-0' aria-haspopup="menu" aria-expanded={dropdown ? "true" : "false"}>
+                    {/* <button type="button" className=' outline-none border-0' aria-haspopup="menu" aria-expanded={dropdown ? "true" : "false"}>
                         {nav.title}
                         <ChevronDownIcon className="inline w-6 h-6" />
-                    </button>
-                    <NavSubMenu subitem={nav.subNav} parenturl={nav.url} slug={slug} dropdown={dropdown} />
+                    </button> */}
+                    <Link
+                        href={nav.url} className=''>
+                        {nav.title}
+                        <ChevronDownIcon className="inline w-6 h-6" />
+                    </Link>
+                    <NavSubMenu subitem={nav.subNav} parenturl={nav.url} dropdown={dropdown} />
                 </>
             ) : (
                 <Link

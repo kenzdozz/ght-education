@@ -1,16 +1,20 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Container, MenuItems } from "./shared";
+import { Container, MenuItems, NavSubMenu } from "./shared";
 import { NavItem } from "@/types";
 import { navMenuItems, sideBarMenuItems } from "@/data";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const Nav = () => {
     const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sideDropdown, setSideDropdown] = useState(false);
+    const dropdownRef = useRef<HTMLSpanElement>(null);
+
     const navigateToPage = (route: string) => {
         router.push(route);
         setSidebarOpen(false);
@@ -19,18 +23,64 @@ const Nav = () => {
         return <MenuItems menu={nav} key={nav.url} />;
     }, []);
 
-    const renderSideNavs = useCallback((nav: { name: string; url: string }, i: number) => {
+    const changeDropDown = () => {
+        setSideDropdown(!sideDropdown)
+    }
+
+    const closeSideBar = (baseurl: string, url: string) => {
+        router.push(`${baseurl}/${url}`)
+        setSidebarOpen(false);
+        setSideDropdown(false)
+    }
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setSideDropdown(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    const renderSideNavs = useCallback((nav: { title: string; url: string, subNav?: { title: string; url: string }[] }, i: number) => {
         return (
-            <Container key={i} onClick={() => navigateToPage(nav.url)}>
-                <Container
-                    as="span"
-                    className="text-white font-medium text-lg transition-all duration-200 hover:text-orange-200"
-                >
-                    {nav.name}
-                </Container>
+            <Container key={i} >
+                {
+                    nav.subNav ? (
+                        <span ref={dropdownRef} className=" relative">
+                            <Container className=" flex items-center gap-10 text-white">
+                                <Container
+                                    onClick={() => navigateToPage(nav.url)}
+                                    as="span"
+                                    className="text-white font-medium text-lg transition-all duration-200 hover:text-orange-200"
+                                >
+                                    {nav.title}
+                                </Container>
+
+                                <Container as='span' onClick={() => changeDropDown()}> <ChevronDownIcon className="inline w-6 h-6" /></Container>
+                            </Container>
+
+                            <NavSubMenu subitem={nav.subNav} closeSideBar={closeSideBar} parenturl={nav.url} dropdown={sideDropdown} />
+                        </span>
+                    )
+                        : (
+                            <Container
+                                onClick={() => navigateToPage(nav.url)}
+                                as="span"
+                                className="text-white font-medium text-lg transition-all duration-200 hover:text-orange-200"
+                            >
+                                {nav.title}
+                            </Container>
+                        )
+                }
             </Container>
         );
-    }, []);
+    }, [sideDropdown]);
 
     // const handleScroll: EventListener = () => {
     //     if (window.scrollY > 0) {
@@ -145,7 +195,7 @@ const Nav = () => {
                     </button>
                 </Container>
                 <Container className=" w-full h-full flex mt-8 flex-col gap-5">
-                    {sideBarMenuItems.map(renderSideNavs)}
+                    {navMenuItems.map(renderSideNavs)}
                 </Container>
             </Container>
         </>

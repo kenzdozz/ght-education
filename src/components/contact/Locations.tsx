@@ -4,7 +4,7 @@ import { AnimateScrollReveal, Container } from "../shared"
 const Locations = () => {
   return (
     <Container>
-      <AnimateScrollReveal duration={1.2} className="container">
+      <AnimateScrollReveal allowOverflow duration={1.2} className="container">
         <Container as="h5" className="flex items-baseline textBorder font-bold text-lg md:text-3xl capitalize">
           <HomeIcon className="pointer-events-none w-6 h-6 mr-3" />
           Our Office Locations
