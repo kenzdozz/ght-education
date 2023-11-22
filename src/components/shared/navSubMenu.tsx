@@ -25,12 +25,12 @@ const _NavSubMenu = ({
                         <Container
                             onClick={() => closeSideBar(parenturl, submenu.url)}
                             as="span"
-                            className="menu-items"
+                            className="cursor-pointer menu-items"
                         >
                             {submenu.title}
                             <Container
                                 as="span"
-                                className="material-icons submenu-icon text-blue-500"
+                                className="text-base ml-3 material-icons submenu-icon text-blue-500"
                             >
                                 double_arrow
                             </Container>
@@ -40,7 +40,7 @@ const _NavSubMenu = ({
                             {submenu.title}
                             <Container
                                 as="span"
-                                className="material-icons submenu-icon text-blue-500"
+                                className="text-base ml-3 material-icons submenu-icon text-blue-500"
                             >
                                 double_arrow
                             </Container>

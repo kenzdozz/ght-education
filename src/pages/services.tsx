@@ -9,7 +9,7 @@ import React from 'react'
 const ServicePage = () => {
     const [serviceRef] = useScrollReveal()
     return (
-        <Page mainRef={serviceRef}>
+        <Page title="Our Services" mainRef={serviceRef}>
             <Header
                 head="Our Comprehensive Offerings"
                 text="Tailored Services for Your Educational Journey" />

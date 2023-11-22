@@ -164,7 +164,7 @@ main {
 }
 
 .container {
-  max-width: 98%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -394,4 +394,8 @@ main {
 
 .border-blue-601 {
   border-color: #0166b4;
+}
+
+.scrollTo {
+  scroll-margin-top: 120px;
 }

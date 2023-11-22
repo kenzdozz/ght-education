@@ -79,7 +79,6 @@
   z-index: 100;
   max-height: 0;
   overflow: hidden;
-  width: 17rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.98);
@@ -90,7 +89,7 @@
 
 .show {
   max-height: 300px;
-  padding: 1.7rem 0.75rem;
+  padding: 0.7rem 0.75rem;
 }
 
 .menu-items {
@@ -101,10 +100,11 @@
   transition: background-color 0.5s ease-in-out, border-radius 0.5s ease-in-out,
     padding 0.5s ease-in-out, 0.1s;
   padding: 0.45rem 0.9rem;
+  white-space: nowrap;
 
   .submenu-icon {
     visibility: hidden;
-    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out 0.2s; /* Delay the opacity transition */
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out 0.1s; /* Delay the opacity transition */
     opacity: 0; /* Start with opacity 0 */
   }
 

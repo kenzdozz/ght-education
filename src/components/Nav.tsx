@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Container, MenuItems, NavSubMenu } from "./shared";
 import { NavItem } from "@/types";
-import { navMenuItems, sideBarMenuItems } from "@/data";
+import { NAV_MENU_ITEMS } from "@/data";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -53,7 +53,7 @@ const Nav = () => {
                 {
                     nav.subNav ? (
                         <span ref={dropdownRef} className=" relative">
-                            <Container className=" flex items-center gap-10 text-white">
+                            <Container className="cursor-pointer flex items-center gap-3 text-white">
                                 <Container
                                     onClick={() => navigateToPage(nav.url)}
                                     as="span"
@@ -61,8 +61,7 @@ const Nav = () => {
                                 >
                                     {nav.title}
                                 </Container>
-
-                                <Container as='span' onClick={() => changeDropDown()}> <ChevronDownIcon className="inline w-6 h-6" /></Container>
+                                <Container as='span' className="cursor-pointer px-3" onClick={() => changeDropDown()}> <ChevronDownIcon className="inline w-6 h-6" /></Container>
                             </Container>
 
                             <NavSubMenu subitem={nav.subNav} closeSideBar={closeSideBar} parenturl={nav.url} dropdown={sideDropdown} />
@@ -72,7 +71,7 @@ const Nav = () => {
                             <Container
                                 onClick={() => navigateToPage(nav.url)}
                                 as="span"
-                                className="text-white font-medium text-lg transition-all duration-200 hover:text-orange-200"
+                                className="cursor-pointer text-white font-medium text-lg transition-all duration-200 hover:text-orange-200"
                             >
                                 {nav.title}
                             </Container>
@@ -81,14 +80,6 @@ const Nav = () => {
             </Container>
         );
     }, [sideDropdown]);
-
-    // const handleScroll: EventListener = () => {
-    //     if (window.scrollY > 0) {
-    //         setScrolled(true);
-    //     } else {
-    //         setScrolled(false);
-    //     }
-    // };
 
     let lastScrollY = 0;
 
@@ -126,12 +117,13 @@ const Nav = () => {
                         <Image
                             src='/img/logo.png'
                             alt="company logo"
-                            width={140}
-                            height={60}
+                            width={0}
+                            height={0}
+                            style={{ height: 60, width: 'auto' }}
                         />
                     </Link>
-                    <Container className="item-container hidden md:flex items-center gap-10">
-                        {navMenuItems.map(renderNavs)}
+                    <Container className="item-container hidden md:flex items-center gap-7">
+                        {NAV_MENU_ITEMS.map(renderNavs)}
                     </Container>
                     <Container className=" hidden lg:flex contact transition-all duration-300">
                         <a
@@ -164,7 +156,7 @@ const Nav = () => {
                     </Container>
                     <Container
                         onClick={() => setSidebarOpen(!sidebarOpen)}
-                        className=" bg-slate-200 shadow-md rounded-md w-10 h-auto py-1 transition-all duration-200 hover:scale-110 cursor-pointer flex flex-col gap-1 px-1 md:hidden"
+                        className="rounded-md w-10 h-auto py-1 transition-all duration-200 hover:scale-110 cursor-pointer flex flex-col gap-1 px-1 md:hidden"
                     >
                         <Container
                             as="span"
@@ -181,21 +173,17 @@ const Nav = () => {
                     </Container>
                 </Container>
             </Container>
-            <Container
-                className={`side-bar block md:hidden ${sidebarOpen && "show-side-bar"}`}
-            >
+            <Container className={`side-bar block md:hidden ${sidebarOpen && "show-side-bar"}`}>
                 <Container className=" flex items-end justify-end">
                     <button
                         onClick={() => setSidebarOpen(!sidebarOpen)}
                         className=" rounded-full w-8 h-8 bg-red-200 flex items-center justify-center outline-none border-0 cursor-pointer"
                     >
-                        <Container as="span" className="material-icons text-white">
-                            close
-                        </Container>
+                        <Container as="span" className="material-icons text-white">close</Container>
                     </button>
                 </Container>
                 <Container className=" w-full h-full flex mt-8 flex-col gap-5">
-                    {navMenuItems.map(renderSideNavs)}
+                    {NAV_MENU_ITEMS.map(renderSideNavs)}
                 </Container>
             </Container>
         </>
