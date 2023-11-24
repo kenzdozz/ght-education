@@ -41,7 +41,7 @@ const Faqs = ({ isRow = false, isSlice = false }: { isRow?: boolean, isSlice?: b
                             <Container as='span' className=' flex bg-blue-500 w-6 h-6 text-lg mr-2 rounded-full items-center justify-center'>
                                 <Container as='span' className="material-icons text-white">question_mark</Container>
                             </Container>
-                            {item.title}
+                            <Container as='span' className={` ${clickedId === id + 1 ? '' : 'overflow-hidden overflow-ellipsis line-clamp-1'}`}> {item.title}</Container>
                         </Container>
                         <Container as='span' className={`material-icons text-blue-600 transition-all duration-300 cursor-pointer ${clickedId === id + 1 ? 'rotate-180' : ''}`}>expand_more</Container>
                     </Container>

@@ -45,10 +45,10 @@ const FeaturedCountries = () => {
                     key={itemIndex}
                 >
                     <Container className=' bg-transparent flex flex-col justify-center text-center md:text-left w-full md:w-[80%] h-[18rem]'>
-                        <Container as='h2' className=' text-white font-semibold text-3xl'>Our Featured Countries</Container>
-                        <Container className=' pt-9'>
-                            <Container as='h3' className=' text-white font-semibold mb-5 text-2xl'>{item.name}</Container>
-                            <Container as='p' className=' text-white font-medium mb-5'>{item.description}</Container>
+                        <Container as='h2' className=' text-white font-semibold text-2xl md:text-3xl'>Our Featured Countries</Container>
+                        <Container className=' pt-2 md:pt-9'>
+                            <Container as='h3' className=' text-white font-semibold mb-2 md:mb-5 text-xl md:text-2xl'>{item.name}</Container>
+                            <Container as='p' className=' text-white font-medium mb-2 md:mb-5'>{item.description}</Container>
                             <button onClick={() => navigateToCountry(item)} className=' bg-transparent border-2 border-white text-white rounded-md py-2 px-3 outline-none cursor-pointer'>Learn More</button>
                         </Container>
                     </Container>
