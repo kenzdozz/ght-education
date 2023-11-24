@@ -8,7 +8,7 @@ const Countries = () => {
     const router = useRouter();
 
     const navigateToIdPage = (country: ICountry) => {
-        router.push(`/studies/countries/${country.slug}`);
+        router.push(`/study-abroad/${country.slug}`);
     };
     const renderCountries = useCallback(
         (item: ICountry, i: number) => {

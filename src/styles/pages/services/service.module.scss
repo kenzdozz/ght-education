@@ -1,25 +1,29 @@
-@import '@/styles/constant';
+@import "@/styles/constant";
 .ServiceItem {
-    background-color: white;
-    cursor: pointer;
-    // transition: max-height 0.5s ease-in-out, visibility 0.5s ease-in-out 0.5s !important;
+  background-color: white;
+  gap: 0.4rem;
+  cursor: pointer;
 
+  .text {
+    transform: translateY(0);
+    transition: transform 0.5s ease 0.25s, opacity 0.5s ease 0.25s;
+  }
+
+  .description {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease 0.25s, opacity 0.5s ease 0.25s;
+  }
+
+  &:hover {
+    gap: 0;
     .description {
-        opacity: 0;
-        transform: scaleY(0);
-      transform-origin: top;
-        // visibility: hidden;
-        transition: transform 0.5s ease 0.25s, opacity 0.5s ease 0.25s;
+      transform: scaleY(1);
+      opacity: 1;
     }
-
-    &:hover {
-        // max-height: 100vh;
-        .description {
-            // max-height: 100vh;
-            transform: scaleY(1);
-          opacity: 1;
-            // visibility: visible;
-            // transition: max-height 0.35s ease-in-out, opacity 0.35s ease-in-out, visibility 0s;
-        }
+    .text {
+      transform: translateY(-0.8rem);
     }
+  }
 }

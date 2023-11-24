@@ -1,6 +1,7 @@
+'use client'
 import { AcademicCapIcon, EnvelopeIcon, PhoneIcon, UserIcon } from "@heroicons/react/20/solid";
 import { Container } from "../shared";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { contactUs } from "@/services/contact.service";
 import { NIGERIA_STATES, STUDY_COUNTRIES } from "@/data";
@@ -53,8 +54,8 @@ const ContactForm = (props: ContactFormProps) => {
           phone: "",
           state: "",
           school: "",
-          country: props.country || "",
-          message: props.message || "",
+          country: "",
+          message: "",
         });
       }
     } catch (error: any) {
@@ -63,6 +64,24 @@ const ContactForm = (props: ContactFormProps) => {
       setFormSubmit(false);
     }
   };
+
+  useEffect(() => {
+    if (props) {
+      let updatedValues = { ...values };
+
+      if (props.country) {
+        updatedValues.country = props.country;
+      }
+
+      if (props.message) {
+        updatedValues.message = props.message;
+      }
+
+      setValue(updatedValues);
+    }
+
+  }, [props.country, props.message])
+
 
   return (
     <Container>
@@ -209,7 +228,7 @@ const ContactForm = (props: ContactFormProps) => {
           disabled={isAnyValueEmpty}
           onClick={() => submitMessage()}
           title={isAnyValueEmpty ? "All fields are required" : ""}
-          className={`${isAnyValueEmpty ? "bg-gray-400" : "bg-blue-400"} border-2 font-semibold border-blue-601 text-white rounded-md py-2 px-16 outline-none`}
+          className={`${isAnyValueEmpty ? "bg-gray-400" : "bg-blue-400"} border-0 font-semibold text-white rounded-md py-2 px-16 outline-none`}
         >
           {formSubmit ? "Sending..." : "Send"}
         </button>

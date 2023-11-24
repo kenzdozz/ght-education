@@ -87,16 +87,31 @@
   transition: all 0.5s ease;
 }
 
+.sidedropdown {
+  // position: absolute;
+  // top: 40px;
+  // z-index: 100;
+  max-height: 0;
+  overflow: hidden;
+  // color: white !important;
+  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  // border-radius: 15px;
+  background-color: transparent;
+  // backdrop-filter: blur(5px);
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
 .show {
   max-height: 300px;
   padding: 0.7rem 0.75rem;
 }
 
-.menu-items {
+.menu-items, .side-menu-items {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: $default-blue !important;
+  color: $default-blue;
   transition: background-color 0.5s ease-in-out, border-radius 0.5s ease-in-out,
     padding 0.5s ease-in-out, 0.1s;
   padding: 0.45rem 0.9rem;
@@ -125,6 +140,10 @@
   }
 }
 
+.side-menu-items {
+  color: white !important;
+}
+
 .side-bar {
   position: fixed;
   z-index: 100;
@@ -133,7 +152,7 @@
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to right,rgba(33, 33, 99, 0.95),rgba(33, 33, 99, 0.95), rgba(88, 11, 11, 0.95) );
+  background-image: linear-gradient(to right,rgba(33, 33, 99, 0.95),rgba(33, 33, 99, 0.95));
   // background-color: rgba(33, 33, 99, 0.95);
   padding: 2rem;
   transform: translateX(-100%);

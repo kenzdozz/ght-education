@@ -8,12 +8,12 @@ const Service = () => {
     const renderServices = useCallback(
         ({ text, icon, id, description }: ISubService) => {
             return (
-                <AnimateScrollReveal duration={1.2} delay={id * 0.1} allowOverflow key={id} className={`shrink-0 shadow-lg relative w-full mb-1 px-2 flex flex-col justify-center items-center gap-4 rounded-md ${S.ServiceItem} hover:shadow-xl`}>
+                <AnimateScrollReveal duration={1.2} delay={id * 0.1} allowOverflow key={id} className={`shrink-0 shadow-lg relative w-full mb-1 px-2 flex flex-col justify-center items-center rounded-md ${S.ServiceItem} hover:shadow-xl`}>
                     <Container className=" w-12 h-12 absolute -top-5 md:-top-3 bg-blue-100 bg-opacity-90 rounded-full text-blue-500 flex items-center justify-center  text-4xl font-bold">
                         <SVGIcon name={icon} />
                     </Container>
-                    <Container className=" pt-10 text-xs md:text-sm text-default-blue mb-0 font-semibold text-center">{text}</Container>
-                    <Container className={`mt-0 text-xs md:text-sm text-center text-slate-600 ${S.description}`}>{description}</Container>
+                    <Container as='h6' className={`pt-10 text-xs md:text-sm text-default-blue mb-0 font-semibold text-center ${S.text}`}>{text}</Container>
+                    <Container as='p' className={`mt-0 text-xs md:text-sm text-center text-slate-600 ${S.description}`}>{description}</Container>
                 </AnimateScrollReveal>
             )
         },

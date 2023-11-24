@@ -18,14 +18,14 @@ const _NavSubMenu = ({
     closeSideBar?: (url1: string, url2: string) => void;
 }) => {
     return (
-        <Container as="ul" className={`dropdown ${dropdown ? "show" : ""}`}>
+        <Container as="ul" className={`${closeSideBar ? 'sidedropdown' : 'dropdown'} ${dropdown ? "show" : ""}`}>
             {subitem.map((submenu, index) => (
                 <Container as="li" key={index}>
                     {closeSideBar ? (
                         <Container
                             onClick={() => closeSideBar(parenturl, submenu.url)}
                             as="span"
-                            className="cursor-pointer menu-items"
+                            className={`cursor-pointer side-menu-items `}
                         >
                             {submenu.title}
                             <Container
