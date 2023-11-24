@@ -7,9 +7,9 @@ import Page from '@/components/Page'
 
 const ContactPage = () => {
     const [contactRef] = useScrollReveal()
-    const text = `Contact our office around the country`
+
     return (
-        <Page mainRef={contactRef}>
+        <Page title="Contact Us" mainRef={contactRef}>
             <Header
                 head="Get in Touch with Us"
                 text="Reach Out for Tailored Support and Guidance" />

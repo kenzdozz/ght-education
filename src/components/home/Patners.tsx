@@ -2,7 +2,7 @@
 import React, { useCallback } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Grid } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Container } from "../shared";
 import { patners } from "@/data";
 
@@ -40,19 +40,8 @@ const Patners = () => {
                 modules={[Autoplay]}
                 className="mySwiper"
             >
-                {
-                    patners.map(renderPatners)
-                }
+                {patners.map(renderPatners)}
             </Swiper>
-            {/* <Container as='span' className=" relative w-[100px] h-[80px] bg-red-100 overflow-hidden" >
-                <Image
-                    src='/img/logos/kentuckylogo.jpg'
-                    alt="logo patners"
-                    fill
-                    style={{objectFit:"cover"}}
-                    className="transition-all duration-300 shrink-0 hover:-translate-y-1 cursor-pointer"
-                />
-            </Container> */}
         </Container>
     );
 };

@@ -22,13 +22,13 @@ const HeroSection = () => {
             <Container className=' container flex flex-col items-center md:items-end justify-center h-full'>
                 <AnimateScrollReveal duration={1.3} className={` glass w-full md:w-2/3 lg:w-1/2 py-20 px-8 ${S.bgWhite50t}`}>
                     <AnimateScrollReveal animName='fadeInRight' duration={1.75} delay={0.12} as='h3' className=' mb-2 text-2xl font-bold text-default-blue capitalize'>
-                        Explore and Choose Your Preferred Schools
+                        Discover Your Ideal Study Destination
                     </AnimateScrollReveal>
-                    <Container as='p' className=' mb-5 text-lg text-slate-700'>
-                        Explore top-tier schools worldwide. Find the perfect match for your educational journey with ease.
+                    <Container as='p' className=' mb-5 text-base text-slate-700'>
+                        Explore and Select from a Wide Range of Global Study Destinations, Tailoring Your Ideal Educational Experience Abroad
                     </Container>
                     <AnimateScrollReveal allowOverflow duration={1.75} delay={0.12} className=' w-1/2 mt-2'>
-                        <button onClick={() => navigateToSchools()} className='button button-primary px-3'>Explore Schools</button>
+                        <button onClick={() => navigateToSchools()} className='button button-primary px-3'>Explore Now</button>
                     </AnimateScrollReveal>
                 </AnimateScrollReveal>
             </Container>

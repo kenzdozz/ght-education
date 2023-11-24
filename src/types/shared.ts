@@ -67,7 +67,7 @@ export interface ContainerProps
     > {
     as?: TAs;
     dynamic?: boolean;
-
+    cRef?: React.RefObject<HTMLElement>
 }
 
 export interface NavItem {

@@ -28,9 +28,7 @@ const Countries = () => {
                             {item.name}
                         </Container>
                         <Container as='p' className=" text-base text-center">
-                            We assist in rendering support to individuals seeking any form of
-                            educational advancement overseas through personalized admission
-                            assistance and visa counseling in {item.name}.
+                            {item.description}
                         </Container>
                     </Container>
                 </AnimateScrollReveal>
