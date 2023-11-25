@@ -73,7 +73,7 @@ const Country = ({ country }: { country: ICountry }) => {
                         </Container>
                     </AnimateScrollReveal>
 
-                    <AnimateScrollReveal animName="fadeInRight" className=" rounded-md shadow-md py-9 mt-8 px-2 lg:px-2 mb-8">
+                    <AnimateScrollReveal animName="fadeInRight" className="sm:hidden md:flex rounded-md shadow-md py-9 mt-8 px-2 lg:px-2 mb-8">
                         <ContactForm
                             isWide={false}
                             message={`I would like to know about stuying in ${country.name}`}
@@ -135,15 +135,22 @@ const Country = ({ country }: { country: ICountry }) => {
                     </AnimateScrollReveal>
 
                     {/* faq section  */}
-                    <AnimateScrollReveal animName="fadeInUp" ref={faqRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11">
+                    <AnimateScrollReveal animName="fadeInUp" cRef={faqRef} className="scrollTo rounded-md py-9">
                         <Container as="h5" className=" textBorder font-bold text-lg md:text-3xl capitalize">
-                            Guides and FAQ
+                            FAQs
                         </Container>
                         <Faqs isSlice isRow />
                     </AnimateScrollReveal>
+
+                    <AnimateScrollReveal animName="fadeInRight" className="md:hidden rounded-md mb-8">
+                        <ContactForm
+                            isWide={false}
+                            message={`I would like to know about stuying in ${country.name}`}
+                            country={country.name}
+                        />
+                    </AnimateScrollReveal>
                 </Container>
             </Container >
-
         </>
     );
 };

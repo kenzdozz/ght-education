@@ -2,15 +2,12 @@
   position: fixed;
   left: 0;
   right: 0;
-  // transform: translateX(-50%);
   top: 0;
   width: 100%;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  // background-color: rgba(255, 255, 255, 0.5);
-  // border-radius: 20px;
 
   .item-container,
   .action-container {
@@ -24,8 +21,6 @@
   }
 
   .action-container {
-    //   background-color: rgba(65, 5, 83, 0.9);
-    //   color: white;
     min-width: unset;
     width: auto;
   }
@@ -59,9 +54,11 @@
     }
   }
 
-  // &.active::after {
-  //   opacity: 1;
-  // }
+  .dropdown {
+    .active {
+      color: $default-red;
+    }
+  }
 
   &:hover {
     &.active::after {
@@ -88,16 +85,9 @@
 }
 
 .sidedropdown {
-  // position: absolute;
-  // top: 40px;
-  // z-index: 100;
   max-height: 0;
   overflow: hidden;
-  // color: white !important;
-  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  // border-radius: 15px;
   background-color: transparent;
-  // backdrop-filter: blur(5px);
   padding: 0;
   transition: all 0.5s ease;
 }
@@ -153,7 +143,6 @@
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(to right,rgba(33, 33, 99, 0.95),rgba(33, 33, 99, 0.95));
-  // background-color: rgba(33, 33, 99, 0.95);
   padding: 2rem;
   transform: translateX(-100%);
   transition: all 0.5s ease-in-out;
@@ -175,7 +164,6 @@
   &:hover {
     .glass-over {
       background-color: $default-red;
-      // color: $default-blue;
       span {
         color: white !important;
       }

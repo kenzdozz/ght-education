@@ -1,6 +1,7 @@
 "use client";
 import React, { memo } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Container } from ".";
 
 const _NavSubMenu = ({
@@ -17,6 +18,9 @@ const _NavSubMenu = ({
     parenturl: string;
     closeSideBar?: (url1: string, url2: string) => void;
 }) => {
+    const router = useRouter();
+    const isActive = (item: { url: string }) => router.asPath.includes(`${parenturl}/${item.url}`);
+
     return (
         <Container as="ul" className={`${closeSideBar ? 'sidedropdown' : 'dropdown'} ${dropdown ? "show" : ""}`}>
             {subitem.map((submenu, index) => (
@@ -30,17 +34,17 @@ const _NavSubMenu = ({
                             {submenu.title}
                             <Container
                                 as="span"
-                                className="text-base ml-3 material-icons submenu-icon text-blue-500"
+                                className="!text-base ml-3 material-icons submenu-icon text-blue-500"
                             >
                                 double_arrow
                             </Container>
                         </Container>
                     ) : (
-                        <Link href={`${parenturl}/${submenu.url}`} className="menu-items">
+                        <Link href={`${parenturl}/${submenu.url}`} className={`menu-items ${isActive(submenu) ? "active" : ""}`}>
                             {submenu.title}
                             <Container
                                 as="span"
-                                className="text-base ml-3 material-icons submenu-icon text-blue-500"
+                                className="!text-base ml-3 material-icons submenu-icon text-blue-500"
                             >
                                 double_arrow
                             </Container>

@@ -125,12 +125,12 @@ const Nav = () => {
                         {NAV_MENU_ITEMS.map(renderNavs)}
                     </Container>
                     <Container className=" hidden lg:flex contact transition-all duration-300">
-                        <a href="tel:+234-903-0143-401" className=" flex items-center transition-all duration-300">
+                        <a href="tel:+2347030344279" className=" flex items-center transition-all duration-300">
                             <Container as="span" className=" w-8 h-8 lg:w-14 lg:h-14 rounded-full flex items-center justify-center glass-over">
                                 <Container as="span" className="material-icons text-red-600">call</Container>
                             </Container>
                             <Container as="span" className=" ml-1 lg:ml-3">
-                                <Container as="p" className=" text-sm font-semibold">+234-903-0143-401</Container>
+                                <Container as="p" className=" text-sm font-semibold">+234-703-0344-279</Container>
                                 <Container as="p" className="text-sm">Contact Support</Container>
                             </Container>
                         </a>

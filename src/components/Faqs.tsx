@@ -56,7 +56,7 @@ const Faqs = ({ isRow = false, isSlice = false }: { isRow?: boolean, isSlice?: b
     )
 
     return (
-        <Container as='section' className=' container pt-6 pb-6'>
+        <Container as='section' className='container pt-6 pb-6'>
             <Container className={`grid grid-cols-1 transition-all duration-200 ${isSlice ? ' max-h-full' : 'max-h-full'} ${isRow ? 'md:grid-cols-1' : 'md:grid-cols-1'} gap-5 mt-0`}>
                 {FAQ_ITEMS.slice(0, end).map(renderFaqs)}
                 {(isSlice) && (

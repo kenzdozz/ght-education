@@ -56,17 +56,14 @@ const Footer = () => {
                         No 18 Ezimgbu link Road GRA, Phase 4 Port Harcourt, Rivers State,
                         Nigeria.
                     </Container>
-                    <Container as="p" className=" text-slate-800 mt-3 flex items-center flex-wrap gap-1">
+                    <Container as="p" className=" text-slate-800 mt-4 flex items-center flex-wrap gap-1">
                         <PhoneIcon className="pointer-events-none text-slate-900 w-6 h-6 mr-1" />
-                        <a href="tel:+234-903-0143-401">+234-903-0143-401</a>,
-                        <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
+                        <a href="tel:+2347030344279">+234-703-0344-279</a>
                     </Container>
-                    <Container as="p" className=" text-slate-800 mt-3 flex items-center gap-1 flex-wrap">
+                    <Container as="p" className=" text-slate-800 mt-4 flex items-center gap-1 flex-wrap">
                         <EnvelopeIcon className="pointer-events-none text-slate-900 w-6 h-6 mr-1" />
                         <Container as="span">
                             <a href="mailto:info@ghteducation.com">info@ghteducation.com</a>
-                            <br />
-                            <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                         </Container>
                     </Container>
                 </Container>
@@ -76,20 +73,16 @@ const Footer = () => {
                     </Container>
                     <Container className=" text-slate-800 mt-4 flex items-center">
                         <HomeIcon className="pointer-events-none text-slate-900 w-6 h-6 mr-1" />
-                        Kwara State Office No 6 Pack Close, GRA Ilorin, Kwara State,
-                        Nigeria.
+                        1st Floor Premium House, Magazine Road Jericho GRA Ibadan, Oyo State, Nigeria
                     </Container>
-                    <Container as="p" className=" text-slate-800 mt-3 flex items-center flex-wrap gap-1">
+                    <Container as="p" className=" text-slate-800 mt-4 flex items-center flex-wrap gap-1">
                         <PhoneIcon className="pointer-events-none text-slate-900 w-6 h-6 mr-1" />
-                        <a href="tel:+234-903-0143-401">+234-903-0143-401</a>,
-                        <a href="tel:+234-803-6718-217">+234-803-6718-217</a>
+                        <a href="tel:+2347037379147">+234-703-7379-147</a>
                     </Container>
-                    <Container as="p" className=" text-slate-800 mt-3 flex items-center gap-1 flex-wrap">
+                    <Container as="p" className=" text-slate-800 mt-4 flex items-center gap-1 flex-wrap">
                         <EnvelopeIcon className="pointer-events-none text-slate-900 w-6 h-6 mr-1" />
                         <Container as="span">
                             <a href="mailto:info@ghteducation.com">info@ghteducation.com</a>
-                            <br />
-                            <a href="mailto:globalht.education@gmail.com">globalht.education@gmail.com</a>
                         </Container>
                     </Container>
                 </Container>

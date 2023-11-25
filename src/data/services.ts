@@ -23,7 +23,7 @@ export const SUB_SERVICES: ISubService[] = [
     {
         text: "Application Preparation",
         description: "Assistance in compiling and refining application materials.",
-        icon: 'atom',
+        icon: 'document',
         id: 2,
     },
     {
@@ -35,31 +35,31 @@ export const SUB_SERVICES: ISubService[] = [
     {
         text: "Visa Application Review",
         description: "Thorough review of documentation before submission.",
-        icon: 'flight',
+        icon: 'review',
         id: 4,
     },
     {
         text: "Visa Interview Preparation",
         description: "Guidance and mock interviews to prepare for visa interviews.",
-        icon: 'speaker-phone',
+        icon: 'interview',
         id: 5,
     },
     {
         text: "Visa Refusal Reversal",
         description: "Assistance in addressing and reversing previous visa refusals.",
-        icon: 'plane-arrival',
+        icon: 'sad-face',
         id: 6,
     },
     {
         text: "Documentation Assistance",
         description: "Guidance in preparing and organizing necessary visa documents.",
-        icon: 'sad-face',
+        icon: 'document',
         id: 7,
     },
     {
         text: "Travel Logistics",
         description: "Assistance in flight bookings, travel insurance, airports pick-up and itinerary planning.",
-        icon: 'petal',
+        icon: 'flight',
         id: 8,
     },
     {
@@ -71,7 +71,7 @@ export const SUB_SERVICES: ISubService[] = [
     {
         text: "Cultural Guidance",
         description: "Information on local customs, culture, and regulations in the destination country.",
-        icon: 'accomodation',
+        icon: 'petal',
         id: 10,
     },
     {

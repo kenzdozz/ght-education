@@ -16,10 +16,7 @@ const Vision = () => {
                         animName="fadeInRight"
                         className=" flex flex-col items-center px-8 py-10 folded-paper"
                     >
-                        <Container
-                            as="h4"
-                            className="capitalize text-gradient font-semibold text-3xl text-center mb-4"
-                        >
+                        <Container as="h4" className="capitalize text-gradient font-semibold text-3xl text-center mb-4">
                             Our Vision
                         </Container>
                         <Container as="p" className=" text-center font-medium text-slate-600">
@@ -42,18 +39,15 @@ const Vision = () => {
                         animName="fadeInLeft"
                         className=" flex flex-col items-center px-8 py-10 folded-paper-mission"
                     >
-                        <Container
-                            as="h4"
-                            className="capitalize text-gradient font-semibold text-3xl text-center mb-4"
-                        >
+                        <Container as="h4" className="capitalize text-gradient font-semibold text-3xl text-center mb-4">
                             Our Mission
                         </Container>
                         <Container as="p" className=" text-center font-medium text-slate-600">
-                        Empowering aspirations with tailored admission and visa support for global education. Extending expertise to ensure fair opportunities and successful journeys.
+                            Empowering aspirations with tailored admission and visa support for global education. Extending expertise to ensure fair opportunities and successful journeys.
                         </Container>
                         <Container className="w-full relative mt-7 h-[15rem] rounded-md">
                             <Image
-                                src='/img/about/mission.webp'
+                                src='/img/about/mission.jpg'
                                 alt='waho-we-are'
                                 fill
                                 className=' rounded-md'
