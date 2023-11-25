@@ -13,7 +13,7 @@ const HeroSection = () => {
         <Container className='relative h-[34rem] lg:h-[49rem]'>
             <Container className={`absolute top-0 left-0 z-[0] w-full h-full`}>
                 <Image
-                    src={`/img/male.jpg`}
+                    src={`/img/male.webp`}
                     alt="Your Image"
                     fill
                     className=" object-cover object-center"

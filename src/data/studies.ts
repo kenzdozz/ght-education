@@ -27,7 +27,7 @@ export interface ICountryText {
 
 export const STUDY_COUNTRIES: ICountry[] = [
     {
-        img: "/img/usa.jpg",
+        img: "/img/usa.webp",
         name: "United States of America",
         slug: "usa",
         description: "Exceptional education, inclusive culture. Renowned for excellence, inviting global students to explore diverse opportunities in a welcoming environment.",
@@ -371,7 +371,7 @@ export const STUDY_COUNTRIES: ICountry[] = [
         ],
     },
     {
-        img: "/img/ireland.jpg",
+        img: "/img/ireland.webp",
         name: "Ireland",
         slug: "ireland",
         description: "Educational excellence, amidst rich cultural tapestry. Discover academic brilliance intertwined with cultural immersion in Ireland's vibrant university landscape.",
@@ -423,7 +423,7 @@ export const STUDY_COUNTRIES: ICountry[] = [
         ],
     },
     {
-        img: "/img/australia.jpg",
+        img: "/img/australia.webp",
         name: "Australia",
         slug: "australia",
         description: "Experience academic diversity and vibrant culture in Australia's universities. Discover excellence in Australia's diverse academic settings.",
@@ -506,7 +506,7 @@ export const STUDY_COUNTRIES: ICountry[] = [
 
 export const FEATURED_COUNTRIES: IFeaturedCountry[] = [
     {
-        img: '/img/usa.jpg',
+        img: '/img/usa.webp',
         name: "United States of America",
         description: "A global education leader, renowned for top universities and diverse opportunities, inviting students to explore academic excellence and innovation.",
         slug: "usa",
@@ -594,7 +594,7 @@ export const COUNTRY_PAGE_TEXT: Record<string, ICountryText> = {
         ],
         life: [
             "Cultural Diversity: Canada's inclusive environment fosters cultural diversity, allowing students to engage in diverse experiences and create global connections.",
-            "Student Life: Vibrant student communities offer various clubs, sports, and social activities, providing ample opportunities for personal growth and skill development.",            
+            "Student Life: Vibrant student communities offer various clubs, sports, and social activities, providing ample opportunities for personal growth and skill development.",
             "Outdoor Adventures: Canada's breathtaking landscapes offer outdoor activities, from exploring national parks to enjoying seasonal sports, allowing students to experience the country's natural beauty.",
         ],
     },
@@ -605,17 +605,17 @@ export const COUNTRY_PAGE_TEXT: Record<string, ICountryText> = {
         ],
         fees: [
             "Tuition Fees: Tuition fees in Australia vary depending on the institution and program. On average, undergraduate fees range from AUD 20,000 to AUD 45,000 annually, while postgraduate fees span AUD 22,000 to AUD 50,000 per year.",
-            "Financial Support: Australia offers various scholarships, grants, and financial aid options for international students, encouraging academic excellence and supporting living expenses.",            
+            "Financial Support: Australia offers various scholarships, grants, and financial aid options for international students, encouraging academic excellence and supporting living expenses.",
             "Cost of Living: The cost of living in Australia varies across regions. Students generally allocate approximately AUD 18,000 to AUD 25,000 per year for accommodation, food, transport, and other expenses.",
         ],
         admission: [
             "Personalized Assistance: Our personalized approach assists students in selecting suitable institutions, ensuring alignment with their academic goals. We offer guidance throughout the application process, enhancing their chances of acceptance.",
-            "Application Support: Crafting persuasive applications is crucial. We provide comprehensive support in preparing documents, refining applications, and meeting deadlines, maximizing students' chances of securing admission.",            
+            "Application Support: Crafting persuasive applications is crucial. We provide comprehensive support in preparing documents, refining applications, and meeting deadlines, maximizing students' chances of securing admission.",
             "Visa Guidance: Our support extends to navigating the visa application process, ensuring compliance and a smooth transition for students heading to Australia.",
         ],
         life: [
             "Cultural Diversity: Australia's inclusive society celebrates cultural diversity, providing an enriching environment for international students to interact and embrace various cultures.",
-            "Student Experience: Australian universities offer vibrant student life with numerous clubs, societies, and extracurricular activities, promoting personal growth and fostering lifelong friendships.",            
+            "Student Experience: Australian universities offer vibrant student life with numerous clubs, societies, and extracurricular activities, promoting personal growth and fostering lifelong friendships.",
             "Natural Beauty & Recreation: The country's diverse landscapes offer outdoor adventures, from pristine beaches to scenic hikes, providing students with recreational opportunities amidst natural beauty.",
         ],
     },
@@ -629,12 +629,12 @@ export const COUNTRY_PAGE_TEXT: Record<string, ICountryText> = {
             "Financial Aid: Ireland offers scholarships, grants, and financial aid for international students, supporting academic achievements and contributing to living expenses.",
             "Cost of Living: The cost of living in Ireland depends on the region. Students generally allocate approximately EUR 8,000 to EUR 12,000 per year for accommodation, food, transport, and other expenses.",
         ],
-        admission: [            
+        admission: [
             "Consultative Approach: Our tailored consultations help students select suitable institutions aligned with their academic aspirations. We guide them through the application process, ensuring a thorough and compelling presentation of their candidacy.",
             "Application Support: We offer comprehensive assistance in application preparation, refining documents, and meeting deadlines to increase students' chances of admission.",
             "Visa Guidance: Our support extends to visa application guidance, ensuring students navigate the process seamlessly and prepare for their educational journey in Ireland.",
         ],
-        life: [            
+        life: [
             "Cultural Immersion: Ireland's rich cultural heritage provides a unique experience for students, offering a blend of tradition and modernity. The country's inclusive atmosphere fosters cultural exchange and community engagement.",
             "Student Life: Irish universities provide active student communities with clubs, societies, and extracurricular activities, allowing students to engage, learn, and grow beyond the classroom.",
             "Natural Beauty & Recreation: Ireland's scenic landscapes and historic sites offer opportunities for outdoor activities and exploration, enriching students' experiences with its natural beauty and cultural history.",
@@ -645,7 +645,7 @@ export const COUNTRY_PAGE_TEXT: Record<string, ICountryText> = {
             "New Zealand offers a diverse range of institutions providing courses in sciences, engineering, business, arts, healthcare, and technology. The universities prioritize quality education and practical learning experiences.",
             "Innovative Learning Environment: New Zealand universities focus on fostering innovation and critical thinking, offering programs that integrate theory with hands-on learning, preparing students for real-world challenges.",
         ],
-        fees: [            
+        fees: [
             "Tuition Fees: Tuition fees in New Zealand vary depending on the institution and program. On average, undergraduate fees range from NZD 22,000 to NZD 32,000 annually, while postgraduate fees span NZD 25,000 to NZD 40,000 per year.",
             "Financial Assistance: New Zealand provides scholarships, grants, and financial aid for international students, encouraging academic excellence and easing financial constraints.",
             "Cost of Living: The cost of living in New Zealand varies by location. Students typically budget around NZD 15,000 to NZD 20,000 per year for accommodation, food, transport, and personal expenses.",
