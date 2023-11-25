@@ -75,7 +75,7 @@ export const SERVICES_STEPS = [
         head: "Visa",
         title: "Visa Consultation & Counseling",
         description: "Our Visa Consultation & Counseling service provides personalized guidance for diverse visa applications. With expertise in documentation and interviews, we assist step-by-step through the process. We're dedicated to avoiding visa refusals and ensuring fair representation for genuine applicants. Committed to professionalism, we empower clients with confidence during their visa journey.",
-        img: "/img/graduation.webp",
+        img: "/img/counseling.webp",
         btnText: 'Get Consultation',
     },
     {
@@ -83,32 +83,32 @@ export const SERVICES_STEPS = [
         head: "Travel",
         title: "Travel & Stay",
         description: "We provide assistance that covers comprehensive support for a seamless transition abroad. We facilitate travel logistics, including flight bookings and documentation, while securing suitable accommodations tailored to individual preferences. Additionally, we provide valuable insights into local culture and regulations, ensuring a comfortable and stress-free stay to focus on academic or professional pursuits.",
-        img: "/img/counseling.webp",
+        img: "/img/travel.jpg",
         btnText: 'Plan Journey',
     },
 ];
 
-export const footerLinks = [
+export const FOOTER_LINKS = [
     {
-        name: "Countries",
-        url: "studies/countries/",
+        name: "Study Abroad",
+        url: "/study-abroad",
     },
 
     {
         name: "Our Services",
-        url: "services",
+        url: "/services",
     },
     {
         name: "About us",
-        url: "about",
+        url: "/about",
     },
     {
         name: "Contact",
-        url: "contact",
+        url: "/contact",
     },
     {
         name: "FAQs",
-        url: "faqs",
+        url: "/faqs",
     },
 ];
 

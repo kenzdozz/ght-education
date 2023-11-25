@@ -41,6 +41,7 @@ export type TAs =
     | 'main'
     | 'aside'
     | 'footer'
+    | 'hr'
     | 'h1'
     | 'h2'
     | 'h3'
