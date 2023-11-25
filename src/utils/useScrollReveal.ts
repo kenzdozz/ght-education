@@ -14,7 +14,7 @@ function useScrollReveal<T extends HTMLElement>() {
                     observer.unobserve(entry.target)
                 }
             })
-        }, { threshold: 0.5 });
+        }, { threshold: 0.3 });
         animAnchors?.forEach((animAnchor) => {
             observer.observe(animAnchor)
         });

@@ -109,8 +109,7 @@ const Nav = () => {
         <>
             <Container
                 as="nav"
-                className={`Nav transition-all duration-300 ${scrolled ? " bg-blue-100 bg-opacity-90 " : " bg-white"
-                    } py-2 md:py-5 h-14 md:h-20`}
+                className={`Nav transition-all duration-300 ${scrolled ? " bg-blue-100 bg-opacity-90 " : " bg-white"} py-2 md:py-5 h-14 md:h-20`}
             >
                 <Container className=" container flex items-center justify-between">
                     <Link href="/" className=" relative ">
@@ -126,31 +125,13 @@ const Nav = () => {
                         {NAV_MENU_ITEMS.map(renderNavs)}
                     </Container>
                     <Container className=" hidden lg:flex contact transition-all duration-300">
-                        <a
-                            href="tel:+234-903-0143-401"
-                            className=" flex items-center transition-all duration-300"
-                        >
-                            <Container
-                                as="span"
-                                className=" w-8 h-8 lg:w-14 lg:h-14 rounded-full flex items-center justify-center glass-over"
-                            >
-                                <Container as="span" className="material-icons text-red-600">
-                                    call
-                                </Container>
+                        <a href="tel:+234-903-0143-401" className=" flex items-center transition-all duration-300">
+                            <Container as="span" className=" w-8 h-8 lg:w-14 lg:h-14 rounded-full flex items-center justify-center glass-over">
+                                <Container as="span" className="material-icons text-red-600">call</Container>
                             </Container>
                             <Container as="span" className=" ml-1 lg:ml-3">
-                                <Container
-                                    as="p"
-                                    className=" text-sm font-medium lg:font-semibold lg:text-base"
-                                >
-                                    +234-903-0143-401
-                                </Container>
-                                <Container
-                                    as="p"
-                                    className=" font-light text-sm lg:font-medium lg:text-base"
-                                >
-                                    Contact Support
-                                </Container>
+                                <Container as="p" className=" text-sm font-semibold">+234-903-0143-401</Container>
+                                <Container as="p" className="text-sm">Contact Support</Container>
                             </Container>
                         </a>
                     </Container>

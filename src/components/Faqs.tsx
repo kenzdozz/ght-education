@@ -1,7 +1,7 @@
 "use client"
 import React, { useCallback, useEffect, useState } from 'react'
 import { FAQ_ITEMS } from '@/data';
-import { Container } from '@/components/shared';
+import { AnimateScrollReveal, Container } from '@/components/shared';
 import { useRouter } from 'next/navigation';
 
 const Faqs = ({ isRow = false, isSlice = false }: { isRow?: boolean, isSlice?: boolean }) => {
@@ -34,7 +34,7 @@ const Faqs = ({ isRow = false, isSlice = false }: { isRow?: boolean, isSlice?: b
     const renderFaqs = useCallback(
         (item: { title: string; text: string }, id: number) => {
             return (
-                <Container key={id} className={`shadow-md w-full rounded-xl bg-white overflow-hidden transition-max-h duration-1000 p-5 ${clickedId === id + 1 ? ' max-h-screen' : ' max-h-40 lg:max-h-30'
+                <AnimateScrollReveal animName="fadeInUp" key={id} className={`shadow-md w-full rounded-xl bg-white overflow-hidden transition-max-h duration-1000 p-5 ${clickedId === id + 1 ? ' max-h-screen' : ' max-h-40 lg:max-h-30'
                     }`}>
                     <Container className='flex items-center justify-between cursor-pointer' onClick={() => toggleShow(id + 1)}>
                         <Container as='h6' className={`text-base capitalize bold w-11/12 flex items-center ${clickedId === id + 1 ? 'text-blue-600' : ' text-slate-800'}`}>
@@ -49,7 +49,7 @@ const Faqs = ({ isRow = false, isSlice = false }: { isRow?: boolean, isSlice?: b
                     <Container as='p' className={`text-base text-slate-500 mt-4 transition-all duration-1000 ${clickedId === id + 1 ? ' opacity-100' : ' hidden opacity-0'}`}>
                         {item.text}
                     </Container>
-                </Container>
+                </AnimateScrollReveal>
             )
         },
         [clickedId],

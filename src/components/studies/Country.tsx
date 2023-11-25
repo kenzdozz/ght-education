@@ -3,7 +3,7 @@ import React, {
     RefObject,
     useRef,
 } from "react";
-import { Container } from "../shared";
+import { AnimateScrollReveal, Container } from "../shared";
 import { COUNTRY_PAGE_TEXT, ICountry } from "@/data/studies";
 import S from "@/styles/pages/studies/study.module.scss";
 import Faqs from "../Faqs";
@@ -30,10 +30,10 @@ const Country = ({ country }: { country: ICountry }) => {
             <ToastContainer />
             <Container className="z-10 relative container grid grid-cols-1 lg:grid-cols-7 gap-10 my-16">
                 <Container as="aside" className="col-span-2">
-                    <Container as="h4" className="textBorder font-semibold text-xl md:text-xl capitalize">
+                    <AnimateScrollReveal animName="fadeInRight" as="h4" className="textBorder font-semibold text-xl md:text-xl capitalize">
                         User Guide
-                    </Container>
-                    <Container className="bg-slate-100 rounded-md mt-10">
+                    </AnimateScrollReveal>
+                    <AnimateScrollReveal animName="fadeInRight" className="bg-slate-100 rounded-md mt-10">
                         <Container as="ul">
                             <Container
                                 as="li"
@@ -71,17 +71,18 @@ const Country = ({ country }: { country: ICountry }) => {
                                 FAQs
                             </Container>
                         </Container>
-                    </Container>
+                    </AnimateScrollReveal>
 
-                    <Container className=" rounded-md shadow-md py-9 mt-8 px-2 lg:px-2 mb-8">
+                    <AnimateScrollReveal animName="fadeInRight" className=" rounded-md shadow-md py-9 mt-8 px-2 lg:px-2 mb-8">
                         <ContactForm
                             isWide={false}
                             message={`I would like to know about stuying in ${country.name}`}
                             country={country.name}
                         />
-                    </Container>
+                    </AnimateScrollReveal>
                 </Container>
                 <Container as="section" className=" col-span-1 lg:col-span-5">
+                    <AnimateScrollReveal animName="fadeInUp">
                     <Container cRef={uniRef} as="h4" className="scrollTo textBorder font-bold text-xl md:text-3xl mb-5 capitalize">
                         Universities and Courses
                     </Container>
@@ -100,7 +101,9 @@ const Country = ({ country }: { country: ICountry }) => {
                             ))}
                         </Container>
                     </Container>
+                    </AnimateScrollReveal>
 
+                    <AnimateScrollReveal animName="fadeInUp">
                     <Container cRef={feeRef} as="h4" className="scrollTo textBorder font-bold text-xl md:text-3xl mt-12 mb-5 capitalize">
                         Fee, Scholarship, Cost of Living
                     </Container>
@@ -109,6 +112,8 @@ const Country = ({ country }: { country: ICountry }) => {
                             <Container key={`fee-text-${i}`} as="p" className=" mb-3">{text}</Container>
                         ))}
                     </Container>
+                    </AnimateScrollReveal>
+                    <AnimateScrollReveal animName="fadeInUp">
                     <Container cRef={admissionRef} as="h4" className="scrollTo textBorder font-bold text-xl md:text-3xl mt-12 mb-5 capitalize">
                         Admission Process - How We Can Help
                     </Container>
@@ -117,6 +122,8 @@ const Country = ({ country }: { country: ICountry }) => {
                             <Container key={`adm-text-${i}`} as="p" className=" mb-3">{text}</Container>
                         ))}
                     </Container>
+                    </AnimateScrollReveal>
+                    <AnimateScrollReveal animName="fadeInUp">
                     <Container cRef={beyondLifeRef} as="h4" className="scrollTo textBorder font-bold text-xl md:text-3xl mt-12 mb-5 capitalize">
                         Study & Beyond - Life in the Country
                     </Container>
@@ -125,14 +132,15 @@ const Country = ({ country }: { country: ICountry }) => {
                             <Container key={`life-text-${i}`} as="p" className=" mb-3">{text}</Container>
                         ))}
                     </Container>
+                    </AnimateScrollReveal>
 
                     {/* faq section  */}
-                    <div ref={faqRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11">
+                    <AnimateScrollReveal animName="fadeInUp" ref={faqRef} className=" rounded-md shadow-md py-9 px-2 lg:px-11">
                         <Container as="h5" className=" textBorder font-bold text-lg md:text-3xl capitalize">
                             Guides and FAQ
                         </Container>
                         <Faqs isSlice isRow />
-                    </div>
+                    </AnimateScrollReveal>
                 </Container>
             </Container >
 

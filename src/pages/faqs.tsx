@@ -1,7 +1,7 @@
 'use client'
 import Faqs from '@/components/Faqs'
 import Page from '@/components/Page'
-import { Container } from '@/components/shared'
+import { AnimateScrollReveal, Container } from '@/components/shared'
 import { Header } from '@/components/studies'
 import useScrollReveal from '@/utils/useScrollReveal'
 import React from 'react'
@@ -21,18 +21,18 @@ const FaqsPage = () => {
             <Container className=" container grid grid-cols-1 lg:grid-cols-7 gap-2 relative z-[2] mt-16 mb-10">
                 <Container className=' col-span-1 lg:col-span-5'>
                     <Container className=' flex items-center justify-center'>
-                        <Container className='textBorder font-bold text-xl md:text-3xl' as='h2'>
+                        <AnimateScrollReveal animName="fadeInLeft" className='textBorder font-bold text-xl md:text-3xl' as='h2'>
                             FAQs
-                        </Container>
+                        </AnimateScrollReveal>
                     </Container>
                     <Container className="px-0 lg:px-16">
                         <Faqs />
                     </Container>
                 </Container>
 
-                <Container as="aside" className=" col-span-1 lg:col-span-2">
+                <AnimateScrollReveal animName="fadeInLeft" as="aside" className="col-span-2">
                     <ContactForm isWide={false} />
-                </Container>
+                </AnimateScrollReveal>
             </Container>
         </Page>
     )
