@@ -225,7 +225,7 @@ const ContactForm = (props: ContactFormProps) => {
       </Container>
       <Container className=" flex items-center justify-center mt-3">
         <button
-          disabled={isAnyValueEmpty}
+          disabled={isAnyValueEmpty || formSubmit}
           onClick={() => submitMessage()}
           title={isAnyValueEmpty ? "All fields are required" : ""}
           className={`${isAnyValueEmpty ? "bg-gray-400" : "bg-blue-400"} border-0 font-semibold text-white rounded-md py-2 px-16 outline-none`}

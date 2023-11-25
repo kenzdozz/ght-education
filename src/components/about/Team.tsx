@@ -9,22 +9,22 @@ const Team = () => {
         (item: { name: string, img: string, description: string, role: string }, i: number) => {
             return (
                 <AnimateScrollReveal duration={1.2} delay={i * 0.22} key={i} className={`w-full bg-red-100 relative cursor-pointer shadow-2xl rounded-2xl ${S.TeamImage}`}>
-                    <Container className={`bg-blue-700 bg-opacity-80 rounded-2xl ${S.TeamText}`}>
+                    <Container className={`bg-slate-700 bg-opacity-80 rounded-2xl ${S.TeamText}`}>
                         <Container as='h5' className=' mb-2 text-white font-medium text-2xl'>{item.name}</Container>
                         <Container as='h6' className=' mb-2 text-red-400 text-xl'>{item.role}</Container>
-                        <Container as='p' className=' text-white'>
+                        {/* <Container as='p' className=' text-white'>
                             {item.description}
-                        </Container>
+                        </Container> */}
 
                     </Container>
-                    {/* <Image
+                    <Image
                         src={item.img}
                         alt={item.name}
                         className=" rounded-2xl shadow-2xl"
                         fill
-                        style={{objectFit:"cover"}}
-                    /> */}
-                    <Container>Image needed</Container>
+                        style={{ objectFit: "cover" }}
+                    />
+                    {/* <Container>Image needed</Container> */}
                 </AnimateScrollReveal>
             )
         },
