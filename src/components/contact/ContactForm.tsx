@@ -92,9 +92,7 @@ const ContactForm = (props: ContactFormProps) => {
       >
         Get in Touch with Us
       </Container>
-      <Container
-        className={props.isWide ? 'grid grid-cols-1 gap-5 md:my-6 md:grid-cols-2' : 'my-6 grid grid-cols-1 gap-5'}
-      >
+      <Container className={`my-6 grid grid-cols-1 gap-5 ${props.isWide ? 'md:grid-cols-2' : ''}`}>
         <Container>
           <Container as="label" className="mb-2 block text-sm font-medium capitalize text-blue-600 ">
             First Name

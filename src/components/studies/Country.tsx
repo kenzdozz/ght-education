@@ -30,6 +30,7 @@ const Country = ({ country }: { country: ICountry }) => {
           <AnimateScrollReveal
             animName="fadeInRight"
             as="h4"
+            allowOverflow={true}
             className="textBorder text-xl font-semibold capitalize md:text-xl"
           >
             User Guide
@@ -74,10 +75,7 @@ const Country = ({ country }: { country: ICountry }) => {
             </Container>
           </AnimateScrollReveal>
 
-          <AnimateScrollReveal
-            animName="fadeInRight"
-            className="mb-8 mt-8 rounded-md px-2 py-9 shadow-md sm:hidden md:flex lg:px-2"
-          >
+          <AnimateScrollReveal animName="fadeInRight" className="mb-8 mt-8 hidden rounded-md p-3 shadow-md md:block">
             <ContactForm
               isWide={false}
               message={`I would like to know about stuying in ${country.name}`}
