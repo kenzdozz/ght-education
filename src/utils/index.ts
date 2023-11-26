@@ -1,2 +1,1 @@
-export * from './useScrollReveal'
-export * from './usePagination'
+export * from './useScrollReveal';

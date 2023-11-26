@@ -1,21 +1,21 @@
-@import '@/styles/constant';
+@import "@/styles/constant";
 .homeHead {
-    position: relative !important;
+  position: relative !important;
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 40rem;
-        top: 0;
-        background: linear-gradient(
-        to right,
-        rgba(1, 101, 178, 0.5),
-        rgba(1, 101, 178, 0.5),
-        rgba(1, 101, 178, 0.1)
-      );
-        z-index: 2;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    top: 0;
+    background: linear-gradient(
+      to right,
+      rgba(1, 101, 178, 0.5),
+      rgba(1, 101, 178, 0.5),
+      rgba(1, 101, 178, 0.1)
+    );
+    z-index: 2;
+  }
 }
 
 .CountryImage {
@@ -49,10 +49,9 @@
 .TextHead {
   position: relative;
   font-weight: 700;
-  // font-size: 2.5rem;
 
   &::after {
-    content: '';
+    content: "";
     width: 4rem;
     height: 3px;
     background: rgb(136, 37, 12);
@@ -65,15 +64,15 @@
 .quote {
   position: relative;
   &:before {
-    content: open-quote; 
+    content: open-quote;
     position: absolute;
     left: -20px;
     top: 0;
-    font-size: 34px; 
+    font-size: 34px;
     color: rgb(17, 77, 77);
   }
   &::after {
-    content: close-quote; 
+    content: close-quote;
     font-size: 34px;
     color: rgb(17, 77, 77) !important;
   }
@@ -89,14 +88,13 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 50%;
     height: 100%;
     left: 50%;
     transform: translateX(-50%);
-    // right: 0;
     top: 0;
-    background-image: url('/img/set1.svg');
+    background-image: url("/img/set1.svg");
     background-repeat: no-repeat;
     opacity: 0.5;
     background-position: center;
@@ -106,14 +104,12 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 50%;
     height: 100%;
     left: 0;
-    // transform: translateX(-50%);
-    // right: 0;
     bottom: 0;
-    background-image: url('/img/set1.svg');
+    background-image: url("/img/set1.svg");
     background-repeat: no-repeat;
     opacity: 0.5;
     background-position: center;
@@ -122,14 +118,10 @@
   }
   @media screen and (min-width: 768px) {
     &::after {
-     
       width: 30%;
-     
     }
     &::before {
-    
       width: 30%;
-     
     }
   }
 }
@@ -140,12 +132,12 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 30%;
     height: 100%;
     left: 70%;
     top: -46%;
-    background-image: url('/img/blue-pill1.svg');
+    background-image: url("/img/blue-pill1.svg");
     background-repeat: no-repeat;
     opacity: 0.5;
     background-position: center;
@@ -155,9 +147,7 @@
 
   @media screen and (min-width: 768px) {
     &::after {
-     top: -2rem;
-     
+      top: -2rem;
     }
-   
   }
 }

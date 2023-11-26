@@ -1,29 +1,23 @@
-"use client";
-
-import React, {
-    memo,
-} from "react";
-import { Container } from ".";
+'use client';
+import React, { memo } from 'react';
+import { Container } from '.';
 
 const _SearchInput = (): JSX.Element => {
-
-    return (
-        <Container className="container relative z-20">
-            <Container className="absolute left-1/2 w-full -translate-x-1/2 -top-7 z-10 h-12 border-2 border-blue-400 rounded-md bg-white flex items-center">
-                <input
-                    type="text"
-                    className=" h-full rounded-md w-10/12 md:w-11/12 shrink-0 border-0 pl-3 outline-none text-base text-black placeholder:text-slate-300 font-normal"
-                    placeholder="search universities"
-                />
-                <button className=" bg-orange-500 w-2/12 md:w-1/12 h-full flex items-center justify-center transition-all duration-300 text-white hover:bg-orange-600">
-                    search
-                </button>
-            </Container>
-            <Container className=" absolute top-12 w-full z-[3] bg-white transition-all duration-200 max-h-0">
-
-            </Container>
-        </Container>
-    );
+  return (
+    <Container className="container relative z-20">
+      <Container className="absolute -top-7 left-1/2 z-10 flex h-12 w-full -translate-x-1/2 items-center rounded-md border-2 border-blue-400 bg-white">
+        <input
+          type="text"
+          className=" h-full w-10/12 shrink-0 rounded-md border-0 pl-3 text-base font-normal text-black outline-none placeholder:text-slate-300 md:w-11/12"
+          placeholder="search universities"
+        />
+        <button className=" flex h-full w-2/12 items-center justify-center bg-orange-500 text-white transition-all duration-300 hover:bg-orange-600 md:w-1/12">
+          search
+        </button>
+      </Container>
+      <Container className=" absolute top-12 z-[3] max-h-0 w-full bg-white transition-all duration-200"></Container>
+    </Container>
+  );
 };
 
 export const SearchInput = memo(_SearchInput);

@@ -15,7 +15,7 @@ $button-box-shadow-hover: 0 0.125em 0.25em rgba(15, 103, 235, 0.25);
   $br: inherit,
   $tr: (
     transform 0.3s,
-    opacity 0.3s
+    opacity 0.3s,
   ),
   $t: 0,
   $l: 0,
@@ -26,7 +26,7 @@ $button-box-shadow-hover: 0 0.125em 0.25em rgba(15, 103, 235, 0.25);
   $bs: none
 ) {
   position: absolute;
-  content: ' ';
+  content: " ";
   width: $w;
   height: $h;
   top: $t;

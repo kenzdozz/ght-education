@@ -1,4 +1,4 @@
-import Contact from "./Contact";
-import Locations from "./Locations";
+import ContactForm from './ContactForm';
+import Locations from './Locations';
 
-export { Contact, Locations }
+export { Locations, ContactForm };

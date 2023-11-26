@@ -13,7 +13,9 @@
     opacity: 0;
     transform: translateY(-1rem);
     transform-origin: top;
-    transition: transform 0.5s ease 0.25s, opacity 0.5s ease 0.3s;
+    transition:
+      transform 0.5s ease 0.25s,
+      opacity 0.5s ease 0.3s;
   }
 
   &:hover {

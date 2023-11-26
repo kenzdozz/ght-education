@@ -1,47 +1,40 @@
-import React, { useCallback } from 'react'
-import Image from 'next/image'
-import { AnimateScrollReveal, Container } from '../shared'
-import { teams } from '@/data'
-import S from '@/styles/pages/about/about.module.scss'
+import React, { useCallback } from 'react';
+import Image from 'next/image';
+import { AnimateScrollReveal, Container } from '../shared';
+import { ITeam, OUR_TEAM } from '@/data';
+import S from '@/styles/pages/about/about.module.scss';
 
 const Team = () => {
-    const renderTeams = useCallback(
-        (item: { name: string, img: string, description: string, role: string }, i: number) => {
-            return (
-                <AnimateScrollReveal duration={1.2} delay={i * 0.22} key={i} className={`w-full bg-red-100 relative cursor-pointer shadow-2xl rounded-2xl ${S.TeamImage}`}>
-                    <Container className={`bg-slate-700 bg-opacity-80 rounded-2xl ${S.TeamText}`}>
-                        <Container as='h5' className=' mb-2 text-white font-medium text-2xl'>{item.name}</Container>
-                        <Container as='h6' className=' mb-2 text-red-400 text-xl'>{item.role}</Container>
-                        {/* <Container as='p' className=' text-white'>
-                            {item.description}
-                        </Container> */}
-
-                    </Container>
-                    <Image
-                        src={item.img}
-                        alt={item.name}
-                        className=" rounded-2xl shadow-2xl"
-                        fill
-                        style={{ objectFit: "cover" }}
-                    />
-                    {/* <Container>Image needed</Container> */}
-                </AnimateScrollReveal>
-            )
-        },
-        [],
-    )
+  const renderTeams = useCallback((item: ITeam, i: number) => {
     return (
-        <Container className=' container mt-14 mb-10'>
-            <Container as='h2' className='text-blue-600 mb-10 font-semibold text-3xl'>
-                Our Exciting Teams
-            </Container>
-            <Container className=' container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-20 gap-6'>
-                {
-                    teams.map(renderTeams)
-                }
-            </Container>
+      <AnimateScrollReveal
+        duration={1.2}
+        delay={i * 0.22}
+        key={i}
+        className={`relative w-full cursor-pointer rounded-2xl bg-red-100 shadow-2xl ${S.TeamImage}`}
+      >
+        <Container className={`rounded-2xl bg-slate-700 bg-opacity-80 ${S.TeamText}`}>
+          <Container as="h5" className=" mb-2 text-2xl font-medium text-white">
+            {item.name}
+          </Container>
+          <Container as="h6" className=" text-md mb-2 text-red-400">
+            {item.role}
+          </Container>
         </Container>
-    )
-}
+        <Image src={item.img} alt={item.name} className="rounded-2xl shadow-2xl" fill style={{ objectFit: 'cover' }} />
+      </AnimateScrollReveal>
+    );
+  }, []);
+  return (
+    <Container className=" container mb-10 mt-14">
+      <AnimateScrollReveal animName="scaleX" as="h2" className="mb-10 text-3xl font-semibold text-blue-600">
+        Our Exciting Teams
+      </AnimateScrollReveal>
+      <Container className=" container grid grid-cols-1 gap-6 pb-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {OUR_TEAM.map(renderTeams)}
+      </Container>
+    </Container>
+  );
+};
 
-export default Team
+export default Team;

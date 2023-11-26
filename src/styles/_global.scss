@@ -3,7 +3,6 @@
 }
 
 :root {
- 
   --base-border-radius: 0.25rem;
   --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
   --duration: 0.75s;
@@ -109,10 +108,7 @@ main {
   background-position: center;
   background-size: cover;
   width: auto !important;
-  // width: 40% !important;
   height: inherit !important;
-  // height: 570px !important;
-  // height: 100px;
 }
 
 .swiper-slide-shadow-left,
@@ -142,6 +138,7 @@ main {
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .text-gradient-bottom {
@@ -154,11 +151,11 @@ main {
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .glass-over {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  // border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
@@ -168,7 +165,6 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .container,
 .container {
@@ -205,12 +201,6 @@ main {
   }
 }
 
-// .container {
-//   max-width: 100%;
-//   padding-left: 1.3rem;
-//   padding-right: 1.3rem;
-// }
-
 .Icon {
   display: inline-flex;
   font-size: inherit;
@@ -219,7 +209,9 @@ main {
   position: relative;
   font-style: normal;
   color: inherit;
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
 
   &.size__tiny {
     $size: 1.5rem;
@@ -264,14 +256,11 @@ main {
   > svg {
     height: 100%;
     width: 100%;
-    // fill: currentColor;
     stroke: currentColor;
     font-weight: inherit;
     stroke-width: 2px;
   }
 }
-
-// for new home
 
 .glass {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
@@ -279,8 +268,6 @@ main {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   min-width: auto;
-  // padding: 0.5rem 1.5rem;
-  // height: max-content;
 }
 
 .header-home {
@@ -336,33 +323,31 @@ main {
   animation-delay: 5s;
 }
 
-
-
-.folded-paper, .folded-paper-mission {
+.folded-paper,
+.folded-paper-mission {
   position: relative;
   width: 100%;
-  // max-width: 450px;
   margin: 0 auto;
   background-color: white;
   transform: skewY(-5deg) translateY(10%) scale(0.94);
-  transition: 
+  transition:
     box-shadow var(--duration) var(--ease),
     background-color var(--duration) var(--ease),
     transform var(--duration) var(--ease);
-  
+
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     pointer-events: none;
     background-color: rgba(102, 102, 187, 0.1);
     width: 25%;
     height: 100%;
-    transition: 
+    transition:
       background-color var(--duration) var(--ease),
       transform var(--duration) var(--ease);
   }
-  
+
   &:before {
     top: 0;
     right: calc(100% - 1px);
@@ -370,7 +355,7 @@ main {
     transform: skewY(-35deg) scaleX(-1);
     z-index: -1;
   }
-  
+
   &:after {
     top: 0;
     left: calc(100% - 1px);
@@ -384,7 +369,6 @@ main {
   &:before,
   &:after {
     background-color: rgba(187, 102, 159, 0.1);
-   
   }
 }
 
