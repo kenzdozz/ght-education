@@ -4,7 +4,7 @@ import { AnimateScrollReveal, Container } from '../shared';
 const Header = ({ head, text }: { head: string; text?: string }) => {
   return (
     <Container className={`PageHeader`}>
-      <AnimateScrollReveal duration={0.8} as="h2" className="text-gradient text-4xl font-bold capitalize">
+      <AnimateScrollReveal duration={0.8} as="h2" className="text-gradient p-1 text-4xl font-bold capitalize">
         {head}
       </AnimateScrollReveal>
       <AnimateScrollReveal
