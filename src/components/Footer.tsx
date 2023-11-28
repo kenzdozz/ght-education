@@ -50,7 +50,7 @@ const Footer = () => {
           </Container>
           <Container as="p" className=" mt-4 flex flex-wrap items-center gap-1 text-slate-800">
             <PhoneIcon className="pointer-events-none mr-1 h-6 w-6 text-slate-900" />
-            <a href="tel:+2347030344279">+234-703-0344-279</a>
+            <a href="tel:+2347030344279">+234-703-0344-279</a>, <a href="tel:+2348036718217">+234-803-6718-217</a>
           </Container>
           <Container as="p" className=" mt-4 flex flex-wrap items-center gap-1 text-slate-800">
             <EnvelopeIcon className="pointer-events-none mr-1 h-6 w-6 text-slate-900" />
