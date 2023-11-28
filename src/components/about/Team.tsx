@@ -28,7 +28,7 @@ const Team = () => {
   return (
     <Container className=" container mb-10 mt-14">
       <AnimateScrollReveal animName="scaleX" as="h2" className="mb-10 text-3xl font-semibold text-blue-600">
-        Our Exciting Teams
+        Our Exciting Team
       </AnimateScrollReveal>
       <Container className=" container grid grid-cols-1 gap-6 pb-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {OUR_TEAM.map(renderTeams)}

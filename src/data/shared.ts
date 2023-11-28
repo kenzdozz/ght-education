@@ -198,7 +198,7 @@ export const TESTIMONIALS = [
   {
     name: 'Ruth Cadmus',
     message:
-      'Dear Global HT Education, I would like to appreciate the smooth process of my application into BCU . The reception and the lecture has been smooth we have various activities and good tutors who takes their time to ensure your foundation year is smooth to catapult you to BCU .I am truly happy to be at BCUIC',
+      'Dear Global HT Education, I would like to appreciate the smooth process of my application into BCU . The reception and the lecture has been smooth, they have various activities and good tutors who takes their time to ensure your foundation year is smooth to catapult you to BCU .I am truly happy to be at BCUIC',
     img: '/img/testimonials/ruth.webp',
     id: 4,
   },
@@ -355,7 +355,7 @@ export const HOME_STEPS: { icon: SVGIconName; head: string; text: string }[] = [
   {
     icon: 'apply',
     head: 'CHECK REQUIREMENTS',
-    text: 'Contact us an we will get you started on the requirements',
+    text: 'Contact us and we will get you started on the requirements',
   },
   {
     icon: 'badge',

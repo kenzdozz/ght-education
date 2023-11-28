@@ -570,7 +570,7 @@ export const COUNTRY_PAGE_TEXT: Record<string, ICountryText> = {
     fees: [
       'Tuition Fees: Tuition fees in the UK vary by program and institution, ranging from £10,000 to £40,000 annually for undergraduate and postgraduate courses. Scholarships and financial aid are available to alleviate the financial burden for international students.',
       'Scholarship Opportunities: Diverse scholarships reward academic excellence and specific talents, covering tuition or living expenses, easing the financial strain on students pursuing higher education in the UK.',
-      'Cost of Living: On average, students can expect living expenses of £12,000 to £15,000 per year, varying by city. Financial management guidance is provided, aiding students in budgeting and navigating accommodation choices.',
+      'Cost of Living: On average, students can expect living expenses of about £12,500 or £9,500 per year inside London or outside London respectively. Financial management guidance is provided, aiding students in budgeting and navigating accommodation choices.',
       'Our support extends to financial advice, including part-time job opportunities, to ensure students effectively manage their expenses while enjoying a fulfilling educational experience in the UK.',
     ],
     admission: [
