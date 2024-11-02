@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import AppHead from './AppHead';
 import Footer from './Footer';
 import Nav from './Nav';
@@ -25,6 +26,7 @@ export default function Page({
         <main ref={mainRef}>{children}</main>
         <Footer />
       </div>
+      <Script async defer crossOrigin="anonymous" src="https://www-cdn.icef.com/scripts/iasbadgeid.js" />
     </>
   );
 }
