@@ -5,6 +5,7 @@ import React from 'react';
 import useScrollReveal from '@/utils/useScrollReveal';
 import Page from '@/components/Page';
 import Patners from '@/components/Patners';
+import ICEF from '@/components/ICEF';
 
 const AboutPage = () => {
   const [storyRef] = useScrollReveal();
@@ -16,6 +17,12 @@ const AboutPage = () => {
         text="Empowering educational aspirations, bridging pathways to global success"
       />
       <WhoWeAre />
+      <ICEF
+        title="Achieving Excellence"
+        subtitles={['Proudly ICEF-Accredited for Quality', 'and Trust in International Education']}
+        bgColor="bg-[#6666bb1a]"
+        animTimeout={1.5}
+      />
       <Vision />
       <Team />
       <Patners />

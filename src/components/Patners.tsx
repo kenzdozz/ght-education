@@ -30,9 +30,6 @@ const Patners = (props: PartnerProps) => {
   return (
     <Container className={`py-5 ${props.bgColor}`}>
       <Container className=" container flex overflow-x-hidden">
-        <div className="flex items-center pr-[2rem]">
-          <span id="iasBadge" className="w-[90px]" data-account-id="6273"></span>
-        </div>
         <Swiper
           slidesPerView={'auto'}
           speed={600}
